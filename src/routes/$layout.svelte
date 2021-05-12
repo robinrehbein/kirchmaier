@@ -9,7 +9,13 @@
 
 <Navbar />
 
-<slot />
+<main>
+	<slot />
+</main>
+
+<footer>
+	<p>Made with ❤ by programr</p>
+</footer>
 
 <style>
 </style>
