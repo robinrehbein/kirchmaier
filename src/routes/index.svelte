@@ -1,59 +1,34 @@
-<script context="module" lang="ts">
-	export const prerender = true;
-</script>
-
 <script lang="ts">
-	import Counter from '$lib/Counter/index.svelte';
+	let a = 1;
+    let b = 2;
+
+
+
+	export async function load({ page, fetch, session, context }) {
+		const url = `/blog/${page.params.slug}.json`;
+		const res = await fetch(url);
+
+		if (res.ok) {
+			return {
+				props: {
+					article: await res.json()
+				}
+			};
+		}
+
+		return {
+			status: res.status,
+			error: new Error(`Could not load ${url}`)
+		};
+	}
 </script>
 
-<svelte:head>
-	<title>Home</title>
-</svelte:head>
 
-<section>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp">
-				<img src="svelte-welcome.png" alt="Welcome"/>
-			</picture>
-		</div>
 
-		to your new<br />SvelteKit app
-	</h1>
+<input type="number" bind:value={a}>
+<input type="number" bind:value={b}>
 
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
+<p>{a} + {b} = {a + b}</p>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
 </style>
