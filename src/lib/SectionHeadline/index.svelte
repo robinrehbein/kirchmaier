@@ -1,0 +1,21 @@
+<div>
+  <div class="section-headline">
+    <slot />
+  </div>
+</div>
+
+<style lang="sass">
+  .section-headline 
+    font-size: 1.5rem
+    position: relative
+  
+
+  .section-headline::after 
+    content: ""
+    position: absolute
+    top: 1.75rem
+    width: 110px
+    height: 3px
+    background: gold
+  
+</style>

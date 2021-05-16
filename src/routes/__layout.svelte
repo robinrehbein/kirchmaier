@@ -1,5 +1,6 @@
 <script lang="ts">
   import Navbar from "../lib/Navbar/index.svelte";
+  import SectionHeadline from "../lib/SectionHeadline/index.svelte";
 
 </script>
 
@@ -8,6 +9,9 @@
 </svelte:head>
 
 <Navbar />
+<SectionHeadline>
+  <p>HALLO <b>WELT</b></p>
+</SectionHeadline>
 
 <main>
   <slot />
