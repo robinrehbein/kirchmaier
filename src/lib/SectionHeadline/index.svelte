@@ -14,8 +14,8 @@
     content: ""
     position: absolute
     top: 1.75rem
-    width: 110px
-    height: 3px
+    width: 7rem
+    height: 0.2rem
     background: gold
-  
+
 </style>
