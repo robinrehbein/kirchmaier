@@ -1,4 +1,7 @@
 <script lang="ts">
+  import "../app.sass";
+  import SectionHeadline from "../lib/SectionHeadline/index.svelte";
+  
   let a = 1;
   let b = 2;
 
@@ -21,6 +24,11 @@
   // }
 
 </script>
+
+
+<SectionHeadline>
+  <p>HALLO <b>WELT</b></p>
+</SectionHeadline>
 
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />

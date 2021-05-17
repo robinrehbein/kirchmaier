@@ -1,6 +1,5 @@
 <script lang="ts">
   import Navbar from "../lib/Navbar/index.svelte";
-  import SectionHeadline from "../lib/SectionHeadline/index.svelte";
 
 </script>
 
