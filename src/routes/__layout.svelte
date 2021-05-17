@@ -8,10 +8,7 @@
   <meta name="robots" content="noindex" />
 </svelte:head>
 
-<Navbar />
-<SectionHeadline>
-  <p>HALLO <b>WELT</b></p>
-</SectionHeadline>
+<Navbar brand = {'Kirchmaier & Staudacher'} brandStatements = {['Gebäudemanagement', 'Immobilienverwaltung', 'Projektentwicklung']} links = {['Home', 'Services', 'About', 'Projects', 'Customer', 'Contact']} />
 
 <main>
   <slot />
@@ -21,5 +18,7 @@
   <p>Made with ❤ by programr</p>
 </footer>
 
-<style>
+<style lang="sass">
+main
+    margin-top: 20rem
 </style>
