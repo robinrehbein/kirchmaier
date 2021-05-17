@@ -25,7 +25,8 @@
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />
 
+<p>Body Main</p>
 <p>{a} + {b} = {a + b}</p>
 
-<style>
+<style lang="sass">
 </style>
