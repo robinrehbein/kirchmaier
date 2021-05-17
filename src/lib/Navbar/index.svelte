@@ -2,10 +2,10 @@
 	import { page } from '$app/stores';
 
 	// Navbareintraege aus Datei laden mit Namen und Links 
-	export const brand = 'Kirchmaier & Staudacher';
-	export const brandStatements = ['Gebäudemanagement', 'Immobilienverwaltung', 'Projektentwicklung'];
-	export const links = ['Home', 'Services', 'About', 'Projects', 'Customer', 'Contact'];
-	export const floating = false;
+	export let brand;
+	export let brandStatements;
+	export let links;
+	export let floating = false;
 </script>
 
 <nav>
@@ -14,26 +14,35 @@
 		<!-- <div class="navbar-content-logo"></div> -->
 		<div class="navbar-content">
 			<p>{brand}</p>
-			<ul>
-				{#each brandStatements as brandStatement}
-					<li>
-						<p>{brandStatement}</p>
-					</li>
-				{/each}
-			</ul>
+			{#if !!brandStatements}
+				<ul class="brand-statement-list">
+					{#each brandStatements as brandStatement}
+						<li class="brand-statement-list-item">
+							<p>{brandStatement}</p>
+						</li>
+					{/each}
+				</ul>
+			{/if}
 		</div>
 	</div>
 	<div class="navbar-list-wrapper">
-
 		<ul class="navbar-list">
 			{#each links as link}
-				<li class="navbar-list-item" class:active={$page.path === ('#' + link)}><a sveltekit:prefetch href="${'/' + link}">{link}</a></li>
+				<li class="navbar-list-item" class:active={$page.path === ('#' + link)}>
+					<a sveltekit:prefetch href="${'/' + link}">
+						{link}
+					</a>
+				</li>
 			{/each}
 		</ul>
 	</div>
 </nav>
 
 <style lang="sass">
+ul
+	list-style: none
+	margin: 0
+	padding: 0
 nav
 	position: fixed
 	top: 0
@@ -49,4 +58,7 @@ nav
 			flex-direction: column
 			justify-content: center
 			align-items: flex-start
+
+			.brand-statement-list
+				display: flex
 </style>

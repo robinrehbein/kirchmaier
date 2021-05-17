@@ -7,7 +7,7 @@
   <meta name="robots" content="noindex" />
 </svelte:head>
 
-<Navbar />
+<Navbar brand = {'Kirchmaier & Staudacher'} brandStatements = {['Gebäudemanagement', 'Immobilienverwaltung', 'Projektentwicklung']} links = {['Home', 'Services', 'About', 'Projects', 'Customer', 'Contact']} />
 
 <main>
   <slot />
