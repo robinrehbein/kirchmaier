@@ -1,23 +1,33 @@
 <script lang="ts">
-  import Navbar from "../lib/Navbar/index.svelte";
-
+    import Navbar from "../lib/Navbar/index.svelte";
+    import '../app.css'
 </script>
 
 <svelte:head>
-  <meta name="robots" content="noindex" />
+    <meta name="robots" content="noindex" />
 </svelte:head>
 
-<Navbar brand = {'Kirchmaier & Staudacher'} brandStatements = {['Gebäudemanagement', 'Immobilienverwaltung', 'Projektentwicklung']} links = {['Home', 'Services', 'About', 'Projects', 'Customer', 'Contact']} />
+<Navbar
+    brand={"Kirchmaier & Staudacher"}
+    brandStatements={[
+        "Gebäudemanagement",
+        "Immobilienverwaltung",
+        "Projektentwicklung",
+    ]}
+    links={["Home", "Services", "About", "Projects", "Customer", "Contact"]}
+/>
 
 <main>
-  <slot />
+    <slot />
 </main>
 
 <footer>
-  <p>Made with ❤ by programr</p>
+    <p>Made with ❤ by programr</p>
 </footer>
 
-<style lang="sass">
-main
-    margin-top: 20rem
+<style>
+main {
+    margin-top: 20rem;
+    background: var(--skills-color);
+}
 </style>

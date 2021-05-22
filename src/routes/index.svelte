@@ -1,5 +1,4 @@
 <script lang="ts">
-  import "../app.sass";
   import SectionHeadline from "../lib/SectionHeadline/index.svelte";
   
   let a = 1;

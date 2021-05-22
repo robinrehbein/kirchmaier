@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from "$app/stores";
 
-	// Navbareintraege aus Datei laden mit Namen und Links 
+	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand;
 	export let brandStatements;
 	export let links;
@@ -10,7 +10,49 @@
 
 <nav>
 	<div class="navbar-content-wrapper">
-		<svg class="navbar-content-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="isolation:isolate" viewBox="689 362 153 75" width="153pt" height="75pt"><defs><clipPath id="_clipPath_50HbLfdDUIK7DZgVfsHm6yKYNKCHtrC0"><rect x="689" y="362" width="153" height="75"/></clipPath></defs><g clip-path="url(#_clipPath_50HbLfdDUIK7DZgVfsHm6yKYNKCHtrC0)"><rect x="689" y="362" width="7" height="75" transform="matrix(1,0,0,1,0,0)" fill="rgb(157,161,163)"/><rect x="762" y="362" width="7" height="75" transform="matrix(1,0,0,1,0,0)" fill="rgb(156,160,162)"/><rect x="835" y="362" width="7" height="75" transform="matrix(1,0,0,1,0,0)" fill="rgb(159,162,164)"/><path d=" M 757 436.924 L 701 437 L 728.914 399.5 L 757 436.924 Z " fill="rgb(220,131,178)"/><path d=" M 830 399.424 L 774 399.5 L 801.914 362 L 830 399.424 Z " fill="rgb(220,131,178)"/></g></svg>
+		<svg
+			class="navbar-content-logo"
+			xmlns="http://www.w3.org/2000/svg"
+			xmlns:xlink="http://www.w3.org/1999/xlink"
+			style="isolation:isolate"
+			viewBox="689 362 153 75"
+			width="153pt"
+			height="75pt"
+			><defs
+				><clipPath id="_clipPath_50HbLfdDUIK7DZgVfsHm6yKYNKCHtrC0"
+					><rect x="689" y="362" width="153" height="75" /></clipPath
+				></defs
+			><g clip-path="url(#_clipPath_50HbLfdDUIK7DZgVfsHm6yKYNKCHtrC0)"
+				><rect
+					x="689"
+					y="362"
+					width="7"
+					height="75"
+					transform="matrix(1,0,0,1,0,0)"
+					fill="rgb(157,161,163)"
+				/><rect
+					x="762"
+					y="362"
+					width="7"
+					height="75"
+					transform="matrix(1,0,0,1,0,0)"
+					fill="rgb(156,160,162)"
+				/><rect
+					x="835"
+					y="362"
+					width="7"
+					height="75"
+					transform="matrix(1,0,0,1,0,0)"
+					fill="rgb(159,162,164)"
+				/><path
+					d=" M 757 436.924 L 701 437 L 728.914 399.5 L 757 436.924 Z "
+					fill="rgb(220,131,178)"
+				/><path
+					d=" M 830 399.424 L 774 399.5 L 801.914 362 L 830 399.424 Z "
+					fill="rgb(220,131,178)"
+				/></g
+			></svg
+		>
 		<!-- <div class="navbar-content-logo"></div> -->
 		<div class="navbar-content">
 			<p>{brand}</p>
@@ -28,7 +70,10 @@
 	<div class="navbar-list-wrapper">
 		<ul class="navbar-list">
 			{#each links as link}
-				<li class="navbar-list-item" class:active={$page.path === ('#' + link)}>
+				<li
+					class="navbar-list-item"
+					class:active={$page.path === "#" + link}
+				>
 					<a sveltekit:prefetch href="${'/' + link}">
 						{link}
 					</a>
