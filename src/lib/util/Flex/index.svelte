@@ -1,7 +1,7 @@
 <script type="ts">
   /* flexDirection - extend list if needed; row is default. */
   export let flexDirectionColumn = false;
-  /* flexDirection responsiveness, generally based on switching at 1000px */
+  /* flexDirection responsiveness, generally based on switching at 1000px width */
   export let flexDirectionResponsiveColumnToRow = false;
   export let flexDirectionResponsiveColumnToRowReverse = false;
   export let flexDirectionResponsiveRowToColumn = false;
