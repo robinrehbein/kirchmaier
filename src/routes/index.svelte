@@ -1,6 +1,7 @@
 <script lang="ts">
   import SectionHeadline from "../lib/SectionHeadline/index.svelte";
-  
+  import Flex from "../lib/util/Flex/index.svelte";
+
   let a = 1;
   let b = 2;
 
@@ -24,6 +25,10 @@
 
 </script>
 
+<Flex flexDirectionColumn justifyContentSpaceAround alignItemsCenter>
+  <div><p>flex 1</p></div>
+  <div><p>flex 2</p></div>
+</Flex>
 
 <SectionHeadline>
   <p>HALLO <b>WELT</b></p>
@@ -35,5 +40,9 @@
 <p>Body Main</p>
 <p>{a} + {b} = {a + b}</p>
 
-<style lang="sass">
+<style lang="scss">
+  div {
+    background-color: red;
+  }
+
 </style>
