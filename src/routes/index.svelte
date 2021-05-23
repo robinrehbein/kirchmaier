@@ -25,7 +25,12 @@
 
 </script>
 
-<Flex flexDirectionColumn justifyContentSpaceAround alignItemsCenter>
+<Flex
+  flexDirectionColumn
+  flexDirectionResponsiveColumnToRow
+  justifyContentSpaceAround
+  alignItemsCenter
+>
   <div><p>flex 1</p></div>
   <div><p>flex 2</p></div>
 </Flex>
