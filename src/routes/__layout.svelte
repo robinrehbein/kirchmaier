@@ -20,14 +20,15 @@
 <main>
     <slot />
 </main>
-
 <footer>
     <p>Made with ❤ by programr</p>
 </footer>
 
 <style>
-main {
+html,
+body {
+    font-family: var(--font-primary);
+    background: var(--bg-color);
     margin-top: 20rem;
-    background: var(--skills-color);
 }
 </style>
