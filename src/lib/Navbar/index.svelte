@@ -2,16 +2,18 @@
 	import { page } from "$app/stores";
 
 	// Navbareintraege aus Datei laden mit Namen und Links
-	export let brand;
-	export let brandStatements;
-	export let links;
-	export let floating = false;
+	export let brand: String;
+	export let brandStatements: Array<String>;
+	export let links: String;
+	export let floating: Boolean = false;
+
+	let floatingNavItems: Array<String> = []
 </script>
 
 <nav>
-	<div class="navbar-content-wrapper">
+	<div class="navbar-brand-wrapper">
 		<svg
-			class="navbar-content-logo"
+			class="navbar-brand-logo"
 			xmlns="http://www.w3.org/2000/svg"
 			xmlns:xlink="http://www.w3.org/1999/xlink"
 			style="isolation:isolate"
@@ -53,8 +55,8 @@
 				/></g
 			></svg
 		>
-		<!-- <div class="navbar-content-logo"></div> -->
-		<div class="navbar-content">
+		<!-- <div class="navbar-brand-logo"></div> -->
+		<div class="navbar-brand">
 			<p>{brand}</p>
 			{#if !!brandStatements}
 				<ul class="brand-statement-list">
@@ -83,27 +85,45 @@
 	</div>
 </nav>
 
-<style lang="sass">
-ul
-	list-style: none
-	margin: 0
-	padding: 0
-nav
-	position: fixed
-	top: 0
-	right: 0
-	left: 0
-	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05)
+<style lang="scss">
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+	background-color: white;
+	z-index: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	
 
-	.navbar-content-wrapper
-		display: flex
+	.navbar-brand-wrapper {
+		display: flex;
 
-		.navbar-content
-			display: flex
-			flex-direction: column
-			justify-content: center
-			align-items: flex-start
+		.navbar-brand {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
 
-			.brand-statement-list
-				display: flex
+			.brand-statement-list {
+				display: flex;
+			}
+		}
+	}
+	.navbar-list-wrapper {
+		.navbar-list {
+			display: flex;
+			flex-direction: row;
+		}
+	}
+}
 </style>

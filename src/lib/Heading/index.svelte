@@ -2,18 +2,18 @@
 </script>
 
 <div>
-  <div class="section-headline">
+  <div class="heading">
     <slot />
   </div>
 </div>
 
 <style lang="scss">
-  .section-headline {
+  .heading {
     font-size: 1.5rem;
     position: relative;
   }
 
-  .section-headline::after {
+  .heading::after {
     content: "";
     position: absolute;
     top: 1.75rem;

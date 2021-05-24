@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SectionHeadline from "../lib/SectionHeadline/index.svelte";
+  import Heading from "../lib/Heading/index.svelte";
   import Flex from "../lib/util/Flex/index.svelte";
 
   let a = 1;
@@ -30,9 +30,9 @@
   <div><p>flex 2</p></div>
 </Flex>
 
-<SectionHeadline>
+<Heading>
   <p>HALLO <b>WELT</b></p>
-</SectionHeadline>
+</Heading>
 
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />
