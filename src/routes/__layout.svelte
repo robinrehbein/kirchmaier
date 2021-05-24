@@ -1,6 +1,13 @@
 <script lang="ts">
+    import { onMount } from "svelte";
     import Navbar from "../lib/Navbar/index.svelte";
-    import '../app.css'
+    import "../app.css";
+
+    let floating: boolean = false;
+
+
+    // load floating from json
+    onMount(() => {});
 </script>
 
 <svelte:head>
@@ -14,7 +21,8 @@
         "Immobilienverwaltung",
         "Projektentwicklung",
     ]}
-    links={["Home", "Services", "About", "Projects", "Customer", "Contact"]}
+    navbarItems={["Home", "Services", "About", "Projects", "Customer", "Contact"]}
+    {floating}
 />
 
 <main>
@@ -25,10 +33,9 @@
 </footer>
 
 <style>
-html,
-body {
-    font-family: var(--font-primary);
-    background: var(--bg-color);
-    margin-top: 20rem;
-}
+    html,
+    body {
+        font-family: var(--font-primary);
+        background: var(--bg-color);
+    }
 </style>
