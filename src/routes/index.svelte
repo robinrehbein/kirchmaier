@@ -36,7 +36,8 @@
 </Flex>
 
 <SectionHeadline>
-  <p>HALLO <b>WELT</b></p>
+  <div slot="headline">HALLO <b>WELT</b></div>
+  <div slot="sub-headline">Moin Leute was geht ich bins Anduk</div>
 </SectionHeadline>
 
 <input type="number" bind:value={a} />
@@ -46,8 +47,4 @@
 <p>{a} + {b} = {a + b}</p>
 
 <style lang="scss">
-  div {
-    background-color: red;
-  }
-
 </style>
