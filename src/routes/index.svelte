@@ -1,6 +1,12 @@
 <script lang="ts">
+  import SectionHeadline from "../lib/SectionHeadline/index.svelte";
+  import Flex from "../lib/util/Flex/index.svelte";
+  import { jsonContent } from "../stores/stores";
+
   let a = 1;
   let b = 2;
+
+  const ourServices = $jsonContent.body.ourServices;
 
   // export async function load({ page, fetch, session, context }) {
   // 	const url = `/blog/${page.params.slug}.json`;
@@ -22,10 +28,29 @@
 
 </script>
 
+<Flex
+  flexDirectionColumn
+  flexDirectionResponsiveColumnToRow
+  justifyContentSpaceAround
+  alignItemsCenter
+>
+  <div><p>flex 1</p></div>
+  <div><p>flex 2</p></div>
+</Flex>
+
+<SectionHeadline>
+  <div slot="headline">
+    {ourServices.headline.headlineNormal}
+    <b>{ourServices.headline.headlineBold}</b>
+  </div>
+  <div slot="sub-headline">{ourServices.subHeadline}</div>
+</SectionHeadline>
+
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />
 
+<p>Body Main</p>
 <p>{a} + {b} = {a + b}</p>
 
-<style>
+<style lang="scss">
 </style>
