@@ -1,3 +1,5 @@
+<script lang="ts"></script>
+
 <div class="headline">
     <slot name="headline" />
 </div>
