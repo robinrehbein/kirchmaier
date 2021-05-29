@@ -21,7 +21,7 @@
         "Immobilienverwaltung",
         "Projektentwicklung",
     ]}
-    navbarItems={["Home", "Services", "About", "Projects", "Customer", "Contact"]}
+    navbarMenuItems={["Home", "Services", "About", "Projects", "Customer", "Contact"]}
     {floating}
 />
 

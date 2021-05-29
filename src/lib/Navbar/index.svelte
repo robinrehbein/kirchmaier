@@ -1,19 +1,26 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
+import { afterUpdate, beforeUpdate, debug } from "svelte/internal";
 
 	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand: string;
 	export let brandStatements: Array<string>;
-	export let navbarItems: Array<string>;
+	export let navbarMenuItems: Array<string>;
 	export let floating: boolean = false;
 
 	let navbarWidth: number;
 	let navbarWidthMenu: number;
 	let navbarWidthBrand: number;
-	let navbarMenuItems: HTMLUListElement;
+	let floatingMenuItems: Array<string> = [];
+
+	let navbarMenuItemList;
 
 	onMount(() => {
+		navbarMenuItemList = document.getElementById("navbar-menu").getElementsByTagName("li");
+	})
+
+	afterUpdate(() => {
 
 		// if (width container < with nav ul container) {
 		// 	remove items from links list;
@@ -22,9 +29,23 @@
 		// 	iterate through floatingLinks
 		// }
 
-		if (navbarWidth < (navbarWidthMenu + navbarWidthBrand)) {
-			return;
+		// trigger function only when window resized
+
+		while (navbarMenuItems.length > 0 && navbarWidth < (navbarWidthMenu + navbarWidthBrand)) {
+			floatingMenuItems = [...floatingMenuItems, ...navbarMenuItems.splice(-1, 1)];
+			console.log("Floating: ", floatingMenuItems, "Navbar: ", navbarMenuItems);
+			navbarWidthMenu = navbarWidthMenu - (navbarWidthMenu / navbarMenuItems.length)
 		}
+
+		function appendItem(item:String) {
+			
+		}
+
+		function removeItem(item:String) {
+			
+		}
+
+
 	});
 </script>
 
@@ -94,18 +115,21 @@
 			</div>
 		</div>
 		<div>
-			<ul bind:offsetWidth={navbarWidthMenu} bind:this={navbarMenuItems} class="navbar-menu">
-				{#each navbarItems as link}
+			<ul bind:offsetWidth={navbarWidthMenu} class="navbar-menu" id="navbar-menu">
+				{#each navbarMenuItems as navbarMenuItem}
 					<li
 						class="navbar-menu-item"
-						class:active={$page.path === "#" + link}
+						class:active={$page.path === "#" + navbarMenuItem}
 					>
-						<a sveltekit:prefetch href="${'/' + link}">
-							{link}
+						<a sveltekit:prefetch href="${'/' + navbarMenuItem}">
+							{navbarMenuItem}
 						</a>
 					</li>
 				{/each}
 			</ul>
+			{#if !!floatingMenuItems}
+				<div>Hamburger Menu</div>
+			{/if}
 		</div>
 	</div>
 </nav>
