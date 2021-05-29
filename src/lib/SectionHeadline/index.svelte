@@ -1,6 +1,3 @@
-<script lang="ts">
-</script>
-
 <div class="section-headline">
   <slot name="headline" />
 </div>
@@ -19,7 +16,7 @@
     content: "";
     position: absolute;
     top: 1.75rem;
-    width: 7rem;
+    width: 8rem;
     height: 0.2rem;
     background: var(--primary-color);
   }

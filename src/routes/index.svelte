@@ -1,9 +1,12 @@
 <script lang="ts">
   import SectionHeadline from "../lib/SectionHeadline/index.svelte";
   import Flex from "../lib/util/Flex/index.svelte";
+  import { jsonContent } from "../stores/stores";
 
   let a = 1;
   let b = 2;
+
+  const ourServices = $jsonContent.body.ourServices;
 
   // export async function load({ page, fetch, session, context }) {
   // 	const url = `/blog/${page.params.slug}.json`;
@@ -36,8 +39,11 @@
 </Flex>
 
 <SectionHeadline>
-  <div slot="headline">HALLO <b>WELT</b></div>
-  <div slot="sub-headline">Moin Leute was geht ich bins Anduk</div>
+  <div slot="headline">
+    {ourServices.headline.headlineNormal}
+    <b>{ourServices.headline.headlineBold}</b>
+  </div>
+  <div slot="sub-headline">{ourServices.subHeadline}</div>
 </SectionHeadline>
 
 <input type="number" bind:value={a} />

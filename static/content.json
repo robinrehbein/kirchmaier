@@ -1,7 +1,6 @@
 {
     "navbar": {
         "logo": {
-            "": "",
             "imgUrl": ""
         },
         "items": [
@@ -14,5 +13,35 @@
                 "url": ""
             }
         ]
+    },
+    "body": {
+        "landingPage": {
+            "imgUrl":""
+        },
+        "ourServices": {
+            "headline": {
+                "headlineNormal": "UNSERE",
+                "headlineBold": "LEISTUNGEN"
+            },
+            "subHeadline": "Ein Projekt - Ein Ansprechpartner",
+            "boxes" : [
+                {
+                    "imgUrl":"url",
+                    "boxHeadline":"GEBÄUDEMANAGEMENT",
+                    "boxText":"Platzhalter 1"
+                },
+                {
+                    "imgUrl":"url-2",
+                    "boxHeadline":"IMMOBILIENEVERWALTUNG",
+                    "boxText":"Platzhalter 2"
+                },
+                {
+                    "imgUrl":"url-3",
+                    "boxHeadline":"PROJEKTENTWICKLUNG",
+                    "boxText":"Platzhalter 3"
+                }
+            ]
+     
+        }
     }
 }
