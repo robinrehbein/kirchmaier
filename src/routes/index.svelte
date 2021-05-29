@@ -40,8 +40,7 @@
 
 <SectionHeadline>
   <div slot="headline">
-    {ourServices.headline.headlineNormal}
-    <b>{ourServices.headline.headlineBold}</b>
+    {@html ourServices.headline}
   </div>
   <div slot="sub-headline">{ourServices.subHeadline}</div>
 </SectionHeadline>
