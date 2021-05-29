@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores";
 	import { onMount } from "svelte";
-import { afterUpdate, beforeUpdate, debug } from "svelte/internal";
+	import { afterUpdate } from "svelte/internal";
 
 	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand: string;
@@ -131,7 +131,7 @@ import { afterUpdate, beforeUpdate, debug } from "svelte/internal";
 				<div>Hamburger Menu</div>
 			{/if}
 		</div>
-	</div>
+	</div>	
 </nav>
 
 <style lang="scss">
