@@ -1,38 +1,49 @@
 <script lang="ts">
-  import Heading from "../lib/Heading/index.svelte";
-  import Flex from "../lib/util/Flex/index.svelte";
+    import Headline from "../lib/Headline/index.svelte";
+    import Flex from "../lib/util/Flex/index.svelte";
+    import { jsonContent } from "../stores/stores";
 
-  let a = 1;
-  let b = 2;
+    let a = 1;
+    let b = 2;
 
-  // export async function load({ page, fetch, session, context }) {
-  // 	const url = `/blog/${page.params.slug}.json`;
-  // 	const res = await fetch(url);
+    const ourServices = $jsonContent.body.ourServices;
 
-  // 	if (res.ok) {
-  // 		return {
-  // 			props: {
-  // 				article: await res.json()
-  // 			}
-  // 		};
-  // 	}
+    // export async function load({ page, fetch, session, context }) {
+    // 	const url = `/blog/${page.params.slug}.json`;
+    // 	const res = await fetch(url);
 
-  // 	return {
-  // 		status: res.status,
-  // 		error: new Error(`Could not load ${url}`)
-  // 	};
-  // }
+    // 	if (res.ok) {
+    // 		return {
+    // 			props: {
+    // 				article: await res.json()
+    // 			}
+    // 		};
+    // 	}
 
+    // 	return {
+    // 		status: res.status,
+    // 		error: new Error(`Could not load ${url}`)
+    // 	};
+    // }
 </script>
 
-<Flex flexDirectionColumn justifyContentSpaceAround alignItemsCenter>
-  <div><p>flex 1</p></div>
-  <div><p>flex 2</p></div>
+<Flex
+    flexDirectionColumn
+    flexDirectionResponsiveColumnToRow
+    justifyContentSpaceAround
+    alignItemsCenter
+>
+    <div><p>flex 1</p></div>
+    <div><p>flex 2</p></div>
 </Flex>
 
-<Heading>
-  <p>HALLO <b>WELT</b></p>
-</Heading>
+<Headline>
+    <div slot="headline">
+        {ourServices.headline.headlineNormal}
+        <b>{ourServices.headline.headlineBold}</b>
+    </div>
+    <div slot="sub-headline">{ourServices.subHeadline}</div>
+</Headline>
 
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />
@@ -41,8 +52,4 @@
 <p>{a} + {b} = {a + b}</p>
 
 <style lang="scss">
-  div {
-    background-color: red;
-  }
-
 </style>

@@ -105,7 +105,7 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		color: var(--heading-color);
+		color: var(--headline-color);
 		font-weight: 700;
 		font-size: 0.8rem;
 		text-transform: uppercase;
