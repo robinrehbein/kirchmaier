@@ -28,7 +28,7 @@ export interface LandingPage {
 }
 
 export interface OurServices {
-    headline: Headline,
+    headline: string,
     subHeadline: string,
     boxes: Box[]
 }
@@ -37,9 +37,4 @@ export interface Box {
     imgUrl: string,
     boxHeadline: string,
     boxText: string
-}
-
-export interface Headline {
-    headlineNormal: string,
-    headlineBold: string
 }

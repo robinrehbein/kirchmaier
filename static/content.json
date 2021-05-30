@@ -19,10 +19,7 @@
             "imgUrl":""
         },
         "ourServices": {
-            "headline": {
-                "headlineNormal": "UNSERE",
-                "headlineBold": "LEISTUNGEN"
-            },
+            "headline": "UNSERE <b>LEISTUNGEN</b>",
             "subHeadline": "Ein Projekt - Ein Ansprechpartner",
             "boxes" : [
                 {
