@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SectionHeadline from "../lib/SectionHeadline/index.svelte";
+  import Headline from "../lib/Headline/index.svelte";
   import Flex from "../lib/util/Flex/index.svelte";
   import { jsonContent } from "../stores/stores";
 
@@ -38,12 +38,12 @@
   <div><p>flex 2</p></div>
 </Flex>
 
-<SectionHeadline>
+<Headline>
   <div slot="headline">
     {@html ourServices.headline}
   </div>
-  <div slot="sub-headline">{ourServices.subHeadline}</div>
-</SectionHeadline>
+  <span slot="sub-headline">{ourServices.subHeadline}</span>
+</Headline>
 
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />
@@ -52,4 +52,8 @@
 <p>{a} + {b} = {a + b}</p>
 
 <style lang="scss">
+  div {
+    margin-top: 10%;
+  }
+
 </style>

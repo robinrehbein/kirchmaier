@@ -3,5 +3,14 @@
 :root {
     --background-color: hsl(0, 0%, 98%);
     --primary-color: hsl(50, 50%, 70%);
+    --bg-color: hsl(0, 0%, 100%);
     --font-primary: 'Montserrat';
+
+    /* set right sizing for boxes */
+	box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
