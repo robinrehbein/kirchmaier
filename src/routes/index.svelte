@@ -58,7 +58,7 @@
 
 {#if showModal}
 	<Modal on:close="{() => showModal = false}">
-		<h2 slot="header">
+		<h2 slot="headline">
 			modal
 			<small><em>adjective</em>  mod·al \ˈmō-dəl\</small>
 		</h2>
