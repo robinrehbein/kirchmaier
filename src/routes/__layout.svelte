@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
     import Navbar from "../lib/Navbar/index.svelte";
+    import Footer from "../lib/Footer/index.svelte";
     import "../app.css";
 
     let floating: boolean = false;
@@ -28,9 +29,8 @@
 <main>
     <slot />
 </main>
-<footer>
-    <p>Made with ❤ by programr</p>
-</footer>
+
+<Footer></Footer>
 
 <style>
     html,
