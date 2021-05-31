@@ -30,21 +30,20 @@
 </script>
 
 <Flex
-    flexDirectionColumn
-    flexDirectionResponsiveColumnToRow
-    justifyContentSpaceAround
-    alignItemsCenter
+  flexDirectionColumn
+  flexDirectionResponsiveColumnToRow
+  justifyContentSpaceAround
+  alignItemsCenter
 >
-    <div><p>flex 1</p></div>
-    <div><p>flex 2</p></div>
+  <div><p>flex 1</p></div>
+  <div><p>flex 2</p></div>
 </Flex>
 
 <Headline>
-    <div slot="headline">
-        {ourServices.headline.headlineNormal}
-        <b>{ourServices.headline.headlineBold}</b>
-    </div>
-    <div slot="sub-headline">{ourServices.subHeadline}</div>
+  <div slot="headline">
+    {@html ourServices.headline}
+  </div>
+  <span slot="sub-headline">{ourServices.subHeadline}</span>
 </Headline>
 
 <input type="number" bind:value={a} />
@@ -80,4 +79,8 @@
 <p>{a} + {b} = {a + b}</p>
 
 <style lang="scss">
+  div {
+    margin-top: 10%;
+  }
+
 </style>
