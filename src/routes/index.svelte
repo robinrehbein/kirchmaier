@@ -3,6 +3,7 @@
     import Flex from "../lib/util/Flex/index.svelte";
     import Modal from "../lib/util/Modal/index.svelte";
     import { jsonContent } from "../stores/stores";
+	import { scale } from "svelte/transition";
 
     let a = 1;
     let b = 2;
@@ -49,14 +50,12 @@
 <input type="number" bind:value={a} />
 <input type="number" bind:value={b} />
 
-
-
 <button on:click="{() => showModal = true}">
     Sesam oeffne dich :)
 </button>
 
 {#if showModal}
-	<Modal on:close="{() => showModal = false}">
+	<Modal on:close="{() => showModal = false}" transition={scale}>
 		<h2 slot="headline">
 			modal
 			<small><em>adjective</em>  mod·al \ˈmō-dəl\</small>

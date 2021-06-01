@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { createEventDispatcher, onDestroy } from "svelte";
+	import { fade } from "svelte/transition";
 
 	const dispatch = createEventDispatcher();
 	const close = () => dispatch("close");
 
+	export let transition = fade;
 	let modal;
 
 	const handle_keydown = (e) => {
@@ -32,7 +34,6 @@
 
 	const previously_focused: any =
 		typeof document !== "undefined" && document.activeElement;
-	console.log("Type of previously_focused ", typeof previously_focused);
 
 	if (previously_focused) {
 		onDestroy(() => {
@@ -43,9 +44,8 @@
 
 <svelte:window on:keydown={handle_keydown} />
 
-<div class="modal-background" on:click={close}>
+<div class="modal-background" on:click={close} transition:transition>
 	<div class="modal" role="dialog" aria-modal="true" bind:this={modal}>
-
 		<!-- Show Headline -->
 		<slot name="headline" />
 		<hr />
@@ -66,6 +66,7 @@
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.3);
+		z-index: 100;
 	}
 
 	.modal {
