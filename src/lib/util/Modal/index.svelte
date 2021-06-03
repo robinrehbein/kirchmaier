@@ -2,7 +2,9 @@
 	import { createEventDispatcher, onDestroy } from "svelte";
 	import { fade } from "svelte/transition";
 
-	const dispatch = createEventDispatcher();
+
+	// boolean here right as type?
+	const dispatch = createEventDispatcher<{close: boolean}>();
 	const close = () => dispatch("close");
 
 	export let transition = fade;
@@ -32,8 +34,10 @@
 		}
 	};
 
-	const previously_focused: any =
-		typeof document !== "undefined" && document.activeElement;
+
+	// type of Element but Element doesnt contain focus because focus is an htmlelement function
+	const previously_focused: HTMLElement =
+		typeof document !== "undefined" && <HTMLElement>document.activeElement as HTMLElement; // cast element to htmlelement
 
 	if (previously_focused) {
 		onDestroy(() => {
@@ -54,7 +58,7 @@
 		<hr />
 
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={close}>close modal</button>
+		<button autofocus on:click={close}>Schliesse Sesam</button>
 	</div>
 </div>
 
