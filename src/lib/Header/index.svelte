@@ -1,16 +1,33 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import logo from "./svelte-logo.svg";
+	import Navbar from "../Navbar/index.svelte";
 </script>
 
 <header>
 	<div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+		<a href="https://kit.svelte.dev">Svelte
 		</a>
 	</div>
 
 	<!-- TODO add navbar component here instead of nav html implementation -->
+
+	<!-- <Navbar
+		brand={"Kirchmaier & Staudacher"}
+		brandStatements={[
+			"Gebäudemanagement",
+			"Immobilienverwaltung",
+			"Projektentwicklung",
+		]}
+		menuItems={[
+			"Home",
+			"Services",
+			"About",
+			"Projects",
+			"Customer",
+			"Contact",
+		]}
+		floating
+	/> -->
 
 	<nav>
 		<svg viewBox="0 0 2 3" aria-hidden="true">
