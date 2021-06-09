@@ -2,7 +2,9 @@
 	import { createEventDispatcher, onDestroy } from "svelte";
 	import { fade } from "svelte/transition";
 
-	const dispatch = createEventDispatcher();
+
+	// boolean here right as type?
+	const dispatch = createEventDispatcher<{close: boolean}>();
 	const close = () => dispatch("close");
 
 	export let transition = fade;
@@ -17,9 +19,7 @@
 		if (e.key === "Tab") {
 			// trap focus
 			const nodes: Array<any> = modal.querySelectorAll("*");
-			console.log("Type of nodes ", typeof nodes);
 			const tabbable = Array.from(nodes).filter((n) => n.tabIndex >= 0);
-			console.log("Type of tabbable ", typeof tabbable);
 
 			let index = tabbable.indexOf(document.activeElement);
 			if (index === -1 && e.shiftKey) index = 0;
@@ -32,8 +32,10 @@
 		}
 	};
 
-	const previously_focused: any =
-		typeof document !== "undefined" && document.activeElement;
+
+	// type of Element but Element doesnt contain focus because focus is an htmlelement function
+	const previously_focused: HTMLElement =
+		typeof document !== "undefined" && <HTMLElement>document.activeElement as HTMLElement; // cast element to htmlelement
 
 	if (previously_focused) {
 		onDestroy(() => {
@@ -54,7 +56,7 @@
 		<hr />
 
 		<!-- svelte-ignore a11y-autofocus -->
-		<button autofocus on:click={close}>close modal</button>
+		<button autofocus on:click={close}>Schliesse Sesam</button>
 	</div>
 </div>
 
