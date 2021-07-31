@@ -22,6 +22,8 @@
 
 	afterUpdate(() => {
 
+		// Priority first navigation menu
+
 		// if (width container < with nav ul container) {
 		// 	remove items from links list;
 		// 	push last items to floatingLinks list
@@ -30,12 +32,6 @@
 		// }
 
 		// trigger function only when window resized
-
-		while (navbarMenuItems.length > 0 && navbarWidth < (navbarWidthMenu + navbarWidthBrand)) {
-			floatingMenuItems = [...floatingMenuItems, ...navbarMenuItems.splice(-1, 1)];
-			console.log("Floating: ", floatingMenuItems, "Navbar: ", navbarMenuItems);
-			navbarWidthMenu = navbarWidthMenu - (navbarWidthMenu / navbarMenuItems.length)
-		}
 
 		function appendItem(item:String) {
 			
