@@ -5,12 +5,24 @@
         },
         "items": [
             {
-                "name": "",
-                "url": ""
+                "name": "UNSERE LEISTUNGEN",
+                "url": "#ourservices"
             },
             {
-                "name": "",
-                "url": ""
+                "name": "ÜBER UNS",
+                "url": "#aboutus"
+            },
+            {
+                "name": "PROJEKTE",
+                "url": "#projects"
+            },
+            {
+                "name": "KUNDEN",
+                "url": "#customer"
+            },
+            {
+                "name": "KONTAKT",
+                "url": "#contact"
             }
         ]
     },
