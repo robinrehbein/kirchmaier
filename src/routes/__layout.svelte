@@ -23,13 +23,13 @@
         "Projektentwicklung",
     ]}
     menuItems={["Home", "Services", "About", "Projects", "Customer", "Contact"]}
-    {floating}
 />
 
 <!-- <Header /> -->
 
 <main>
     <slot />
+    <div style="height: 10000px;"></div>
 </main>
 
 <Footer />
