@@ -1,54 +1,10 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import { onMount } from "svelte";
-	import { afterUpdate, each } from "svelte/internal";
 
 	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand: string;
 	export let brandStatements: Array<string>;
 	export let menuItems: Array<string>;
-	export let floating: boolean = false;
-
-	let navbarWidth: number;
-	let navbarWidthMenu: number;
-	let navbarWidthBrand: number;
-	let floatingMenuItems: Array<string> = [];
-
-	let navbarMenuItemList;
-
-	onMount(() => {
-		navbarMenuItemList = document
-			.getElementById("navbar-menu")
-			.getElementsByTagName("li");
-	});
-
-	afterUpdate(() => {
-		// if (width container < with nav ul container) {
-		// 	remove items from links list;
-		// 	push last items to floatingLinks list
-		// 	create after element
-		// 	iterate through floatingLinks
-		// }
-
-		// trigger function only when window resized
-
-		while (
-			menuItems.length > 0 &&
-			navbarWidth < navbarWidthMenu + navbarWidthBrand
-		) {
-			floatingMenuItems = [
-				...floatingMenuItems,
-				...menuItems.splice(-1, 1),
-			];
-			console.log("Floating: ", floatingMenuItems, "Navbar: ", menuItems);
-			navbarWidthMenu =
-				navbarWidthMenu - navbarWidthMenu / menuItems.length;
-		}
-
-		function appendItem(item: String) {}
-
-		function removeItem(item: String) {}
-	});
 </script>
 
 <div>
@@ -123,13 +79,6 @@
 				</li>
 			{/each}
 		</ul>
-		<span>
-			<!-- or button or span -->
-			<div>more</div>
-			<ul>
-				<li>unvisible menu items</li>
-			</ul>
-		</span>
 	</nav>
 </div>
 
@@ -138,43 +87,5 @@
 	div,
 	ul {
 		display: flex;
-	}
-	nav {
-		position: fixed;
-		width: 100%;
-		top: 0;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		z-index: 1;
-
-		& > div {
-			width: 100%;
-			border-radius: 7px;
-			display: flex;
-			justify-content: space-between;
-			/* justify-content: space-evenly; */
-			align-items: center;
-			background-color: var(--bg-color);
-			box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-		}
-	}
-	ul {
-		list-style: none;
-	}
-	.brand {
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-start;
-	}
-	.navbar-menu {
-		flex-direction: row;
-	}
-	.floating {
-		.navbar-wrapper {
-			width: auto;
-			padding: 0.3rem 3rem;
-			margin: 1rem 0 0 0;
-		}
 	}
 </style>
