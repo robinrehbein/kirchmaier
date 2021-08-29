@@ -19,10 +19,16 @@
   export let flexWrapWrap = false;
   export let flexWrapWrapReverse = false;
 
+  /* gap between flex elements */
+  export let gap: string = undefined;
+
+  /* styles - note: the class passed has to be made available on a global level or imported to this file directly */
+  let className = "";
+  export { className as class };
 </script>
 
 <div
-  class="flex"
+  class={`flex ${className || ""}`}
   class:flexDirectionColumn
   class:flexDirectionResponsiveColumnToRow
   class:flexDirectionResponsiveColumnToRowReverse
@@ -34,6 +40,7 @@
   class:alignItemsCenter
   class:flexWrapWrap
   class:flexWrapWrapReverse
+  style={`gap: ${gap || "0rem"}`}
 >
   <slot />
 </div>
@@ -98,5 +105,4 @@
   .flexWrapWrapReverse {
     flex-wrap: wrap-reverse;
   }
-
 </style>
