@@ -43,7 +43,7 @@
           <img
             src={iconMapper[contactDataElement.icon]}
             class="contact-data-icon"
-            alt={contactDataElement.icon}
+            alt={contactDataElement.text}
           />
           {contactDataElement.value}
         </div>
