@@ -7,7 +7,7 @@
 
 <style lang="scss">
   .content-wrapper {
-    max-width: 1600px;
+    max-width: 1400px;
     margin: auto;
     padding: 1.5rem;
   }

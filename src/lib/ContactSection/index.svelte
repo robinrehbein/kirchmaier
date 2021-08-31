@@ -37,16 +37,16 @@
     gap="3rem"
     class="section-content-wrapper"
   >
-    <div>
+    <div class="contact-data">
       {#each contact.contactData as contactDataElement}
-        <div class="contact-data-element">
+        <Flex style="margin-bottom: 1rem;">
           <img
             src={iconMapper[contactDataElement.icon]}
             class="contact-data-icon"
             alt={contactDataElement.text}
           />
           {contactDataElement.value}
-        </div>
+        </Flex>
       {/each}
 
       <form action={`mailto:${contact.mailAddress}`} method="GET">
@@ -55,16 +55,25 @@
         >
       </form>
     </div>
-    <img src={map} class="picture" alt="map" />
+
+    <img src={map} class="contact-map img-shadow" alt="map" />
   </Flex>
 </div>
 
 <style lang="scss">
-  .contact-data-element {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 1rem;
+  .contact-data {
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (min-width: 1100px) {
+    .contact-data {
+      width: 27%; //25%;
+      margin-top: auto;
+    }
+
+    .contact-map {
+      width: 48%; //45%;
+    }
   }
 
   .contact-data-icon {
