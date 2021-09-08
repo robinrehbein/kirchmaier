@@ -77,6 +77,30 @@
                     "boxText": "Unsere Herzensangelegenheit.. Die im Jahr 2001 gegründete Ralph Kirchmaier Stiftung kümmert sich seit vielen Jahren um hilfsbedürftige Kinder in Mombasa. Die Stiftung betreibt dort eine Schule für über 300 Slumkinder. Mehr als 10 Lehrkräfte unterrichten dort mit großem Erfolg die motivierten Kinder. Die Stiftung kümmert sich darüber hinaus um die medizinische Betreuung und Verpflegung der Schülerinnen und Schüler. Mehr Infos zur Ralph Kirchmaier Stiftung erhalten Sie unter: <a href='www.ralph-kirchmaier-stiftung.de'>www.ralph-kirchmaier-stiftung.de</a>"
                 }
             ]
+        },
+        "contact": {
+            "headline": "<b>KONTAKT</b>DATEN",
+            "subHeadline": "Gerne beantworten wir Ihre Fragen",
+            "buttonText": "KONTAKTIEREN SIE UNS",
+            "mapText":"",
+            "mailAddress":"info@kirchmaier-staudacher.de",
+            "contactData": [
+                {
+                    "text": "Telefon",
+                    "icon": "phone",
+                    "value": "+49 751 36221-0"
+                },
+                {
+                    "text": "Fax",
+                    "icon": "fax",
+                    "value": "+49 751 36221-60"
+                },
+                {
+                    "text": "Mail",
+                    "icon": "mail",
+                    "value": "info@kirchmaier-staudacher.de"
+                } 
+            ]
         }
     }
 }
