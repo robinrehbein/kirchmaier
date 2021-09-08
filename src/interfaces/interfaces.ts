@@ -20,7 +20,9 @@ export interface NavbarItem {
 
 export interface Body {
     landingPage: LandingPage,
-    ourServices: OurServices
+    ourServices: OurServices,
+    about: About,
+    contact: Contact
 }
 
 export interface LandingPage {
@@ -33,8 +35,29 @@ export interface OurServices {
     boxes: Box[]
 }
 
+export interface About {
+    headline: string,
+    subHeadline: string,
+    boxes: Box[]
+}
+
+export interface Contact {
+    headline: string,
+    subHeadline: string,
+    buttonText: string,
+    mapText: string,
+    mailAddress: string,
+    contactData: ContactData[]
+}
+
 export interface Box {
     imgUrl: string,
     boxHeadline: string,
     boxText: string
+}
+
+export interface ContactData {
+    text: string,
+    icon: string,
+    value: string
 }
