@@ -137,8 +137,7 @@
 	}
 	nav.scrolled,
 	nav.active {
-		box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.8),
-			0 8px 16px 0 rgba(204, 204, 204, 0.8);
+		box-shadow: var(--box-shadow);
 	}
 	nav.active {
 		height: calc(100% - 6rem);
@@ -183,5 +182,8 @@
 		justify-content: flex-start;
 		align-items: center;
 		gap: 2rem;
+	}
+	.brand-logo {
+		height: 67px;
 	}
 </style>
