@@ -4,17 +4,17 @@
 	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand: string;
 	export let brandStatements: Array<string>;
-	export let menuItems: Array<string>;
+	export let navbarItems: Array<string>;
 	let y;
 	let active = false;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<div class="relative">
-	<div class="navbar-wrapper" class:scrolled={y > 50} class:active>
-		<!-- // div with logo Kirchmaier or // -->
-		<div class="brand-wrapper">
+<nav class:scrolled={y > 50} class:active>
+	<!-- // div with logo Kirchmaier or // -->
+	<div class="brand-wrapper">
+		<div class="brand">
 			<svg
 				class="brand-logo"
 				xmlns="http://www.w3.org/2000/svg"
@@ -42,8 +42,7 @@
 							transform="matrix(1,0,0,1,0,0)"
 							fill="rgb(255,255,255)"
 						/></clipPath
-					><g
-						clip-path="url(#_clipPath_F4W9GkP635I59phimjSWCTxIIPHWhVjj)"
+					><g clip-path="url(#_clipPath_F4W9GkP635I59phimjSWCTxIIPHWhVjj)"
 						><g
 							><rect
 								x="0"
@@ -78,144 +77,111 @@
 				></svg
 			>
 
-			<div class="brand">
+			<div class="brand-info">
 				<h1 class="brand-name">{brand}</h1>
 				{#if !!brandStatements}
 					<div class="brand-statements">
 						{#each brandStatements as brandStatement}
-							<span class="brand-statement">{brandStatement}</span
-							>
+							<span class="brand-statement">{brandStatement}</span>
 						{/each}
 					</div>
 				{/if}
 			</div>
 		</div>
-
-		<nav class="navbar">
-			<!-- responsive menu -->
-			<svg
-				on:click={() => (active = !active)}
-				class="arrow"
-				class:active
-				xmlns="http://www.w3.org/2000/svg"
-				height="24px"
-				viewBox="0 0 24 24"
-				width="24px"
-				fill="#000000"
-				><path d="M0 0h24v24H0V0z" fill="none" /><path
-					d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
-				/></svg
-			>
-
-			<ul class="navbar-menu" class:active>
-				{#each menuItems as menuItem}
-					<li
-						class="navbar-menu-item"
-						class:active={$page.path === "#" + menuItem}
-					>
-						<a sveltekit:prefetch href="${'/' + menuItem}">
-							{menuItem}
-						</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
+		<!-- responsive menu -->
+		<svg
+			class="arrow"
+			class:active
+			on:click={() => (active = !active)}
+			xmlns="http://www.w3.org/2000/svg"
+			height="24px"
+			viewBox="0 0 24 24"
+			width="24px"
+			fill="#000000"
+			><path d="M0 0h24v24H0V0z" fill="none" /><path
+				d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"
+			/></svg
+		>
 	</div>
-</div>
+
+	<ul class="navbar" class:active>
+		{#each navbarItems as navbarItem}
+			<li
+				class="navbar-item"
+				class:active={$page.path === "#" + navbarItem}
+			>
+				<a sveltekit:prefetch href="${'/' + navbarItem}">
+					{navbarItem}
+				</a>
+			</li>
+		{/each}
+	</ul>
+</nav>
 
 <style lang="scss">
+	nav {
+		height: 67px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		padding: 2rem;
+		top: 1rem;
+		right: 1rem;
+		left: 1rem;
+		border-radius: 0.5rem;
+		background-color: var(--bg-color);
+		z-index: 1;
+		transition: box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	nav.scrolled,
+	nav.active {
+		box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.8),
+			0 8px 16px 0 rgba(204, 204, 204, 0.8);
+	}
+	nav.active {
+		height: calc(100% - 6rem);
+	}
 	a {
 		text-decoration: none;
 		color: var(--text-color);
 	}
-	.navbar-wrapper {
-		background-color: white;
-		position: fixed;
-		padding: 2rem 3rem;
-		box-shadow: none;
-		top: 0rem;
-		right: 0rem;
-		left: 0rem;
-		max-width: 100%;
-		border-radius: 0rem;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-		transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
-		z-index: 1;
-	}
-	.navbar-wrapper.scrolled {
-		// background-color: var(--primary-color);
-		box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.8),
-			0 8px 16px 0 rgba(204, 204, 204, 0.8);
-		top: 0rem;
-		right: 0rem;
-		left: 0rem;
-		bottom: 0rem;
-		padding: 1rem 2rem;
-		border-radius: 0.5rem;
-	}
-	.navbar-wrapper.active {
-		// background-color: var(--primary-color);
-		box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.8),
-			0 8px 16px 0 rgba(204, 204, 204, 0.8);
-		top: 1rem;
-		right: 1rem;
-		left: 1rem;
-		padding: 1rem 2rem;
-		border-radius: 0.5rem;
-	}
-	.brand-wrapper {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 1rem;
-	}
-	.brand-logo {
-		width: 5rem;
-	}
-	.brand {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-		text-transform: uppercase;
-		gap: 0.25rem;
-	}
-	.brand-name {
-		font-size: 1rem;
-	}
-	.brand-statements {
-		font-size: 0.7rem;
-		display: none;
-	}
-	.brand-statement::after {
-		content: "-";
-		padding-left: 1rem;
-		padding-right: 1rem;
-		// display: none;
-	}
-	.brand-statement:last-child:after {
-		display: none;
-	}
-	.relative {
-		position: relative;
-	}
 	.arrow {
 		cursor: pointer;
-		transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+		transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	.arrow.active {
 		transform: rotate(180deg);
-		transition: all 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
-	.navbar-menu {
-		display: none;
+	.navbar {
+		// set height to full screen when active whith flex-grow
+		flex-grow: 1;
+		opacity: 0;
 		list-style: none;
-		position: absolute;
-		left: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+		overflow: hidden;
 	}
-	.navbar-menu.active {
-		display: initial;
+	.navbar.active {
+		opacity: 1;
+		transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+	}
+	.brand-wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		gap: 2rem;
+	}
+	.brand {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 2rem;
 	}
 </style>

@@ -5,8 +5,6 @@
   import ContentWrapper from "../lib/util/ContentWrapper/index.svelte";
   import "../app.css";
 
-  let floating: boolean = false;
-
     // load floating from json
     onMount(() => {});
 </script>
@@ -22,7 +20,7 @@
       "Immobilienverwaltung",
       "Projektentwicklung",
     ]}
-    navbarMenuItems={[
+    navbarItems={[
       "Home",
       "Services",
       "About",
@@ -30,12 +28,13 @@
       "Customer",
       "Contact",
     ]}
-    {floating}
   />
 
   <main>
     <slot />
   </main>
+
+  <div style="height: 1000px;"></div>
 
   <Footer />
 </ContentWrapper>
