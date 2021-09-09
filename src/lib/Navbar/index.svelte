@@ -121,6 +121,7 @@
 <style lang="scss">
 	nav {
 		height: 67px;
+		text-transform: uppercase;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
