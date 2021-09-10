@@ -59,7 +59,7 @@
         flex-direction: column;
     }
 
-    @media screen and (min-width: 1100px) {
+    @media screen and (min-width: 960px) {
         .flexDirectionResponsiveColumnToRow {
             flex-direction: row;
         }
@@ -67,16 +67,13 @@
         .flexDirectionResponsiveColumnToRowReverse {
             flex-direction: row-reverse;
         }
-    }
-
-    @media screen and (max-width: 1100px) {
         .flexDirectionResponsiveRowToColumn {
             flex-direction: column;
         }
 
         .flexDirectionResponsiveRowToColumnReverse {
             flex-direction: column-reverse;
-        }
+        }   
     }
 
     /* justifyContent classes */

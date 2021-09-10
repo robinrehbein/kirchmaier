@@ -8,7 +8,7 @@
     import mailIcon from "../../../static/icons/mail.svg";
     import map from "../../../static/map-mock.png";
 
-    const contact = ($jsonContent as Content).body.contact;
+    const contact = ($jsonContent).body.contact;
 
     const iconMapper = {
         phone: phoneIcon,
@@ -64,7 +64,7 @@
         margin-top: 2.5rem;
     }
 
-    @media screen and (min-width: 1100px) {
+    @media screen and (min-width: 960px) {
         .contact-data {
             width: 27%; //25%;
             margin-top: auto;

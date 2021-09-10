@@ -15,8 +15,7 @@
 * {
     margin: 0;
     padding: 0;
-    /* set right sizing for boxes */
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
 
 html,
