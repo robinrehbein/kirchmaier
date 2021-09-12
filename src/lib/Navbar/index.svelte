@@ -1,22 +1,23 @@
 <script lang="ts">
 	import { page } from "$app/stores";
+	import type { NavbarItem } from "../../interfaces/interfaces"
 
 	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand: string;
-	export let brandStatements: Array<string>;
-	export let navbarItems: Array<string>;
+	export let navbarItems: Array<NavbarItem>;
+	export let scrollMargin = 100;
 	let y;
 	let active = false;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<nav class:scrolled={y > 50} class:active>
+<nav class:scrolled={y > scrollMargin} class:active>
 	<!-- // div with logo Kirchmaier or // -->
 	<div class="brand-wrapper">
 		<div class="brand">
 			<svg
-				class="brand-logo"
+				class="logo"
 				xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink"
 				style="isolation:isolate"
@@ -42,7 +43,8 @@
 							transform="matrix(1,0,0,1,0,0)"
 							fill="rgb(255,255,255)"
 						/></clipPath
-					><g clip-path="url(#_clipPath_F4W9GkP635I59phimjSWCTxIIPHWhVjj)"
+					><g
+						clip-path="url(#_clipPath_F4W9GkP635I59phimjSWCTxIIPHWhVjj)"
 						><g
 							><rect
 								x="0"
@@ -76,17 +78,9 @@
 					></g
 				></svg
 			>
-
-			<div class="brand-info">
-				<h1 class="brand-name">{brand}</h1>
-				{#if !!brandStatements}
-					<div class="brand-statements">
-						{#each brandStatements as brandStatement}
-							<span class="brand-statement">{brandStatement}</span>
-						{/each}
-					</div>
-				{/if}
-			</div>
+			<p class="name" class:active>
+				{brand}
+			</p>
 		</div>
 		<!-- responsive menu -->
 		<svg
@@ -103,15 +97,14 @@
 			/></svg
 		>
 	</div>
-
-	<ul class="navbar" class:active>
+	<ul class:active>
 		{#each navbarItems as navbarItem}
 			<li
 				class="navbar-item"
-				class:active={$page.path === "#" + navbarItem}
+				class:active={$page.path === "#" + navbarItem.url}
 			>
-				<a sveltekit:prefetch href="${'/' + navbarItem}">
-					{navbarItem}
+				<a class:scrolled={y > scrollMargin} sveltekit:prefetch href="${'/' + navbarItem.url}">
+					{navbarItem.name}
 				</a>
 			</li>
 		{/each}
@@ -120,31 +113,54 @@
 
 <style lang="scss">
 	nav {
-		height: 67px;
-		text-transform: uppercase;
+		height: 6rem;
+
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+
 		position: fixed;
+		top: 2rem;
+		right: 2rem;
+		left: 2rem;
+
 		padding: 2rem;
-		top: 1rem;
-		right: 1rem;
-		left: 1rem;
+		text-transform: uppercase;
+		overflow: hidden;
+		color: white;
+
 		border-radius: 0.5rem;
-		background-color: var(--bg-color);
 		z-index: 1;
-		transition: box-shadow 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+		transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	nav.scrolled,
 	nav.active {
 		box-shadow: var(--box-shadow);
+		background-color: white;
+		color: var(--text-color);
 	}
 	nav.active {
-		height: calc(100% - 6rem);
+		height: calc(100% - 2rem);
+	}
+	ul {
+		opacity: 0;
+		list-style: none;
+
+		display: flex;
+		flex-grow: 1;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: center;
+	}
+	ul.active {
+		opacity: 1;
+		transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	a {
 		text-decoration: none;
+		color: white;
+	}
+	a.scrolled {
 		color: var(--text-color);
 	}
 	.arrow {
@@ -154,37 +170,48 @@
 	.arrow.active {
 		transform: rotate(180deg);
 	}
-	.navbar {
-		// set height to full screen when active whith flex-grow
-		flex-grow: 1;
-		opacity: 0;
-		list-style: none;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-evenly;
-		align-items: center;
-		overflow: hidden;
-	}
-	.navbar.active {
-		opacity: 1;
-		transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-	}
 	.brand-wrapper {
 		width: 100%;
+
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
 		align-items: center;
-		gap: 2rem;
+		justify-content: space-between;
 	}
 	.brand {
 		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
 		align-items: center;
-		gap: 2rem;
+		justify-content: flex-start;
 	}
-	.brand-logo {
-		height: 67px;
+	.logo {
+		height: 2rem;
+		margin-right: 2rem;
+		width: auto;
+	}
+	.name {
+		display: none;
+	}
+
+	@media screen and (min-width: 960px) {
+		nav {
+			height: 6rem;
+			flex-direction: row;
+		}
+		ul {
+			opacity: 1;
+			flex-direction: row;
+		}
+		li {
+			margin-left: 2rem;
+		}
+		.logo {
+			height: 2rem;
+		}
+		.name {
+			font-size: 1rem;
+			display: initial;
+		}
+		.arrow {
+			display: none;
+		}
 	}
 </style>

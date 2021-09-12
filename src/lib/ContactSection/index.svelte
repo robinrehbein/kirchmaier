@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Headline from "../Headline/index.svelte";
+    import Headline from "../util/Headline/index.svelte";
     import { jsonContent } from "../../stores/stores";
     import Flex from "../util/Flex/index.svelte";
     import type { Content } from "src/interfaces/interfaces";
@@ -8,16 +8,13 @@
     import mailIcon from "../../../static/icons/mail.svg";
     import map from "../../../static/map-mock.png";
 
-    const contact = ($jsonContent as Content).body.contact;
+    const contact = ($jsonContent).body.contact;
 
     const iconMapper = {
         phone: phoneIcon,
         fax: faxIcon,
         mail: mailIcon,
     };
-
-    console.log(iconMapper.phone);
-    console.log(phoneIcon);
 </script>
 
 <div class="section-wrapper">
@@ -64,7 +61,7 @@
         margin-top: 2.5rem;
     }
 
-    @media screen and (min-width: 1100px) {
+    @media screen and (min-width: 960px) {
         .contact-data {
             width: 27%; //25%;
             margin-top: auto;

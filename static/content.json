@@ -1,35 +1,40 @@
 {
-  "navbar": {
-    "logo": {
-      "imgUrl": ""
+    "navbar": {
+        "logo": {
+            "imgUrl": ""
+        },
+        "items": [
+            {
+                "name": "LEISTUNGEN",
+                "url": "ourservices"
+            },
+            {
+                "name": "ÜBER",
+                "url": "aboutus"
+            },
+            {
+                "name": "PROJEKTE",
+                "url": "projects"
+            },
+            {
+                "name": "KUNDEN",
+                "url": "customer"
+            },
+            {
+                "name": "KONTAKT",
+                "url": "contact"
+            }
+        ]
     },
-    "items": [
-      {
-        "name": "UNSERE LEISTUNGEN",
-        "url": "#ourservices"
-      },
-      {
-        "name": "ÜBER UNS",
-        "url": "#aboutus"
-      },
-      {
-        "name": "PROJEKTE",
-        "url": "#projects"
-      },
-      {
-        "name": "KUNDEN",
-        "url": "#customer"
-      },
-      {
-        "name": "KONTAKT",
-        "url": "#contact"
-      }
-    ]
-  },
-  "body": {
-    "landingPage": {
-      "imgUrl": ""
-    },
+    "body": {
+        "landingPage": {
+            "heading": "Kirchmaier & Staudacher",
+            "statements": [
+                "Gebäudemanagement",
+                "Immobilienverwaltung",
+                "Projektentwicklung"
+              ]
+          },
     "ourServices": {
       "headline": "UNSERE <b>LEISTUNGEN</b>",
       "subHeadline": "Ein Projekt - Ein Ansprechpartner",
@@ -48,27 +53,6 @@
           "img-url": "url-4",
           "boxHeadline": "MIETINTERESSENTEN",
           "boxText": "Für unsere Mietwohnungen sowie Gewerbeflächen können sich als Mietinteressent gerne für freiwerdende Wohnungen und Büro- oder Verkaufsflächen vormerken lassen. "
-        },
-        {
-          "imgUrl": "url-3",
-          "boxHeadline": "PROJEKTENTWICKLUNG",
-          "boxText": "Bei uns finden Sie die Fachkenntnis, die Sie von einem renommierten Projektentwickler erwarten können. Seit 1993 entwickeln wir Wohnprojekte, Einkaufscenter sowie Reihen- und Doppelhaussiedlungen. Wir sind sowohl am Erwerb von Grundstücken mit und ohne Baurecht interessiert. Ebenso erwerben wir Bestandsimmobilien und Sanierungsobjekte verschiedenster Größenordnungen. Sprechen Sie mit uns."
-        }
-      ]
-    },
-    "about": {
-      "headline": "ÜBER <b>UNS</b>",
-      "subHeadline": "",
-      "boxes": [
-        {
-          "imgUrl": "about-us.jpg",
-          "boxHeadline": "FIRMA",
-          "boxText": "Kirchmaier & Staudacher wurde 1993 von Ralph Kirchmaier und Wolfgang Staudacher gegründet. Anfangs war das Unternehmen als klassische Bauträgergesellschaft tätig. Schwerpunkte waren der Geschosswohnungsbau sowie die Entwicklung und der Bau von Reihen- und Doppelhaussiedlungen. Aber auch Sanierungen und Baulanderschließungen gehörten zum Leistungsspektrum des Unternehmens. Ab 2005 wurde dann überwiegend für den eigenen Immobilienbestand gebaut. Heute entwickeln wir ausschließlich Projekte, die langfristig im Eigentum der Unternehmensgruppe verbleiben. Der Fokus liegt hierbei auf Wohn- und Einzelhandelsimmobilien. Sämtliche Immobilien werden von uns selbst verwaltet und betreut. Wir kümmern uns sowohl um die Vermietung wie auch um das kaufmännische und technische Gebäudemanagement. Auf Grund der gewachsenen Strukturen und unseres Knowhows bieten wir unser Gebäudemanagement sowie die Vermietung und Vermarktung von Immobilien auch als Dienstleistung für Immobilieneigentümer an."
-        },
-        {
-          "imgUrl": "about-us.jpg",
-          "boxHeadline": "TEAM",
-          "boxText": "28 Jahre Erfahrung gepaart mit junger, kompetenter Dynamik. Unser Team  v.l.n.r."
         },
         {
           "imgUrl": "about-us.jpg",

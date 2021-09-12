@@ -1,18 +1,21 @@
 <script lang="ts">
-  import Headline from "../lib/Headline/index.svelte";
-  import Flex from "../lib/util/Flex/index.svelte";
-  import Modal from "../lib/util/Modal/index.svelte";
-  import ContactSection from "../lib/ContactSection/index.svelte";
-  import AboutUsSection from "../lib/AboutUsSection/index.svelte";
-  import { jsonContent } from "../stores/stores";
-  import { scale } from "svelte/transition";
-  import type { Content } from "src/interfaces/interfaces";
+    import Headline from "../lib/util/Headline/index.svelte";
+    import Home from "$lib/Home/index.svelte"
+    import Flex from "../lib/util/Flex/index.svelte";
+    import Modal from "../lib/util/Modal/index.svelte";
+    import ContactSection from "../lib/ContactSection/index.svelte";
+    import AboutUsSection from "../lib/AboutUsSection/index.svelte";
+    import { jsonContent } from "../stores/stores";
+    import { scale } from "svelte/transition";
+    import type { Content } from "src/interfaces/interfaces";
 
   let a = 1;
   let b = 2;
   let showModal = false;
   const ourServices = ($jsonContent as Content).body.ourServices;
 </script>
+
+<Home></Home>
 
 <Flex
   flexDirectionColumn
