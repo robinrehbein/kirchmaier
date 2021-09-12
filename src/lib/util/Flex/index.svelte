@@ -1,108 +1,108 @@
 <script type="ts">
-    /* flexDirection - extend list if needed; row is default. */
-    export let flexDirectionColumn = false;
-    /* flexDirection responsiveness, generally based on switching at 1000px width */
-    export let flexDirectionResponsiveColumnToRow = false;
-    export let flexDirectionResponsiveColumnToRowReverse = false;
-    export let flexDirectionResponsiveRowToColumn = false;
-    export let flexDirectionResponsiveRowToColumnReverse = false;
+  /* flexDirection - extend list if needed; row is default. */
+  export let flexDirectionColumn = false;
+  /* flexDirection responsiveness, generally based on switching at 1000px width */
+  export let flexDirectionResponsiveColumnToRow = false;
+  export let flexDirectionResponsiveColumnToRowReverse = false;
+  export let flexDirectionResponsiveRowToColumn = false;
+  export let flexDirectionResponsiveRowToColumnReverse = false;
 
-    /* justifyContent - extend list if needed */
-    export let justifyContentSpaceBetween = false;
-    export let justifyContentSpaceAround = false;
-    export let justifyContentSpaceEvenly = false;
+  /* justifyContent - extend list if needed */
+  export let justifyContentSpaceBetween = false;
+  export let justifyContentSpaceAround = false;
+  export let justifyContentSpaceEvenly = false;
 
-    /* alignItems - extend list if needed */
-    export let alignItemsCenter = false;
+  /* alignItems - extend list if needed */
+  export let alignItemsCenter = false;
 
-    /* flexWrap; nowrap is default */
-    export let flexWrapWrap = false;
-    export let flexWrapWrapReverse = false;
+  /* flexWrap; nowrap is default */
+  export let flexWrapWrap = false;
+  export let flexWrapWrapReverse = false;
 
-    /* gap between flex elements */
-    export let gap: string = undefined;
+  /* gap between flex elements */
+  export let gap: string = undefined;
 
-    /* custom style */
-    export let style: string = "";
+  /* custom style */
+  export let style: string = "";
 
-    /* styles - note: the class passed has to be made available on a global level or imported to this file directly */
-    let className = "";
-    export { className as class };
+  /* styles - note: the class passed has to be made available on a global level or imported to this file directly */
+  let className = "";
+  export { className as class };
 </script>
 
 <div
-    class={`flex ${className || ""}`}
-    class:flexDirectionColumn
-    class:flexDirectionResponsiveColumnToRow
-    class:flexDirectionResponsiveColumnToRowReverse
-    class:flexDirectionResponsiveRowToColumn
-    class:flexDirectionResponsiveRowToColumnReverse
-    class:justifyContentSpaceBetween
-    class:justifyContentSpaceEvenly
-    class:justifyContentSpaceAround
-    class:alignItemsCenter
-    class:flexWrapWrap
-    class:flexWrapWrapReverse
-    style={`gap: ${gap || "0rem"}; ${style}`}
+  class={`flex ${className}`}
+  class:flexDirectionColumn
+  class:flexDirectionResponsiveColumnToRow
+  class:flexDirectionResponsiveColumnToRowReverse
+  class:flexDirectionResponsiveRowToColumn
+  class:flexDirectionResponsiveRowToColumnReverse
+  class:justifyContentSpaceBetween
+  class:justifyContentSpaceEvenly
+  class:justifyContentSpaceAround
+  class:alignItemsCenter
+  class:flexWrapWrap
+  class:flexWrapWrapReverse
+  style={`gap: ${gap}; ${style}`}
 >
-    <slot />
+  <slot />
 </div>
 
 <style lang="scss">
-    .flex {
-        display: flex;
+  .flex {
+    display: flex;
+  }
+
+  /* flexDirection classes & responsiveness */
+
+  .flexDirectionColumn {
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 960px) {
+    .flexDirectionResponsiveColumnToRow {
+      flex-direction: row;
     }
 
-    /* flexDirection classes & responsiveness */
-
-    .flexDirectionColumn {
-        flex-direction: column;
+    .flexDirectionResponsiveColumnToRowReverse {
+      flex-direction: row-reverse;
+    }
+    .flexDirectionResponsiveRowToColumn {
+      flex-direction: column;
     }
 
-    @media screen and (min-width: 960px) {
-        .flexDirectionResponsiveColumnToRow {
-            flex-direction: row;
-        }
-
-        .flexDirectionResponsiveColumnToRowReverse {
-            flex-direction: row-reverse;
-        }
-        .flexDirectionResponsiveRowToColumn {
-            flex-direction: column;
-        }
-
-        .flexDirectionResponsiveRowToColumnReverse {
-            flex-direction: column-reverse;
-        }   
+    .flexDirectionResponsiveRowToColumnReverse {
+      flex-direction: column-reverse;
     }
+  }
 
-    /* justifyContent classes */
+  /* justifyContent classes */
 
-    .justifyContentSpaceBetween {
-        justify-content: space-between;
-    }
+  .justifyContentSpaceBetween {
+    justify-content: space-between;
+  }
 
-    .justifyContentSpaceEvenly {
-        justify-content: space-evenly;
-    }
+  .justifyContentSpaceEvenly {
+    justify-content: space-evenly;
+  }
 
-    .justifyContentSpaceAround {
-        justify-content: space-around;
-    }
+  .justifyContentSpaceAround {
+    justify-content: space-around;
+  }
 
-    /* alignItems classes */
+  /* alignItems classes */
 
-    .alignItemsCenter {
-        align-items: center;
-    }
+  .alignItemsCenter {
+    align-items: center;
+  }
 
-    /* flexWrap classes */
+  /* flexWrap classes */
 
-    .flexWrapWrap {
-        flex-wrap: wrap;
-    }
+  .flexWrapWrap {
+    flex-wrap: wrap;
+  }
 
-    .flexWrapWrapReverse {
-        flex-wrap: wrap-reverse;
-    }
+  .flexWrapWrapReverse {
+    flex-wrap: wrap-reverse;
+  }
 </style>
