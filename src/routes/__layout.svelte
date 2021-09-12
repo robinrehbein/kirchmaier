@@ -13,7 +13,7 @@
     <meta name="robots" content="noindex" />
 </svelte:head>
 
-<div class="content-wrapper">
+<!-- <div class="content-wrapper"> -->
     <Navbar
         brand={"Kirchmaier & Staudacher"}
         navbarItems={($jsonContent).navbar.items}
@@ -26,7 +26,7 @@
     <div style="height: 1000px;" />
 
     <Footer />
-</div>
+<!-- </div> -->
 
 <style>
     html,
@@ -34,7 +34,7 @@
         font-family: var(--font-primary);
         background: var(--bg-color);
     }
-
+/* 
     .content-wrapper {
         max-width: 1400px;
         margin: auto;
@@ -45,5 +45,5 @@
         .content-wrapper {
             padding: 2rem 2rem;
         }
-    }
+    } */
 </style>

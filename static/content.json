@@ -28,7 +28,12 @@
     },
     "body": {
         "landingPage": {
-            "imgUrl":""
+            "heading": "Kirchmaier & Staudacher",
+            "statements": [
+                "Gebäudemanagement",
+                "Immobilienverwaltung",
+                "Projektentwicklung"
+            ]
         },
         "ourServices": {
             "headline": "UNSERE <b>LEISTUNGEN</b>",

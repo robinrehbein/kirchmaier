@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Headline from "../Headline/index.svelte";
+    import Headline from "../util/Headline/index.svelte";
     import { jsonContent } from "../../stores/stores";
     import Flex from "../util/Flex/index.svelte";
     import type { Content } from "src/interfaces/interfaces";
@@ -15,9 +15,6 @@
         fax: faxIcon,
         mail: mailIcon,
     };
-
-    console.log(iconMapper.phone);
-    console.log(phoneIcon);
 </script>
 
 <div class="section-wrapper">

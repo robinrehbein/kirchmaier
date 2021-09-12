@@ -4,7 +4,7 @@
 :root {
     --background-color: hsl(0, 0%, 98%);
     --primary-color: hsl(50, 50%, 70%);
-    --bg-color: hsl(0, 0%, 100%);
+    --bg-color: #FAFAFA;
     --text-color: black;
     
     --font-primary: "Montserrat";
@@ -21,6 +21,7 @@
 html,
 body {
     font-family: var(--font-primary);
+    background-color: var(--bg-color);
 }
 
 .section-wrapper {

@@ -5,13 +5,14 @@
 	// Navbareintraege aus Datei laden mit Namen und Links
 	export let brand: string;
 	export let navbarItems: Array<NavbarItem>;
+	export let scrollMargin = 100;
 	let y;
 	let active = false;
 </script>
 
 <svelte:window bind:scrollY={y} />
 
-<nav class:scrolled={y > 100} class:active>
+<nav class:scrolled={y > scrollMargin} class:active>
 	<!-- // div with logo Kirchmaier or // -->
 	<div class="brand-wrapper">
 		<div class="brand">
@@ -102,7 +103,7 @@
 				class="navbar-item"
 				class:active={$page.path === "#" + navbarItem.url}
 			>
-				<a sveltekit:prefetch href="${'/' + navbarItem.url}">
+				<a class:scrolled={y > scrollMargin} sveltekit:prefetch href="${'/' + navbarItem.url}">
 					{navbarItem.name}
 				</a>
 			</li>
@@ -118,23 +119,25 @@
 		flex-direction: column;
 
 		position: fixed;
-		top: 1rem;
-		right: 1rem;
-		left: 1rem;
+		top: 2rem;
+		right: 2rem;
+		left: 2rem;
 
 		padding: 2rem;
 		text-transform: uppercase;
 		overflow: hidden;
+		color: white;
 
-		background-color: var(--bg-color);
 		border-radius: 0.5rem;
 		z-index: 1;
 
-		transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+		transition: height 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
 	nav.scrolled,
 	nav.active {
 		box-shadow: var(--box-shadow);
+		background-color: white;
+		color: var(--text-color);
 	}
 	nav.active {
 		height: calc(100% - 2rem);
@@ -155,6 +158,9 @@
 	}
 	a {
 		text-decoration: none;
+		color: white;
+	}
+	a.scrolled {
 		color: var(--text-color);
 	}
 	.arrow {

@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Headline from "../lib/Headline/index.svelte";
+    import Headline from "../lib/util/Headline/index.svelte";
+    import Home from "$lib/Home/index.svelte"
     import Flex from "../lib/util/Flex/index.svelte";
     import Modal from "../lib/util/Modal/index.svelte";
     import ContactSection from "../lib/ContactSection/index.svelte";
@@ -12,6 +13,8 @@
     let showModal = false;
     const ourServices = ($jsonContent as Content).body.ourServices;
 </script>
+
+<Home></Home>
 
 <Flex
     flexDirectionColumn

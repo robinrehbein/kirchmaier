@@ -26,7 +26,8 @@ export interface Body {
 }
 
 export interface LandingPage {
-    imgUrl: string
+    heading: string,
+    statements: Array<string>
 }
 
 export interface OurServices {
