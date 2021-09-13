@@ -21,7 +21,7 @@
 
         <ul>
             {#each services.boxes as card}
-                <IntersectionObserver let:intersecting bottom={-100} className="card-wrapper">
+                <IntersectionObserver let:intersecting bottom={-100} className="card-wrapper" once>
                     <li class:intersecting>
                         <Card headline={card.boxHeadline} text={card.boxText} showImg imgType="img" imgSrc={card.imgUrl} />
                     </li>
@@ -40,7 +40,7 @@
     }
     li {
         opacity: 0;
-        transform: translateY(150px) rotate(2deg);
+        transform: translateY(150px) rotate(1.5deg);
         transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
             transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
             rotate cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
@@ -60,6 +60,9 @@
         }
         :global(.card-wrapper) {
             width: calc(50% - 1.5rem);
+        }
+        :global(.card) {
+            height: 100%;
         }
     }
 </style>

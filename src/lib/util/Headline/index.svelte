@@ -11,7 +11,8 @@
 
 <style lang="scss">
     .headline-wrapper {
-        margin: 4rem 0;
+        // margin: 4rem 0;
+        padding: 11rem 0 4rem 0;
     }
     .headline {
         font-size: 1.6rem;
