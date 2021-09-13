@@ -5,12 +5,17 @@
 
     const heading = $jsonContent.body.landingPage.heading;
     const statements = $jsonContent.body.landingPage.statements;
+
+    let y;
+    let innerHeight;
 </script>
+
+<svelte:window bind:scrollY={y} bind:innerHeight />
 
 <section id="home">
     <Image src={bgImg} alt="" imgType="img" className="bg-image" />
 
-    <div class="wrapper">
+    <div class="wrapper" style="--opacity: {1 - y / (innerHeight / 3)}" class:hidden={1 - y / (innerHeight / 3) <= 0}>
         <h1>{heading}</h1>
         <div class="statements">
             {#each statements as statement}
@@ -29,42 +34,64 @@
     div.wrapper {
         // position: absolute;
         position: fixed;
+        width: 80%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-    }
-    h1,
-    .statements {
-        width: fit-content;
         color: white;
-        // mix-blend-mode: difference;
-        // background-color: whitesmoke;
+        text-align: center;
+        opacity: var(--opacity);
+        transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    }
+    .wrapper.hidden {
+        display: none;;
     }
     h1 {
-        font-size: 5rem;
-        opacity: 1;
-        // font-weight: normal;
-        // color: var(--primary-color);
+        font-size: 11vw;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    h1::after {
+        content: "";
+        position: absolute;
+        left: 15%;
+        top: 105%;
+        // bottom: -50%;
+        // transform: translate(-50%, -50%);
+        width: 70%;
+        height: 6px;
+        background-color: var(--primary-color);
+        border-radius: 0.5rem;
     }
     .statements {
-        opacity: 1;
         display: flex;
-        flex-direction: row;
-        font-size: 2rem;
-        gap: 1rem;
-        // font-weight: bold;
-        // color: var(--primary-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 6vw;
     }
-    .statement::after {
-        content: "-";
-        margin-left: 1rem;
-    }
-    .statement:last-child::after {
-        content: "";
+    .statement {
+        margin-bottom: 0.5rem;
     }
     :global(.bg-image) {
         position: absolute;
         height: 100vh;
         width: 100vw;
+        filter: brightness(0.7);
+    }
+    @media screen and (min-width: 960px) {
+        div.wrapper {
+            white-space: nowrap;
+        }
+        h1 {
+            font-size: 6vw;
+            margin-bottom: 2rem;
+        }
+        .statements {
+            font-size: 2vw;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 </style>

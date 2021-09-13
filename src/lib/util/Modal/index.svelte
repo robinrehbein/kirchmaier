@@ -79,7 +79,7 @@
 		max-height: calc(100vh - 4em);
 		transform: translate(-50%, -50%);
 		padding: 1em;
-		border-radius: 0.2em;
+		border-radius: 0.2rem;
 		background: white;
 	}
 

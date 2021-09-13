@@ -28,9 +28,9 @@
 </IntersectionObserver>
 
 <style lang="scss">
-    img {
-        // background-image: var(--img);
-        // width: 50%;
+    img, 
+    picture,
+    div {
         object-fit: cover   ;
         object-position: center;
     }

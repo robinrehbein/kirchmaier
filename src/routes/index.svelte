@@ -1,9 +1,10 @@
 <script lang="ts">
     import Headline from "../lib/util/Headline/index.svelte";
     import Home from "$lib/Home/index.svelte"
+    import Services from "$lib/Services/index.svelte"
     import Flex from "../lib/util/Flex/index.svelte";
     import Modal from "../lib/util/Modal/index.svelte";
-    import ContactSection from "../lib/ContactSection/index.svelte";
+    import Contact from "../lib/Contact/index.svelte";
     import { jsonContent } from "../stores/stores";
     import { scale } from "svelte/transition";
     import type { Content } from "src/interfaces/interfaces";
@@ -15,6 +16,7 @@
 </script>
 
 <Home></Home>
+<Services></Services>
 
 <Flex
     flexDirectionColumn
@@ -66,7 +68,7 @@
     </Modal>
 {/if}
 
-<ContactSection />
+<Contact />
 
 <p>Body Main</p>
 <p>{a} + {b} = {a + b}</p>

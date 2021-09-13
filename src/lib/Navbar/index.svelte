@@ -86,6 +86,7 @@
 		<svg
 			class="arrow"
 			class:active
+			class:scrolled={y > scrollMargin}
 			on:click={() => (active = !active)}
 			xmlns="http://www.w3.org/2000/svg"
 			height="24px"
@@ -103,7 +104,7 @@
 				class="navbar-item"
 				class:active={$page.path === "#" + navbarItem.url}
 			>
-				<a class:scrolled={y > scrollMargin} sveltekit:prefetch href="${'/' + navbarItem.url}">
+				<a class:scrolled={y > scrollMargin} class:active sveltekit:prefetch href="${'/' + navbarItem.url}">
 					{navbarItem.name}
 				</a>
 			</li>
@@ -113,7 +114,7 @@
 
 <style lang="scss">
 	nav {
-		height: 6rem;
+		height: 5rem;
 
 		display: flex;
 		flex-direction: column;
@@ -123,7 +124,7 @@
 		right: 2rem;
 		left: 2rem;
 
-		padding: 2rem;
+		padding: 1.5rem 2rem;
 		text-transform: uppercase;
 		overflow: hidden;
 		color: white;
@@ -140,7 +141,7 @@
 		color: var(--text-color);
 	}
 	nav.active {
-		height: calc(100% - 2rem);
+		height: calc(100% - 4rem);
 	}
 	ul {
 		opacity: 0;
@@ -163,11 +164,19 @@
 	a.scrolled {
 		color: var(--text-color);
 	}
+	a.active {
+		color: var(--text-color);
+	}
 	.arrow {
 		cursor: pointer;
+		filter: invert(1);
 		transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 	}
+	.arrow.scrolled {
+		filter: invert(0);
+	}
 	.arrow.active {
+		filter: invert(0);
 		transform: rotate(180deg);
 	}
 	.brand-wrapper {
