@@ -2,8 +2,9 @@
   import Headline from "../util/Headline/index.svelte";
   import Flex from "../util/Flex/index.svelte";
   import Modal from "../util/Modal/index.svelte";
+  import Wrapper from "../util/Wrapper/index.svelte";
   import { jsonContent } from "../../stores/stores";
-  import { scale } from "svelte/transition";
+  import { fade } from "svelte/transition";
   import type { Box } from "../../interfaces/interfaces";
 
   const imgBasePath = "../../../static/";
@@ -23,7 +24,7 @@
   };
 </script>
 
-<div class="content-wrapper">
+<Wrapper>
   <Headline>
     <div slot="headline">
       {@html aboutUsContent.headline}
@@ -41,10 +42,10 @@
         flexDirectionResponsiveColumnToRowReverse={!(i % 2 === 0)}
         justifyContentSpaceBetween
         gap="2rem"
-        style="margin-bottom:3rem; cursor:pointer;"
+        style="margin-bottom:4rem; cursor:pointer;"
       >
         <div
-          class="box-text about-us-text-box"
+          class="box-text about-us-box"
           on:click={() => setContentAndShowModal(aboutUsElement, i)}
         >
           <p class="box-headline">{aboutUsElement.boxHeadline}</p>
@@ -55,15 +56,15 @@
         <img
           src={`${imgBasePath}${aboutUsElement.imgUrl}`}
           alt={aboutUsElement.imgUrl}
-          class="img-shadow about-us-image-box"
+          class="img-shadow about-us-box"
           on:click={() => setContentAndShowModal(aboutUsElement, i)}
         />
       </Flex>
     {/each}
   </div>
-</div>
+</Wrapper>
 <div class="about-us-numbers">
-  <div class="content-wrapper">
+  <Wrapper>
     <Flex
       flexDirectionColumn
       flexDirectionResponsiveColumnToRow
@@ -79,11 +80,11 @@
         <span class="line-break" />
       {/each}
     </Flex>
-  </div>
+  </Wrapper>
 </div>
 
 {#if showModal}
-  <Modal on:close={() => (showModal = false)} transition={scale}>
+  <Modal on:close={() => (showModal = false)} transition={fade}>
     <p class="box-headline">{currentModalContent.boxHeadline}</p>
     <Flex
       flexDirectionColumn
@@ -146,7 +147,8 @@
     .line-break {
       display: none;
     }
-    .about-us-text-box {
+
+    .about-us-box {
       width: 40%;
     }
   }
