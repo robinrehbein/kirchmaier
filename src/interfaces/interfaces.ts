@@ -1,7 +1,8 @@
 
 export interface Content {
     navbar: Navbar,
-    body: Body
+    body: Body,
+    legal: Legal
 }
 
 export interface Navbar {
@@ -67,4 +68,19 @@ export interface ContactData {
     text: string,
     icon: string,
     value: string
+}
+
+export interface Legal {
+    imprint: LegalSection,
+    dataProtection: LegalSection,
+    disclaimer: LegalSection
+}
+export interface LegalSection {
+    title: string,
+    content: LegalContentEntry[]
+}
+
+export interface LegalContentEntry {
+    heading: string,
+    text: string
 }

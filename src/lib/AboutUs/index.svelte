@@ -110,6 +110,7 @@
   .about-us-numbers {
     background: var(--primary-color);
     padding: 4rem 0rem;
+    color: var(--background-color);
   }
 
   .about-us-number-card {
@@ -132,7 +133,7 @@
   .line-break {
     width: 40%;
     height: 3px;
-    background-color: var(--text-color);
+    background-color: var(--background-color);
     border-radius: 0.5rem;
   }
   .line-break:last-child {
@@ -141,7 +142,7 @@
 
   @media screen and (min-width: 960px) {
     .about-us-number-card {
-      width: 20%;
+      width: 23%;
     }
 
     .line-break {

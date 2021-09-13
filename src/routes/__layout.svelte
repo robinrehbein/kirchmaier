@@ -1,40 +1,38 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import Navbar from "../lib/Navbar/index.svelte";
-    import Footer from "../lib/Footer/index.svelte";
-	import { jsonContent } from "../stores/stores"
-    import "../app.css";
+  import { onMount } from "svelte";
+  import Navbar from "../lib/Navbar/index.svelte";
+  import Footer from "../lib/Footer/index.svelte";
+  import { jsonContent } from "../stores/stores";
+  import "../app.css";
 
-    // load floating from json
-    onMount(() => {});
+  // load floating from json
+  onMount(() => {});
 </script>
 
 <svelte:head>
-    <meta name="robots" content="noindex" />
+  <meta name="robots" content="noindex" />
 </svelte:head>
 
 <!-- <div class="content-wrapper"> -->
-    <Navbar
-        brand={"Kirchmaier & Staudacher"}
-        navbarItems={($jsonContent).navbar.items}
-    />
+<Navbar
+  brand={"Kirchmaier & Staudacher"}
+  navbarItems={$jsonContent.navbar.items}
+/>
 
-    <main>
-        <slot />
-    </main>
+<main>
+  <slot />
+</main>
 
-    <div style="height: 1000px;" />
+<Footer />
 
-    <Footer />
 <!-- </div> -->
-
 <style>
-    html,
-    body {
-        font-family: var(--font-primary);
-        background: var(--bg-color);
-    }
-/* 
+  html,
+  body {
+    font-family: var(--font-primary);
+    background: var(--bg-color);
+  }
+  /* 
     .content-wrapper {
         max-width: 1400px;
         margin: auto;
