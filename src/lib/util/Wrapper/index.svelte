@@ -7,7 +7,7 @@
 <style lang="scss">
     .wrapped {
         padding: 0 2rem;
-        max-width: 1080px;
+        max-width: 1280px;
         margin: auto;
     }
 </style>

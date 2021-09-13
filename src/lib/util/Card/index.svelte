@@ -15,7 +15,7 @@
     {/if}
     <div class="card-content">
         <h2 class="box-headline headline">{headline}</h2>
-        <p>{text}</p>
+        <p class="box-text">{text}</p>
     </div>
 </div>
 

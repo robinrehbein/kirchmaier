@@ -41,7 +41,7 @@
         padding: 1.5rem;
     }
 
-    @media screen and (min-width: 960px) {
+    @media screen and (min-width: var(--min-width)) {
         .content-wrapper {
             padding: 2rem 2rem;
         }

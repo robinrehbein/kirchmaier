@@ -200,7 +200,7 @@
 		display: none;
 	}
 
-	@media screen and (min-width: 960px) {
+    @media screen and (min-width: 960px) {
 		nav {
 			height: 6rem;
 			flex-direction: row;

@@ -146,24 +146,12 @@
     .line-break {
       display: none;
     }
+    .about-us-text-box {
+      width: 40%;
+    }
   }
 
   .about-us-number-card-hl {
     font-weight: bold;
-  }
-
-  .content-wrapper {
-    max-width: 1400px;
-    margin: auto;
-    padding: 1.5rem;
-  }
-
-  @media screen and (min-width: 960px) {
-    .content-wrapper {
-      padding: 2rem 2rem;
-    }
-    .about-us-text-box {
-      width: 40%;
-    }
   }
 </style>

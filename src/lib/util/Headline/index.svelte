@@ -11,7 +11,6 @@
 
 <style lang="scss">
     .headline-wrapper {
-        // margin: 4rem 0;
         padding: 11rem 0 4rem 0;
     }
     .headline {
@@ -20,7 +19,6 @@
         margin: 0.7rem 0rem;
         width: fit-content;
     }
-
     .headline::after {
         content: "";
         position: absolute;
