@@ -2,11 +2,11 @@
 export interface Content {
     navbar: Navbar,
     body: Body
-} 
+}
 
 export interface Navbar {
     logo: NavbarLogo,
-    items: NavbarItem []
+    items: NavbarItem[]
 }
 
 export interface NavbarLogo {
@@ -14,7 +14,7 @@ export interface NavbarLogo {
 }
 
 export interface NavbarItem {
-    name: string, 
+    name: string,
     url: string
 }
 
@@ -39,7 +39,13 @@ export interface OurServices {
 export interface About {
     headline: string,
     subHeadline: string,
-    boxes: Box[]
+    boxes: Box[],
+    numbers: NumberBox[]
+}
+
+export interface NumberBox {
+    boxNumber: string,
+    boxMetric: string
 }
 
 export interface Contact {
