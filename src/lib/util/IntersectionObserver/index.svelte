@@ -5,6 +5,7 @@
     export let bottom = 0;
     export let left = 0;
     export let right = 0;
+    export let className = undefined;
     let intersecting = false;
     let container;
   
@@ -41,13 +42,8 @@
     });
   </script>
   
-  <style>
-    div {
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+  <style lang="scss"></style>
   
-  <div bind:this={container}>
+  <div bind:this={container} class={className}>
     <slot {intersecting}></slot>
   </div>

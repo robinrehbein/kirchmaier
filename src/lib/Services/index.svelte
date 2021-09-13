@@ -21,7 +21,7 @@
 
         <ul>
             {#each services.boxes as card}
-                <IntersectionObserver let:intersecting bottom={-100}>
+                <IntersectionObserver let:intersecting bottom={-100} className="card-wrapper">
                     <li class:intersecting>
                         <Card headline={card.boxHeadline} text={card.boxText} showImg imgType="img" imgSrc={card.imgUrl} />
                     </li>
@@ -53,6 +53,13 @@
     @media screen and (min-width: 960px) {
         ul {
             flex-direction: row;
+            flex-wrap: wrap;
+        }
+        li {
+            height: 100%;
+        }
+        :global(.card-wrapper) {
+            width: calc(50% - 1.5rem);
         }
     }
 </style>

@@ -15,11 +15,16 @@
 <section id="home">
     <Image src={bgImg} alt="" imgType="img" className="bg-image" />
 
-    <div class="wrapper" style="--opacity: {1 - y / (innerHeight / 3)}" class:hidden={1 - y / (innerHeight / 3) <= 0}>
+    <div
+        class="wrapper"
+        style="--opacity: {1 - y / (innerHeight / 3)}"
+        class:hidden={1 - y / (innerHeight / 3) <= 0}
+    >
         <h1>{heading}</h1>
         <div class="statements">
             {#each statements as statement}
                 <span class="statement">{statement}</span>
+                <span class="bullet">-</span>
             {/each}
         </div>
     </div>
@@ -44,7 +49,7 @@
         transition: opacity cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     }
     .wrapper.hidden {
-        display: none;;
+        display: none;
     }
     h1 {
         font-size: 11vw;
@@ -73,6 +78,9 @@
     .statement {
         margin-bottom: 0.5rem;
     }
+    .bullet {
+        display: none;
+    }
     :global(.bg-image) {
         position: absolute;
         height: 100vh;
@@ -92,6 +100,12 @@
             flex-direction: row;
             justify-content: space-between;
             align-items: center;
+        }
+        .bullet {
+            display: initial;
+        }
+        .bullet:last-child {
+            display: none;
         }
     }
 </style>
