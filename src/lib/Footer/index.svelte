@@ -115,7 +115,7 @@
 
     @media screen and (min-width: 960px) {
         .line-break {
-            width: 11%;
+            width: 10%;
         }
     }
     .footer-link {

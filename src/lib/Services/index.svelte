@@ -23,7 +23,7 @@
             {#each services.boxes as card}
                 <IntersectionObserver let:intersecting bottom={-100} className="card-wrapper" once>
                     <li class:intersecting>
-                        <Card headline={card.boxHeadline} text={card.boxText} showImg imgType="img" imgSrc={card.imgUrl} />
+                        <Card headline={card.boxHeadline} text={card.boxText} showImg imgType="img" imgSrc={card.imgUrl} cropText />
                     </li>
                 </IntersectionObserver>
             {/each}
@@ -59,6 +59,7 @@
             height: 100%;
         }
         :global(.card-wrapper) {
+            margin: 0 auto;
             width: calc(50% - 1.5rem);
         }
         :global(.card) {

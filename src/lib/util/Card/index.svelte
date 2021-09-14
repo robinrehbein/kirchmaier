@@ -6,6 +6,7 @@
     export let imgAlt = undefined;
     export let headline;
     export let text;
+    export let cropText = false;
     // export let imgClassName = undefined;
 </script>
 
@@ -15,7 +16,7 @@
     {/if}
     <div class="card-content">
         <h2 class="box-headline headline">{headline}</h2>
-        <p class="box-text">{text}</p>
+        <p class="box-text" class:cropText>{@html text}</p>
     </div>
 </div>
 
@@ -34,10 +35,27 @@
     p {
         text-align: justify;
     }
+    .cropText {
+        display: -webkit-box;
+        max-height: 16rem;
+        -webkit-line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.625rem;
+    }
+    @media screen and (min-width: 960px) {
+        .cropText {
+            max-height: 8rem;
+            -webkit-line-clamp: 5;
+        }
+    }
     :global(.img) {
         border-radius: 0.5rem;
         margin-bottom: 2rem;
         width: 100%;
+        max-height: 300px;
         object-fit: cover;
+        object-position: top;
     }
 </style>

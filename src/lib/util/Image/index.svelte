@@ -3,10 +3,10 @@
     import IntersectionObserver from "$lib/util/IntersectionObserver/index.svelte";
 
     type type = "img" | "picture" | "background";
+    export let className: string = undefined;
     export let alt: string = undefined;
     export let src: string;
-    export let imgType: type;
-    export let className: string;
+    export let imgType: type = "img";
 </script>
 
 <IntersectionObserver let:intersecting>
@@ -31,7 +31,8 @@
     img, 
     picture,
     div {
-        object-fit: cover   ;
-        object-position: center;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 0.5rem;
     }
 </style>
