@@ -71,6 +71,11 @@ body {
   line-height: 1.625rem;
 }
 
+.modal-text {
+  height: 300px;
+  overflow-y: scroll;
+}
+
 .img-shadow {
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
