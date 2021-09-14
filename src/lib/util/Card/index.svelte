@@ -12,7 +12,7 @@
 
 <div class="card">
     {#if showImg}
-        <Image src={imgSrc} alt={imgAlt} {imgType} className="img" />
+        <Image src={imgSrc} alt={imgAlt} {imgType} className="card-img" />
     {/if}
     <div class="card-content">
         <h2 class="box-headline headline">{headline}</h2>
@@ -50,12 +50,12 @@
             -webkit-line-clamp: 5;
         }
     }
-    :global(.img) {
+    :global(.card-img) {
         border-radius: 0.5rem;
         margin-bottom: 2rem;
         width: 100%;
         max-height: 300px;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
     }
 </style>

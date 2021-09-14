@@ -96,12 +96,14 @@
     }
 
     .content {
-        padding: 2rem;
+        margin: 2rem 2rem 0 2rem;
         overflow-y: scroll;
+        max-height: 35vh;
     }
 
     .button {
-        // margin: 2rem;
+        margin: 2rem;
+        width: calc(100% - 4rem);
     }
 
     @media screen and (min-width: 960px) {

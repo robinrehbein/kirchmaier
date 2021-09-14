@@ -69,6 +69,7 @@
             src={`${imgBasePath}${currentModalContent.imgUrl}`}
             alt={currentModalContent.imgUrl}
             slot="img"
+            className="modal-img"
         />
         <p class="box-headline">{currentModalContent.boxHeadline}</p>
         <div class="box-text modal-text">
@@ -177,7 +178,13 @@
         opacity: 1;
         transform: translateY(0) rotate(0);
     }
-
+    :global(.modal-img) {
+        border-radius: 0.5rem;
+        width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+        object-position: center;
+    }
     @media screen and (min-width: 960px) {
         ul {
             flex-direction: row;

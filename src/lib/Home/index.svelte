@@ -58,7 +58,7 @@
     #home {
         position: relative;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
     }
     div.wrapper {
         // position: absolute;
@@ -119,8 +119,8 @@
     }
     :global(.bg-image) {
         position: absolute;
-        height: 100vh;
-        width: 100vw;
+        height: 100%;
+        width: 100%;
         filter: brightness(0.7);
     }
     @media screen and (min-width: 960px) {
