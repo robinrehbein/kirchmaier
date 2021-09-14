@@ -125,8 +125,8 @@
       ]
     }
   },
-  "legal": {
-    "imprint": {
+  "legal": [
+    {
       "title": "Imprint",
       "content": [
         {
@@ -135,11 +135,11 @@
         },
         {
           "heading": "Contact info",
-          "text": "Telephone: 015735511167 <br/> E-Mail: me@andreas-lemberger.de"
+          "text": "Telephone: 015735511167 <br/> E-Mail: info@kirchmaier-staudacher.de"
         }
       ]
     },
-    "dataProtection": {
+    {
       "title": "Data Protection",
       "content": [
         {
@@ -156,7 +156,7 @@
         }
       ]
     },
-    "disclaimer": {
+    {
       "title": "Disclaimer",
       "content": [
         {
@@ -173,5 +173,5 @@
         }
       ]
     }
-  }
+  ]
 }

@@ -1,9 +1,21 @@
 <script lang="ts">
   import Flex from "../util/Flex/index.svelte";
   import Wrapper from "../util/Wrapper/index.svelte";
+  import Modal from "../util/Modal/index.svelte";
   import { jsonContent } from "../../stores/stores";
+  import type { LegalSection } from "../../interfaces/interfaces";
+  import { fade } from "svelte/transition";
 
-  const legalContent = $jsonContent.legal;
+  const legalSections = $jsonContent.legal;
+  let showModal = false;
+  let currentModalContent: LegalSection = {
+    title: "",
+    content: [],
+  };
+  const setContentAndShowModal = (legalElement: LegalSection) => {
+    currentModalContent = legalElement;
+    showModal = true;
+  };
 </script>
 
 <footer>
@@ -21,10 +33,15 @@
         alignItemsCenter
         gap="1rem"
       >
-        <!-- open in modal -->
-        <a class="footer-link" href="">Imprint</a>
-        <a class="footer-link" href="">Data Protection</a>
-        <a class="footer-link" href="">Disclaimer</a>
+        {#each legalSections as legalElement}
+          <!-- open in modal -->
+          <div
+            class="footer-link"
+            on:click={() => setContentAndShowModal(legalElement)}
+          >
+            {legalElement.title}
+          </div>
+        {/each}
       </Flex>
       <span class="line-break" />
       <p>
@@ -56,6 +73,19 @@
     </Flex>
   </Wrapper>
 </footer>
+{#if showModal}
+  <Modal on:close={() => (showModal = false)} transition={fade}>
+    <h2>{currentModalContent.title}</h2>
+    {#each currentModalContent.content as contentElement}
+      <div class="legal-content-wrapper">
+        <p class="box-headline">{contentElement.heading}</p>
+        <div class="box-text">
+          {@html contentElement.text}
+        </div>
+      </div>
+    {/each}
+  </Modal>
+{/if}
 
 <style lang="scss">
   footer {
@@ -77,11 +107,18 @@
       width: 18%;
     }
   }
-
   .footer-link {
     color: var(--background-color);
     text-decoration: none !important;
     cursor: pointer;
     font-weight: bold;
+  }
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .legal-content-wrapper {
+    margin-bottom: 2rem;
   }
 </style>

@@ -17,7 +17,6 @@
   };
   let currentIndex: number = 0;
   const setContentAndShowModal = (aboutUsElement: Box, index: number) => {
-    console.log("remmo");
     currentModalContent = aboutUsElement;
     currentIndex = index;
     showModal = true;

@@ -53,7 +53,7 @@
     <slot />
 
     <!-- svelte-ignore a11y-autofocus -->
-    <button class="button" autofocus on:click={close}>Schliesse Sesam</button>
+    <button class="button" autofocus on:click={close}>Schließen</button>
   </div>
 </div>
 
