@@ -23,6 +23,7 @@ export interface Body {
     landingPage: LandingPage,
     ourServices: OurServices,
     about: About,
+    references: References,
     contact: Contact
 }
 
@@ -47,6 +48,18 @@ export interface About {
 export interface NumberBox {
     boxNumber: string,
     boxMetric: string
+}
+
+export interface References {
+    headline: string,
+    subHeadline: string,
+    projects: Project[]
+}
+
+export interface Project {
+    projectName: string,
+    mainPictureName: string,
+    galleryPictureNames: string
 }
 
 export interface Contact {

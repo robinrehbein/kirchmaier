@@ -100,6 +100,37 @@
         }
       ]
     },
+    "references": {
+      "headline": "UNSERE <b>REFERENZEN</b>",
+      "subHeadline": "Ein Spiegel über 25 Jahre erfolgreicher Projektarbeit",
+      "projects": [
+        {
+          "projectName": "Headquarters",
+          "mainPictureName": "2021_06_18_kirchmaier_0327.jpg",
+          "galleryPictureNames": "2021_06_18_kirchmaier_0327.jpg,2021_06_18_kirchmaier_0230.jpg,2021_06_18_kirchmaier_0286.jpg,2021_06_18_kirchmaier_0290.jpg,2021_06_18_kirchmaier_0385.jpg"
+        },
+        {
+          "projectName": "Rewe",
+          "mainPictureName": "2021_06_18_kirchmaier_0065.jpg",
+          "galleryPictureNames": "2021_06_18_kirchmaier_0065.jpg,2021_06_18_kirchmaier_0083.jpg"
+        },
+        {
+          "projectName": "Salgo",
+          "mainPictureName": "2021_06_18_kirchmaier_0022.jpg",
+          "galleryPictureNames": "2021_06_18_kirchmaier_0022.jpg,2021_06_18_kirchmaier_0004.jpg,2021_06_18_kirchmaier_0065.jpg"
+        },
+        {
+          "projectName": "Haus der Mitte",
+          "mainPictureName": "2021_06_18_kirchmaier_0428.jpg",
+          "galleryPictureNames": "2021_06_18_kirchmaier_0428.jpg"
+        },
+        {
+          "projectName": "Some other building",
+          "mainPictureName": "2021_06_18_kirchmaier_0436.jpg",
+          "galleryPictureNames": "2021_06_18_kirchmaier_0436.jpg"
+        }
+      ]
+    },
     "contact": {
       "headline": "<b>KONTAKT</b>DATEN",
       "subHeadline": "Gerne beantworten wir Ihre Fragen",
