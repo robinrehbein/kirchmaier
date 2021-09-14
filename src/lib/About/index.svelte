@@ -25,8 +25,8 @@
     };
 </script>
 
-<Wrapper>
-    <section id="about">
+<section id="about">
+    <Wrapper>
         <Headline>
             <div slot="headline">
                 {@html about.headline}
@@ -37,7 +37,7 @@
         </Headline>
 
         <ul>
-            {#each about.boxes as card, i}
+            {#each about.boxes as card}
                 <IntersectionObserver
                     let:intersecting
                     bottom={-100}
@@ -46,6 +46,7 @@
                 >
                     <li
                         class:intersecting
+                        class="about-box"
                         on:click={() => setContentAndShowModal(card)}
                     >
                         <Card
@@ -60,8 +61,19 @@
                 </IntersectionObserver>
             {/each}
         </ul>
-    </section>
-</Wrapper>
+    </Wrapper>
+    <ul class="numbers">
+        {#each about.numbers as number}
+            <IntersectionObserver let:intersecting bottom={-100} once>
+                <li class="number" class:intersecting>
+                    <h2>{number.boxNumber}</h2>
+                    <p>{number.boxMetric}</p>
+                </li>
+            </IntersectionObserver>
+            <span class="line-break" />
+        {/each}
+    </ul>
+</section>
 
 {#if showModal}
     <Modal on:close={() => (showModal = false)} transition={scale}>
@@ -78,89 +90,11 @@
     </Modal>
 {/if}
 
-<!-- <Wrapper>
-    <Headline>
-        <div slot="headline">
-            {@html aboutUsContent.headline}
-        </div>
-        <div slot="sub-headline">
-            {@html aboutUsContent.subHeadline}
-        </div>
-    </Headline>
-
-    <div>
-        {#each aboutUsContent.boxes as aboutUsElement, i}
-            <Flex
-                flexDirectionColumn
-                flexDirectionResponsiveColumnToRow={i % 2 === 0}
-                flexDirectionResponsiveColumnToRowReverse={!(i % 2 === 0)}
-                justifyContentSpaceBetween
-                gap="2rem"
-                style="margin-bottom:4rem; cursor:pointer;"
-            >
-            <img
-                src={`${imgBasePath}${aboutUsElement.imgUrl}`}
-                alt={aboutUsElement.imgUrl}
-                class="img-shadow about-us-box"
-                on:click={() => setContentAndShowModal(aboutUsElement, i)}
-            />
-                <div
-                    class="box-text about-us-box"
-                    on:click={() => setContentAndShowModal(aboutUsElement, i)}
-                >
-                    <p class="box-headline">{aboutUsElement.boxHeadline}</p>
-                    <div class="crop-after-three-lines">
-                        {@html aboutUsElement.boxText}
-                    </div>
-                </div>
-            </Flex>
-        {/each}
-    </div>
-</Wrapper>
-<div class="about-us-numbers">
-    <Wrapper>
-        <Flex
-            flexDirectionColumn
-            flexDirectionResponsiveColumnToRow
-            justifyContentSpaceBetween
-            alignItemsCenter
-            gap="3rem"
-        >
-            {#each aboutUsContent.numbers as numberEntry}
-                <div class="about-us-number-card">
-                    <div class="about-us-number-card-hl">
-                        {numberEntry.boxNumber}
-                    </div>
-                    <div>{numberEntry.boxMetric}</div>
-                </div>
-                <span class="line-break" />
-            {/each}
-        </Flex>
-    </Wrapper>
-</div>
-
-{#if showModal}
-    <Modal on:close={() => (showModal = false)} transition={fade}>
-        <p class="box-headline">{currentModalContent.boxHeadline}</p>
-        <Flex
-            flexDirectionColumn
-            flexDirectionResponsiveColumnToRowReverse
-            justifyContentSpaceBetween
-            class="flex-gap"
-            on:click={() => (showModal = false)}
-        >
-            <img
-                src={`${imgBasePath}${currentModalContent.imgUrl}`}
-                alt={currentModalContent.imgUrl}
-                class="img-shadow"
-            />
-            <div class="box-text modal-text">
-                {@html currentModalContent.boxText}
-            </div>
-        </Flex>
-    </Modal>
-{/if} -->
 <style lang="scss">
+    h2,
+    p {
+        text-align: center;
+    }
     ul {
         display: flex;
         flex-direction: column;
@@ -185,6 +119,38 @@
         object-fit: cover;
         object-position: center;
     }
+
+    .numbers {
+        font-size: 1.7rem;
+        line-height: 3rem;
+        margin-top: 4rem;
+        padding: 4rem;
+        background-color: var(--primary-color);
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    li.number {
+        color: white;
+    }
+
+    // li.number:hover {
+    //     box-shadow: var(--box-shadow-dark);
+    // }
+
+    span.line-break {
+        opacity: 1;
+        transform: translateY(0) rotate(0);
+        width: 15%;
+        height: 2px;
+        background-color: white;
+        border-radius: 0.5rem;
+    }
+
+    span.line-break:last-child {
+        display: none;
+    }
+
     @media screen and (min-width: 960px) {
         ul {
             flex-direction: row;
@@ -193,74 +159,12 @@
         li {
             height: 100%;
         }
+        span.line-break {
+            display: none;
+        }
         :global(.card-wrapper) {
             margin: 0 auto;
             width: calc(50% - 1.5rem);
         }
-        :global(.card) {
-            height: 100%;
-        }
     }
-
-    // .about-us-numbers {
-    //     background: var(--primary-color);
-    //     padding: 4rem 0rem;
-    //     color: var(--background-color);
-    // }
-
-    // .about-us-number-card {
-    //     width: 85%;
-    //     padding: 1.5rem;
-    //     border-radius: 1rem;
-    //     text-align: center;
-    //     font-size: 1.7rem;
-    //     line-height: 1.5;
-    //     transition: all ease-in-out 0.25s;
-    //     position: relative;
-    // }
-
-    // .about-us-number-card:hover {
-    //     background: var(--secondary-color);
-    //     box-shadow: var(--box-shadow-dark);
-    //     transform: scale(1.03);
-    // }
-
-    // .line-break {
-    //     width: 15%;
-    //     height: 2px;
-    //     background-color: var(--background-color);
-    //     border-radius: 0.5rem;
-    // }
-
-    // .line-break:last-child {
-    //     display: none;
-    // }
-
-    // .about-us-number-card-hl {
-    //     font-weight: bold;
-    // }
-
-    // .flex-gap {
-    //     gap: 2rem;
-    //     margin-bottom: 3rem;
-    //     cursor: pointer;
-    // }
-
-    // @media screen and (min-width: 960px) {
-    //     .about-us-number-card {
-    //         width: 23%;
-    //     }
-
-    //     .line-break {
-    //         display: none;
-    //     }
-
-    //     .about-us-box {
-    //         width: 40%;
-    //         margin: auto 0;
-    //     }
-    //     .flex-gap {
-    //         gap: 4rem;
-    //     }
-    // }
 </style>

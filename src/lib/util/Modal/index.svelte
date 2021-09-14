@@ -89,7 +89,7 @@
         left: 50%;
         top: 50%;
         max-height: calc(100vh - 4rem);
-        max-width: calc(100vw - 4rem);
+        width: calc(100vw - 4rem);
         transform: translate(-50%, -50%);
         border-radius: 0.5rem;
         background: white;

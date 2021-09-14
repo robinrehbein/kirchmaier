@@ -46,15 +46,15 @@
     }
     @media screen and (min-width: 960px) {
         .cropText {
-            max-height: 8rem;
-            -webkit-line-clamp: 5;
+            max-height: 11rem;
+            -webkit-line-clamp: 7;
         }
     }
     :global(.card-img) {
         border-radius: 0.5rem;
         margin-bottom: 2rem;
         width: 100%;
-        max-height: 300px;
+        max-height: 17rem;
         object-fit: cover;
         object-position: center;
     }
