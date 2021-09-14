@@ -111,8 +111,8 @@
         },
         {
           "projectName": "Rewe",
-          "mainPictureName": "2021_06_18_kirchmaier_0065.jpg",
-          "galleryPictureNames": "2021_06_18_kirchmaier_0065.jpg,2021_06_18_kirchmaier_0083.jpg"
+          "mainPictureName": "2021_06_18_kirchmaier_0083.jpg",
+          "galleryPictureNames": "2021_06_18_kirchmaier_0083.jpg,2021_06_18_kirchmaier_0097.jpg"
         },
         {
           "projectName": "Salgo",
@@ -161,7 +161,7 @@
       "title": "Imprint",
       "content": [
         {
-          "heading": "Information in accordance with Section 5 TMG",
+          "heading": "Information in accordance <br/> with Section 5 TMG",
           "text": "Andreas Lemberger <br/> Gerokstraße 11 <br/> 71665 Vaihingen an der Enz"
         },
         {

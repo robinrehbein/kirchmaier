@@ -42,9 +42,14 @@
 
 <style lang="scss">
   .reference-box {
-    width: calc(50% - 1.5rem);
     box-shadow: var(--box-shadow);
     background: white;
     border-radius: 0.5rem;
+  }
+
+  @media screen and (min-width: 960px) {
+    .reference-box {
+      width: calc(50% - 1.5rem);
+    }
   }
 </style>
