@@ -21,7 +21,7 @@ export interface NavbarItem {
 
 export interface Body {
     landingPage: LandingPage,
-    ourServices: OurServices,
+    services: Services,
     about: About,
     references: References,
     contact: Contact
@@ -32,7 +32,7 @@ export interface LandingPage {
     statements: Array<string>
 }
 
-export interface OurServices {
+export interface Services {
     headline: string,
     subHeadline: string,
     boxes: Box[]
@@ -58,6 +58,7 @@ export interface References {
 
 export interface Project {
     projectName: string,
+    text: string,
     mainPictureName: string,
     galleryPictureNames: string
 }

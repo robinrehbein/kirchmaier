@@ -32,23 +32,23 @@
     <div class="mouse" style="--opacity: {1 - y / (innerHeight / 3)}">
         <a href="#services">
             <svg
-            id="Ebene_1"
-            data-name="Ebene 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 42"
-            ><defs
-            ><style>
-                    .cls-1 {
-                        fill-rule: evenodd;
-                    }
+                id="Ebene_1"
+                data-name="Ebene 1"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 42"
+                ><defs
+                    ><style>
+                        .cls-1 {
+                            fill-rule: evenodd;
+                        }
                     </style></defs
-            ><title>mouse</title><path
-            class="cls-1"
-            d="M2,12H2V30a10,10,0,1,0,20,0V12A10,10,0,1,0,2,12ZM0,12a12,12,0,1,1,24,0V30A12,12,0,1,1,0,30V12Z"
-            /><path
-            class="cls-1"
-            d="M11,7v4a1,1,0,0,0,2,0V7a1,1,0,0,0-2,0Z"
-            /></svg
+                ><title>mouse</title><path
+                    class="cls-1"
+                    d="M2,12H2V30a10,10,0,1,0,20,0V12A10,10,0,1,0,2,12ZM0,12a12,12,0,1,1,24,0V30A12,12,0,1,1,0,30V12Z"
+                /><path
+                    class="cls-1"
+                    d="M11,7v4a1,1,0,0,0,2,0V7a1,1,0,0,0-2,0Z"
+                /></svg
             >
         </a>
     </div>
@@ -88,7 +88,7 @@
         // bottom: -50%;
         // transform: translate(-50%, -50%);
         width: 70%;
-        height: 6px;
+        height: 0.25rem;
         background-color: var(--primary-color);
         border-radius: 0.5rem;
     }
@@ -146,13 +146,13 @@
     }
     @keyframes moveDown {
         0% {
-        transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
         50% {
-        transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
         }
         100% {
-        transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
     }
 </style>

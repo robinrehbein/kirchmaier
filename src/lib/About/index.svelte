@@ -5,7 +5,7 @@
     import Wrapper from "../util/Wrapper/index.svelte";
     import Headline from "../util/Headline/index.svelte";
     import IntersectionObserver from "$lib/util/IntersectionObserver/index.svelte";
-    import { fade, scale } from "svelte/transition";
+    import { fade, crossfade, fly, scale } from "svelte/transition";
     import { jsonContent } from "../../stores/stores";
 
     const about = $jsonContent.body.about;
@@ -77,12 +77,13 @@
 
 {#if showModal}
     <Modal on:close={() => (showModal = false)} transition={scale}>
-        <Image
-            src={`${imgBasePath}${currentModalContent.imgUrl}`}
-            alt={currentModalContent.imgUrl}
-            slot="img"
-            className="modal-img"
-        />
+        <div slot="img">
+            <Image
+                src={`${imgBasePath}${currentModalContent.imgUrl}`}
+                alt={currentModalContent.imgUrl}
+                className="modal-img"
+            />
+        </div>
         <p class="box-headline">{currentModalContent.boxHeadline}</p>
         <div class="box-text modal-text">
             {@html currentModalContent.boxText}
@@ -91,10 +92,6 @@
 {/if}
 
 <style lang="scss">
-    h2,
-    p {
-        text-align: center;
-    }
     ul {
         display: flex;
         flex-direction: column;
@@ -124,19 +121,25 @@
         font-size: 1.7rem;
         line-height: 3rem;
         margin-top: 4rem;
-        padding: 4rem;
+        padding: 3rem;
         background-color: var(--primary-color);
         align-items: center;
+        text-align: center;
         justify-content: space-around;
     }
 
     li.number {
         color: white;
+        border-radius: 0.5rem;
+        padding: 2rem;
+        transition: box-shadow cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
+            transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     }
 
-    // li.number:hover {
-    //     box-shadow: var(--box-shadow-dark);
-    // }
+    li.number:hover {
+        box-shadow: var(--box-shadow-dark);
+        transform: scale(1.1);
+    }
 
     span.line-break {
         opacity: 1;
@@ -161,6 +164,9 @@
         }
         span.line-break {
             display: none;
+        }
+        .numbers {
+            padding: 4rem;
         }
         :global(.card-wrapper) {
             margin: 0 auto;

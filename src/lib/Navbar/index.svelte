@@ -104,7 +104,7 @@
 				class="navbar-item"
 				class:active={$page.path === "#" + navbarItem.url}
 			>
-				<a class:scrolled={y > scrollMargin} class:active sveltekit:prefetch href="${'/' + navbarItem.url}">
+				<a class:scrolled={y > scrollMargin} class:active sveltekit:prefetch href="{'/#' + navbarItem.url}">
 					{navbarItem.name}
 				</a>
 			</li>

@@ -1,6 +1,8 @@
 <script lang="ts">
     import { createEventDispatcher, onDestroy } from "svelte";
-    import { fade } from "svelte/transition";
+    import { fade, fly } from "svelte/transition";
+    // transition:fly="{{ y: 150, duration: 250 }}"
+    // transition:crossfade
 
     // boolean here right as type?
     const dispatch = createEventDispatcher<{ close: boolean }>();
@@ -46,10 +48,7 @@
 
 <svelte:window on:keydown={handle_keydown} />
 
-<div 
-    class="modal-background" 
-    on:click={close} transition:bgTransition
->
+<div class="modal-background" on:click={close} transition:bgTransition>
     <div
         class="modal"
         role="dialog"
@@ -58,7 +57,7 @@
         transition:transition
     >
         <!-- Show Img  -->
-        <slot name="img"/>
+        <slot name="img" />
 
         <!-- wrap content -->
         <div class="content">
@@ -68,8 +67,9 @@
             <slot />
             <!-- svelte-ignore a11y-autofocus -->
         </div>
-        
-        <button class="button" autofocus on:click={close}>Schließen</button>
+
+        <!-- <button class="button" autofocus on:click={close}>Schließen</button> -->
+        <button class="button" on:click={close}>Schließen</button>
     </div>
 </div>
 
@@ -99,6 +99,7 @@
         margin: 2rem 2rem 0 2rem;
         overflow-y: scroll;
         max-height: 35vh;
+        padding-right: 0.5rem;
     }
 
     .button {
@@ -107,5 +108,10 @@
     }
 
     @media screen and (min-width: 960px) {
+        .modal {
+            max-height: calc(100vh - 4rem);
+            width: auto;
+            max-width: calc(100vw - 4rem);
+        }
     }
 </style>

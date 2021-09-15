@@ -6,11 +6,11 @@
     "items": [
       {
         "name": "LEISTUNGEN",
-        "url": "ourservices"
+        "url": "services"
       },
       {
         "name": "ÜBER",
-        "url": "aboutus"
+        "url": "about"
       },
       {
         "name": "PROJEKTE",
@@ -106,26 +106,31 @@
       "projects": [
         {
           "projectName": "Headquarters",
+          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
           "mainPictureName": "2021_06_18_kirchmaier_0327.jpg",
           "galleryPictureNames": "2021_06_18_kirchmaier_0327.jpg,2021_06_18_kirchmaier_0230.jpg,2021_06_18_kirchmaier_0286.jpg,2021_06_18_kirchmaier_0290.jpg,2021_06_18_kirchmaier_0385.jpg"
         },
         {
           "projectName": "Rewe",
+          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
           "mainPictureName": "2021_06_18_kirchmaier_0083.jpg",
           "galleryPictureNames": "2021_06_18_kirchmaier_0083.jpg,2021_06_18_kirchmaier_0097.jpg"
         },
         {
           "projectName": "Salgo",
+          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
           "mainPictureName": "2021_06_18_kirchmaier_0022.jpg",
           "galleryPictureNames": "2021_06_18_kirchmaier_0022.jpg,2021_06_18_kirchmaier_0004.jpg,2021_06_18_kirchmaier_0065.jpg"
         },
         {
           "projectName": "Haus der Mitte",
+          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
           "mainPictureName": "2021_06_18_kirchmaier_0428.jpg",
           "galleryPictureNames": "2021_06_18_kirchmaier_0428.jpg"
         },
         {
           "projectName": "Some other building",
+          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
           "mainPictureName": "2021_06_18_kirchmaier_0436.jpg",
           "galleryPictureNames": "2021_06_18_kirchmaier_0436.jpg"
         }

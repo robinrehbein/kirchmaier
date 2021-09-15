@@ -28,13 +28,14 @@
     .card {
         box-shadow: var(--box-shadow);
         border-radius: 0.5rem;
+        cursor: pointer;
     }
     .card-content {
         padding: 0 2rem 2rem 2rem;
     }
     .headline {
         font-size: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 
     .headline-no-margin {
@@ -56,7 +57,7 @@
         border-radius: 0.5rem;
         margin-bottom: 2rem;
         width: 100%;
-        max-height: 300px;
+        // max-height: 250px;
         object-fit: cover;
         object-position: center;
     }
