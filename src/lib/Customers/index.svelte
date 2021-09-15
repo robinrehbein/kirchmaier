@@ -11,35 +11,37 @@
     const imageFileNames = customersContent.customerList.split(",");
 </script>
 
-<Wrapper>
-    <Headline>
-        <div slot="headline">
-            {@html customersContent.headline}
-        </div>
-        <div slot="sub-headline">
-            {@html customersContent.subHeadline}
-        </div>
-    </Headline>
-    <ul>
-        <Flex
-            flexDirectionResponsiveColumnToRow
-            alignItemsCenter
-            flexWrapWrap
-            class="section-content-wrapper customer-list"
-        >
-            {#each imageFileNames as imageFileName}
-                <li class="customer-list-element">
-                    <img
-                        src={`${imgBasePath}${imageFileName}`}
-                        class="customer-list-image"
-                        alt={imageFileName}
-                        title={imageFileName.split(".")[0]}
-                    />
-                </li>
-            {/each}
-        </Flex>
-    </ul>
-</Wrapper>
+<section id="customer">
+    <Wrapper>
+        <Headline>
+            <div slot="headline">
+                {@html customersContent.headline}
+            </div>
+            <div slot="sub-headline">
+                {@html customersContent.subHeadline}
+            </div>
+        </Headline>
+        <ul>
+            <Flex
+                flexDirectionResponsiveColumnToRow
+                alignItemsCenter
+                flexWrapWrap
+                class="section-content-wrapper customer-list"
+            >
+                {#each imageFileNames as imageFileName}
+                    <li class="customer-list-element">
+                        <img
+                            src={`${imgBasePath}${imageFileName}`}
+                            class="customer-list-image"
+                            alt={imageFileName}
+                            title={imageFileName.split(".")[0]}
+                        />
+                    </li>
+                {/each}
+            </Flex>
+        </ul>
+    </Wrapper>
+</section>
 
 <style lang="scss">
     ul {
