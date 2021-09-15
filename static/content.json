@@ -136,6 +136,11 @@
         }
       ]
     },
+    "customers": {
+        "headline": "UNSERE <b>KUNDEN</b>",
+        "subHeadline": "Irgendeine subheadline",
+        "customerList": "html5.svg,java.svg,javascript.svg,nodejs.svg,php.svg,python.svg,R.svg,react.svg,spring.svg,typescript.svg,aws.svg"
+    },
     "contact": {
       "headline": "<b>KONTAKT</b>DATEN",
       "subHeadline": "Gerne beantworten wir Ihre Fragen",

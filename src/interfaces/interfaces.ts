@@ -24,6 +24,7 @@ export interface Body {
     services: Services,
     about: About,
     references: References,
+    customers: Customers,
     contact: Contact
 }
 
@@ -61,6 +62,12 @@ export interface Project {
     text: string,
     mainPictureName: string,
     galleryPictureNames: string
+}
+
+export interface Customers {
+    headline: string,
+    subHeadline: string,
+    customerList: string
 }
 
 export interface Contact {

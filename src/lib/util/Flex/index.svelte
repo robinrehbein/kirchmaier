@@ -43,7 +43,7 @@
     class:alignItemsCenter
     class:flexWrapWrap
     class:flexWrapWrapReverse
-    style={`--gap: ${gap}; ${style}`}
+    style={`${gap ? `gap: ${gap};` : ""} ${style}`}
 >
     <slot />
 </div>
@@ -51,7 +51,6 @@
 <style lang="scss">
     .flex {
         display: flex;
-        gap: var(--gap);
     }
 
     /* flexDirection classes & responsiveness */
