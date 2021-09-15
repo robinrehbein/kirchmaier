@@ -3,17 +3,13 @@
     import { jsonContent } from "../../stores/stores";
     import Flex from "../util/Flex/index.svelte";
     import Wrapper from "../util/Wrapper/index.svelte";
-    import phoneIcon from "../../../static/icons/phone.svg";
-    import faxIcon from "../../../static/icons/fax.svg";
-    import mailIcon from "../../../static/icons/mail.svg";
-    import map from "../../../static/map-mock.png";
 
     const contact = $jsonContent.body.contact;
 
     const iconMapper = {
-        phone: phoneIcon,
-        fax: faxIcon,
-        mail: mailIcon,
+        phone: "/phone.svg",
+        fax: "/fax.svg",
+        mail: "/mail.svg",
     };
 </script>
 
@@ -53,14 +49,17 @@
                     </form>
                 </div>
 
-                <img src={map} class="contact-map img-shadow" alt="map" />
+                <img
+                    src="/map-mock.png"
+                    class="contact-map img-shadow"
+                    alt="map"
+                />
             </Flex>
         </div>
     </Wrapper>
 </section>
 
 <style lang="scss">
-
     @media screen and (min-width: 960px) {
         .contact-data {
             width: 27%; //25%;

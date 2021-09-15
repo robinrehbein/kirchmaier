@@ -1,218 +1,218 @@
 {
-  "navbar": {
-    "logo": {
-      "imgUrl": ""
+    "navbar": {
+        "logo": {
+            "imgUrl": ""
+        },
+        "items": [
+            {
+                "name": "LEISTUNGEN",
+                "url": "services"
+            },
+            {
+                "name": "ÜBER",
+                "url": "about"
+            },
+            {
+                "name": "PROJEKTE",
+                "url": "projects"
+            },
+            {
+                "name": "KUNDEN",
+                "url": "customer"
+            },
+            {
+                "name": "KONTAKT",
+                "url": "contact"
+            }
+        ]
     },
-    "items": [
-      {
-        "name": "LEISTUNGEN",
-        "url": "services"
-      },
-      {
-        "name": "ÜBER",
-        "url": "about"
-      },
-      {
-        "name": "PROJEKTE",
-        "url": "projects"
-      },
-      {
-        "name": "KUNDEN",
-        "url": "customer"
-      },
-      {
-        "name": "KONTAKT",
-        "url": "contact"
-      }
+    "body": {
+        "landingPage": {
+            "heading": "Kirchmaier & Staudacher",
+            "statements": [
+                "Gebäudemanagement",
+                "Immobilienverwaltung",
+                "Projektentwicklung"
+            ]
+        },
+        "ourServices": {
+            "headline": "UNSERE <b>LEISTUNGEN</b>",
+            "subHeadline": "Ein Projekt - Ein Ansprechpartner",
+            "boxes": [
+                {
+                    "imgUrl": "../../../facility-management.jpg",
+                    "boxHeadline": "GEBÄUDEMANAGEMENT",
+                    "boxText": "Kompetent, zuverlässig und servicestark. Wir verwalten Ihr Gebäude und sorgen für eine technisch effiziente Bewirtschaftung. Unsere Dienstleistung umfasst sowohl die kaufmännische als auch die technische Gebäudeverwaltung (keine WEG-Verwaltung). Selbstverständlich informieren wir Sie regelmäßig über aktuelle Reportings, damit Sie über Ihre Immobilien immer auf dem Laufenden sind."
+                },
+                {
+                    "imgUrl": "../../../vermietung-verkauf.jpg",
+                    "boxHeadline": "VERMIETUNG UND VERKAUF",
+                    "boxText": "Wir erweitern unseren Immobilienbestand kontinuierlich. Hierzu sind wir ständig am Erwerb von Immobilien und Grundstücken aller Art interessiert. Eine schnelle sowie kompetente und zuverlässige Kaufvertragsabwicklung ist unsere Stärke."
+                },
+                {
+                    "imgUrl": "../../../mietinteressenten.jpg",
+                    "boxHeadline": "MIETINTERESSENTEN",
+                    "boxText": "Für unsere Mietwohnungen sowie Gewerbeflächen können sich als Mietinteressent gerne für freiwerdende Wohnungen und Büro- oder Verkaufsflächen vormerken lassen. "
+                },
+                {
+                    "imgUrl": "../../../projektplanung.jpg",
+                    "boxHeadline": "PROJEKTENTWICKLUNG",
+                    "boxText": "Bei uns finden Sie die Fachkenntnis, die Sie von einem renommierten Projektentwickler erwarten können. Seit 1993 entwickeln wir Wohnprojekte, Einkaufscenter sowie Reihen- und Doppelhaussiedlungen. Wir sind sowohl am Erwerb von Grundstücken mit und ohne Baurecht interessiert. Ebenso erwerben wir Bestandsimmobilien und Sanierungsobjekte verschiedenster Größenordnungen. Sprechen Sie mit uns."
+                }
+            ]
+        },
+        "about": {
+            "headline": "ÜBER <b>UNS</b>",
+            "subHeadline": "Kirchmaier & Staudacher",
+            "boxes": [
+                {
+                    "imgUrl": "about-us.jpg",
+                    "boxHeadline": "FIRMA",
+                    "boxText": "Kirchmaier & Staudacher wurde 1993 von Ralph Kirchmaier und Wolfgang Staudacher gegründet. Anfangs war das Unternehmen als klassische Bauträgergesellschaft tätig. Schwerpunkte waren der Geschosswohnungsbau sowie die Entwicklung und der Bau von Reihen- und Doppelhaussiedlungen. Aber auch Sanierungen und Baulanderschließungen gehörten zum Leistungsspektrum des Unternehmens. Ab 2005 wurde dann überwiegend für den eigenen Immobilienbestand gebaut. Heute entwickeln wir ausschließlich Projekte, die langfristig im Eigentum der Unternehmensgruppe verbleiben. Der Fokus liegt hierbei auf Wohn- und Einzelhandelsimmobilien. Sämtliche Immobilien werden von uns selbst verwaltet und betreut. Wir kümmern uns sowohl um die Vermietung wie auch um das kaufmännische und technische Gebäudemanagement. Auf Grund der gewachsenen Strukturen und unseres Knowhows bieten wir unser Gebäudemanagement sowie die Vermietung und Vermarktung von Immobilien auch als Dienstleistung für Immobilieneigentümer an."
+                },
+                {
+                    "imgUrl": "about-us.jpg",
+                    "boxHeadline": "TEAM",
+                    "boxText": "28 Jahre Erfahrung gepaart mit junger kompetenter Dynamik. Unser Team  v.l.n.r."
+                },
+                {
+                    "imgUrl": "about-us.jpg",
+                    "boxHeadline": "STIFTUNG",
+                    "boxText": "Unsere Herzensangelegenheit.. Die im Jahr 2001 gegründete Ralph Kirchmaier Stiftung kümmert sich seit vielen Jahren um hilfsbedürftige Kinder in Mombasa. Die Stiftung betreibt dort eine Schule für über 300 Slumkinder. Mehr als 10 Lehrkräfte unterrichten dort mit großem Erfolg die motivierten Kinder. Die Stiftung kümmert sich darüber hinaus um die medizinische Betreuung und Verpflegung der Schülerinnen und Schüler. Mehr Infos zur Ralph Kirchmaier Stiftung erhalten Sie unter: <a href='http://www.ralph-kirchmaier-stiftung.de'>www.ralph-kirchmaier-stiftung.de</a>"
+                }
+            ],
+            "numbers": [
+                {
+                    "boxNumber": "181",
+                    "boxMetric": "Projekte"
+                },
+                {
+                    "boxNumber": "3000m²",
+                    "boxMetric": "bebaute Fläche"
+                },
+                {
+                    "boxNumber": "28 Jahre",
+                    "boxMetric": "Erfahrung"
+                },
+                {
+                    "boxNumber": "?",
+                    "boxMetric": "???"
+                }
+            ]
+        },
+        "references": {
+            "headline": "UNSERE <b>REFERENZEN</b>",
+            "subHeadline": "Ein Spiegel über 25 Jahre erfolgreicher Projektarbeit",
+            "projects": [
+                {
+                    "projectName": "Headquarters",
+                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "mainPictureName": "2021_06_18_kirchmaier_0327.jpg",
+                    "galleryPictureNames": "2021_06_18_kirchmaier_0327.jpg,2021_06_18_kirchmaier_0230.jpg,2021_06_18_kirchmaier_0286.jpg,2021_06_18_kirchmaier_0290.jpg,2021_06_18_kirchmaier_0385.jpg"
+                },
+                {
+                    "projectName": "Rewe",
+                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "mainPictureName": "2021_06_18_kirchmaier_0083.jpg",
+                    "galleryPictureNames": "2021_06_18_kirchmaier_0083.jpg,2021_06_18_kirchmaier_0097.jpg"
+                },
+                {
+                    "projectName": "Salgo",
+                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "mainPictureName": "2021_06_18_kirchmaier_0022.jpg",
+                    "galleryPictureNames": "2021_06_18_kirchmaier_0022.jpg,2021_06_18_kirchmaier_0004.jpg,2021_06_18_kirchmaier_0065.jpg"
+                },
+                {
+                    "projectName": "Haus der Mitte",
+                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "mainPictureName": "2021_06_18_kirchmaier_0428.jpg",
+                    "galleryPictureNames": "2021_06_18_kirchmaier_0428.jpg"
+                },
+                {
+                    "projectName": "Some other building",
+                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "mainPictureName": "2021_06_18_kirchmaier_0436.jpg",
+                    "galleryPictureNames": "2021_06_18_kirchmaier_0436.jpg"
+                }
+            ]
+        },
+        "customers": {
+            "headline": "UNSERE <b>KUNDEN</b>",
+            "subHeadline": "Irgendeine subheadline",
+            "customerList": "html5.svg,java.svg,javascript.svg,nodejs.svg,php.svg,python.svg,R.svg,react.svg,spring.svg,typescript.svg,aws.svg"
+        },
+        "contact": {
+            "headline": "<b>KONTAKT</b>DATEN",
+            "subHeadline": "Gerne beantworten wir Ihre Fragen",
+            "buttonText": "KONTAKTIEREN SIE UNS",
+            "mapText": "",
+            "mailAddress": "info@kirchmaier-staudacher.de",
+            "contactData": [
+                {
+                    "text": "Telefon",
+                    "icon": "phone",
+                    "value": "+49 751 36221-0"
+                },
+                {
+                    "text": "Fax",
+                    "icon": "fax",
+                    "value": "+49 751 36221-60"
+                },
+                {
+                    "text": "Mail",
+                    "icon": "mail",
+                    "value": "info@kirchmaier-staudacher.de"
+                }
+            ]
+        }
+    },
+    "legal": [
+        {
+            "title": "Imprint",
+            "content": [
+                {
+                    "heading": "Information in accordance <br/> with Section 5 TMG",
+                    "text": "Andreas Lemberger <br/> Gerokstraße 11 <br/> 71665 Vaihingen an der Enz"
+                },
+                {
+                    "heading": "Contact info",
+                    "text": "Telephone: 015735511167 <br/> E-Mail: info@kirchmaier-staudacher.de"
+                }
+            ]
+        },
+        {
+            "title": "Data Protection",
+            "content": [
+                {
+                    "heading": "",
+                    "text": ""
+                },
+                {
+                    "heading": "",
+                    "text": ""
+                },
+                {
+                    "heading": "",
+                    "text": ""
+                }
+            ]
+        },
+        {
+            "title": "Disclaimer",
+            "content": [
+                {
+                    "heading": "Accountability for content",
+                    "text": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG)."
+                },
+                {
+                    "heading": "Accountability for links",
+                    "text": "Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately."
+                },
+                {
+                    "heading": "Copyright",
+                    "text": "Our web pages and their contents are subject to German copyright law. Unless expressly permitted by law, every form of utilizing, reproducing or processing works subject to copyright protection on our web pages requires the prior consent of the respective owner of the rights. Individual reproductions of a work are only allowed for private use. The materials from these pages are copyrighted and any unauthorized use may violate copyright laws."
+                }
+            ]
+        }
     ]
-  },
-  "body": {
-    "landingPage": {
-      "heading": "Kirchmaier & Staudacher",
-      "statements": [
-        "Gebäudemanagement",
-        "Immobilienverwaltung",
-        "Projektentwicklung"
-      ]
-    },
-    "ourServices": {
-      "headline": "UNSERE <b>LEISTUNGEN</b>",
-      "subHeadline": "Ein Projekt - Ein Ansprechpartner",
-      "boxes": [
-        {
-          "imgUrl": "../../../facility-management.jpg",
-          "boxHeadline": "GEBÄUDEMANAGEMENT",
-          "boxText": "Kompetent, zuverlässig und servicestark. Wir verwalten Ihr Gebäude und sorgen für eine technisch effiziente Bewirtschaftung. Unsere Dienstleistung umfasst sowohl die kaufmännische als auch die technische Gebäudeverwaltung (keine WEG-Verwaltung). Selbstverständlich informieren wir Sie regelmäßig über aktuelle Reportings, damit Sie über Ihre Immobilien immer auf dem Laufenden sind."
-        },
-        {
-          "imgUrl": "../../../vermietung-verkauf.jpg",
-          "boxHeadline": "VERMIETUNG UND VERKAUF",
-          "boxText": "Wir erweitern unseren Immobilienbestand kontinuierlich. Hierzu sind wir ständig am Erwerb von Immobilien und Grundstücken aller Art interessiert. Eine schnelle sowie kompetente und zuverlässige Kaufvertragsabwicklung ist unsere Stärke."
-        },
-        {
-          "imgUrl": "../../../mietinteressenten.jpg",
-          "boxHeadline": "MIETINTERESSENTEN",
-          "boxText": "Für unsere Mietwohnungen sowie Gewerbeflächen können sich als Mietinteressent gerne für freiwerdende Wohnungen und Büro- oder Verkaufsflächen vormerken lassen. "
-        },
-        {
-          "imgUrl": "../../../projektplanung.jpg",
-          "boxHeadline": "PROJEKTENTWICKLUNG",
-          "boxText": "Bei uns finden Sie die Fachkenntnis, die Sie von einem renommierten Projektentwickler erwarten können. Seit 1993 entwickeln wir Wohnprojekte, Einkaufscenter sowie Reihen- und Doppelhaussiedlungen. Wir sind sowohl am Erwerb von Grundstücken mit und ohne Baurecht interessiert. Ebenso erwerben wir Bestandsimmobilien und Sanierungsobjekte verschiedenster Größenordnungen. Sprechen Sie mit uns."
-        }
-      ]
-    },
-    "about": {
-      "headline": "ÜBER <b>UNS</b>",
-      "subHeadline": "Kirchmaier & Staudacher",
-      "boxes": [
-        {
-          "imgUrl": "about-us.jpg",
-          "boxHeadline": "FIRMA",
-          "boxText": "Kirchmaier & Staudacher wurde 1993 von Ralph Kirchmaier und Wolfgang Staudacher gegründet. Anfangs war das Unternehmen als klassische Bauträgergesellschaft tätig. Schwerpunkte waren der Geschosswohnungsbau sowie die Entwicklung und der Bau von Reihen- und Doppelhaussiedlungen. Aber auch Sanierungen und Baulanderschließungen gehörten zum Leistungsspektrum des Unternehmens. Ab 2005 wurde dann überwiegend für den eigenen Immobilienbestand gebaut. Heute entwickeln wir ausschließlich Projekte, die langfristig im Eigentum der Unternehmensgruppe verbleiben. Der Fokus liegt hierbei auf Wohn- und Einzelhandelsimmobilien. Sämtliche Immobilien werden von uns selbst verwaltet und betreut. Wir kümmern uns sowohl um die Vermietung wie auch um das kaufmännische und technische Gebäudemanagement. Auf Grund der gewachsenen Strukturen und unseres Knowhows bieten wir unser Gebäudemanagement sowie die Vermietung und Vermarktung von Immobilien auch als Dienstleistung für Immobilieneigentümer an."
-        },
-        {
-          "imgUrl": "about-us.jpg",
-          "boxHeadline": "TEAM",
-          "boxText": "28 Jahre Erfahrung gepaart mit junger kompetenter Dynamik. Unser Team  v.l.n.r."
-        },
-        {
-          "imgUrl": "about-us.jpg",
-          "boxHeadline": "STIFTUNG",
-          "boxText": "Unsere Herzensangelegenheit.. Die im Jahr 2001 gegründete Ralph Kirchmaier Stiftung kümmert sich seit vielen Jahren um hilfsbedürftige Kinder in Mombasa. Die Stiftung betreibt dort eine Schule für über 300 Slumkinder. Mehr als 10 Lehrkräfte unterrichten dort mit großem Erfolg die motivierten Kinder. Die Stiftung kümmert sich darüber hinaus um die medizinische Betreuung und Verpflegung der Schülerinnen und Schüler. Mehr Infos zur Ralph Kirchmaier Stiftung erhalten Sie unter: <a href='www.ralph-kirchmaier-stiftung.de'>www.ralph-kirchmaier-stiftung.de</a>"
-        }
-      ],
-      "numbers": [
-        {
-          "boxNumber": "181",
-          "boxMetric": "Projekte"
-        },
-        {
-          "boxNumber": "3000m²",
-          "boxMetric": "bebaute Fläche"
-        },
-        {
-          "boxNumber": "28 Jahre",
-          "boxMetric": "Erfahrung"
-        },
-        {
-          "boxNumber": "?",
-          "boxMetric": "???"
-        }
-      ]
-    },
-    "references": {
-      "headline": "UNSERE <b>REFERENZEN</b>",
-      "subHeadline": "Ein Spiegel über 25 Jahre erfolgreicher Projektarbeit",
-      "projects": [
-        {
-          "projectName": "Headquarters",
-          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
-          "mainPictureName": "2021_06_18_kirchmaier_0327.jpg",
-          "galleryPictureNames": "2021_06_18_kirchmaier_0327.jpg,2021_06_18_kirchmaier_0230.jpg,2021_06_18_kirchmaier_0286.jpg,2021_06_18_kirchmaier_0290.jpg,2021_06_18_kirchmaier_0385.jpg"
-        },
-        {
-          "projectName": "Rewe",
-          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
-          "mainPictureName": "2021_06_18_kirchmaier_0083.jpg",
-          "galleryPictureNames": "2021_06_18_kirchmaier_0083.jpg,2021_06_18_kirchmaier_0097.jpg"
-        },
-        {
-          "projectName": "Salgo",
-          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
-          "mainPictureName": "2021_06_18_kirchmaier_0022.jpg",
-          "galleryPictureNames": "2021_06_18_kirchmaier_0022.jpg,2021_06_18_kirchmaier_0004.jpg,2021_06_18_kirchmaier_0065.jpg"
-        },
-        {
-          "projectName": "Haus der Mitte",
-          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
-          "mainPictureName": "2021_06_18_kirchmaier_0428.jpg",
-          "galleryPictureNames": "2021_06_18_kirchmaier_0428.jpg"
-        },
-        {
-          "projectName": "Some other building",
-          "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
-          "mainPictureName": "2021_06_18_kirchmaier_0436.jpg",
-          "galleryPictureNames": "2021_06_18_kirchmaier_0436.jpg"
-        }
-      ]
-    },
-    "customers": {
-        "headline": "UNSERE <b>KUNDEN</b>",
-        "subHeadline": "Irgendeine subheadline",
-        "customerList": "html5.svg,java.svg,javascript.svg,nodejs.svg,php.svg,python.svg,R.svg,react.svg,spring.svg,typescript.svg,aws.svg"
-    },
-    "contact": {
-      "headline": "<b>KONTAKT</b>DATEN",
-      "subHeadline": "Gerne beantworten wir Ihre Fragen",
-      "buttonText": "KONTAKTIEREN SIE UNS",
-      "mapText": "",
-      "mailAddress": "info@kirchmaier-staudacher.de",
-      "contactData": [
-        {
-          "text": "Telefon",
-          "icon": "phone",
-          "value": "+49 751 36221-0"
-        },
-        {
-          "text": "Fax",
-          "icon": "fax",
-          "value": "+49 751 36221-60"
-        },
-        {
-          "text": "Mail",
-          "icon": "mail",
-          "value": "info@kirchmaier-staudacher.de"
-        }
-      ]
-    }
-  },
-  "legal": [
-    {
-      "title": "Imprint",
-      "content": [
-        {
-          "heading": "Information in accordance <br/> with Section 5 TMG",
-          "text": "Andreas Lemberger <br/> Gerokstraße 11 <br/> 71665 Vaihingen an der Enz"
-        },
-        {
-          "heading": "Contact info",
-          "text": "Telephone: 015735511167 <br/> E-Mail: info@kirchmaier-staudacher.de"
-        }
-      ]
-    },
-    {
-      "title": "Data Protection",
-      "content": [
-        {
-          "heading": "",
-          "text": ""
-        },
-        {
-          "heading": "",
-          "text": ""
-        },
-        {
-          "heading": "",
-          "text": ""
-        }
-      ]
-    },
-    {
-      "title": "Disclaimer",
-      "content": [
-        {
-          "heading": "Accountability for content",
-          "text": "The contents of our pages have been created with the utmost care. However, we cannot guarantee the contents' accuracy, completeness or topicality. According to statutory provisions, we are furthermore responsible for our own content on these web pages. In this matter, please note that we are not obliged to monitor the transmitted or saved information of third parties, or investigate circumstances pointing to illegal activity. Our obligations to remove or block the use of information under generally applicable laws remain unaffected by this as per §§ 8 to 10 of the Telemedia Act (TMG)."
-        },
-        {
-          "heading": "Accountability for links",
-          "text": "Responsibility for the content of external links (to web pages of third parties) lies solely with the operators of the linked pages. No violations were evident to us at the time of linking. Should any legal infringement become known to us, we will remove the respective link immediately."
-        },
-        {
-          "heading": "Copyright",
-          "text": "Our web pages and their contents are subject to German copyright law. Unless expressly permitted by law, every form of utilizing, reproducing or processing works subject to copyright protection on our web pages requires the prior consent of the respective owner of the rights. Individual reproductions of a work are only allowed for private use. The materials from these pages are copyrighted and any unauthorized use may violate copyright laws."
-        }
-      ]
-    }
-  ]
 }

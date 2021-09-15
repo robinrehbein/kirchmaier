@@ -12,7 +12,7 @@
 
     import type { Box } from "../../interfaces/interfaces";
 
-    const imgBasePath = "../../../static/";
+    const imgBasePath = "/";
     let showModal = false;
     let currentModalContent: Box = {
         imgUrl: "",
