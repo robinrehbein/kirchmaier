@@ -5,12 +5,11 @@
     import Wrapper from "../util/Wrapper/index.svelte";
     import Headline from "../util/Headline/index.svelte";
     import IntersectionObserver from "$lib/util/IntersectionObserver/index.svelte";
-    import { fade, crossfade, fly, scale } from "svelte/transition";
     import { jsonContent } from "../../stores/stores";
+    import type { Box } from "../../interfaces/interfaces";
+    import { fade, crossfade, fly, scale } from "svelte/transition";
 
     const about = $jsonContent.body.about;
-
-    import type { Box } from "../../interfaces/interfaces";
 
     const imgBasePath = "/";
     let showModal = false;

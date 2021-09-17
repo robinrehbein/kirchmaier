@@ -127,7 +127,7 @@
         text-decoration: none;
     }
 
-    h2, 
+    h2,
     .legal-content-wrapper {
         margin-bottom: 2rem;
     }
