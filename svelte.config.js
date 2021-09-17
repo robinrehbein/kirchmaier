@@ -14,7 +14,6 @@ const config = {
 		// paths: { base: "/" },
 		
 		paths: {
-			assets: './static',
 			base: ''
 		},
 		adapter: adapter(),
