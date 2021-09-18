@@ -83,11 +83,11 @@
             ],
             "numbers": [
                 {
-                    "boxNumber": "181",
+                    "boxNumber": "xxx",
                     "boxMetric": "Projekte"
                 },
                 {
-                    "boxNumber": "3000m²",
+                    "boxNumber": "xxxx m²",
                     "boxMetric": "bebaute Fläche"
                 },
                 {
@@ -105,8 +105,8 @@
             "subHeadline": "Ein Spiegel über 25 Jahre erfolgreicher Projektarbeit",
             "projects": [
                 {
-                    "projectName": "Headquarters",
-                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "projectName": "Ziegelhöfe Ravensburg",
+                    "text": "Unser 1. Bauabschnitt ist seit 2018 fertiggestellt. Im  Zentrum von Ravensburg entstand ein neues und einmaliges Quartier mit hochwertigen Gewerbeflächen und Wohnungen. Den Mietern stehen Büro- und Praxisflächen in Top Lage mit ca. 230m² bis 300m² zur Verfügung und traumhafte, barrierefreie Wohnungen in zentraler Wohnlage mit modernster Technik von ca. 48m² bis ca. 110m².",
                     "mainPictureName": "2021_06_18_kirchmaier_0327.jpg",
                     "galleryPictureNames": "2021_06_18_kirchmaier_0327.jpg,2021_06_18_kirchmaier_0230.jpg,2021_06_18_kirchmaier_0286.jpg,2021_06_18_kirchmaier_0290.jpg,2021_06_18_kirchmaier_0385.jpg"
                 },
@@ -117,8 +117,8 @@
                     "galleryPictureNames": "2021_06_18_kirchmaier_0083.jpg,2021_06_18_kirchmaier_0097.jpg"
                 },
                 {
-                    "projectName": "Salgo",
-                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "projectName": "Neubau des Fachmarktzentrums \"Salgo\" in Bad Saulgau",
+                    "text": "Zu den namhaften Mietern im Salgo gehören REWE, Drogeriemarkt Müller, AWG, Penny, Deichmann und das Dänisches Bettenlager. Insgesamt stehen den Kunden über 450 Parkplätzen zur Verfügung.",
                     "mainPictureName": "2021_06_18_kirchmaier_0022.jpg",
                     "galleryPictureNames": "2021_06_18_kirchmaier_0022.jpg,2021_06_18_kirchmaier_0004.jpg,2021_06_18_kirchmaier_0065.jpg"
                 },
