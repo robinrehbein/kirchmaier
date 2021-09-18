@@ -8,9 +8,9 @@
     const dispatch = createEventDispatcher<{ close: boolean }>();
     const close = () => dispatch("close");
 
+    let modal;
     export let transition = fade;
     export let bgTransition = fade;
-    let modal;
 
     const handle_keydown = (e) => {
         if (e.key === "Escape") {

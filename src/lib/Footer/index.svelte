@@ -4,7 +4,7 @@
     import Modal from "../util/Modal/index.svelte";
     import { jsonContent } from "../../stores/stores";
     import type { LegalSection } from "../../interfaces/interfaces";
-    import { fade } from "svelte/transition";
+    import { scale } from "svelte/transition";
 
     const legalSections = $jsonContent.legal;
     let showModal = false;
@@ -79,7 +79,7 @@
     </Wrapper>
 </footer>
 {#if showModal}
-    <Modal on:close={() => (showModal = false)} transition={fade}>
+    <Modal on:close={() => (showModal = false)} transition={scale}>
         <h2>{currentModalContent.title}</h2>
         {#each currentModalContent.content as contentElement}
             <div class="legal-content-wrapper">
