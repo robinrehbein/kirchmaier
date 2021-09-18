@@ -8,7 +8,7 @@
     import { jsonContent } from "../../stores/stores";
 
     const referenceContent = $jsonContent.body.references;
-    const imgBasePath = "../../../../static/web/";
+    const imgBasePath = "/web/";
 </script>
 
 <section id="projects">

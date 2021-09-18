@@ -7,7 +7,7 @@
     import { jsonContent } from "../../stores/stores";
 
     const customersContent = $jsonContent.body.customers;
-    const imgBasePath = "../../../static/icons/customers/";
+    const imgBasePath = "/icons/customers/";
     const imageFileNames = customersContent.customerList.split(",");
 </script>
 

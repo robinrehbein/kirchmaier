@@ -1,6 +1,5 @@
 <script lang="ts">
     import Image from "$lib/util/Image/index.svelte";
-    import bgImg from "../../../static/lp-bg-lq-1.jpg";
     import { jsonContent } from "../../stores/stores";
 
     const heading = $jsonContent.body.landingPage.heading;
@@ -13,7 +12,7 @@
 <svelte:window bind:scrollY={y} bind:innerHeight />
 
 <section id="home">
-    <Image src={bgImg} alt="" imgType="img" className="bg-image" />
+    <Image src="/lp-bg-lq-1.jpg" alt="" imgType="img" className="bg-image" />
 
     <!-- class:hidden -> if opacity is 0 or less than remove headline from dom -->
     <div
