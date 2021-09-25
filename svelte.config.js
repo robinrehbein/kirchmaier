@@ -10,9 +10,7 @@ const config = {
 	kit: {
 		// hydrate the <div id="svelte"> element in src/app.html
 		appDir: '_app',
-		target: '#svelte',
-		// paths: { base: "/" },
-		
+		target: '#svelte',		
 		paths: {
 			base: ''
 		},
