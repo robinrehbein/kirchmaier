@@ -12,7 +12,7 @@
 <svelte:window bind:scrollY={y} bind:innerHeight />
 
 <section id="home">
-    <Image src="/lp-bg-lq-1.jpg" alt="" imgType="img" className="bg-image" />
+    <Image src="/web/lp-bg-lq-1.jpg" alt="" imgType="img" className="bg-image" />
 
     <!-- class:hidden -> if opacity is 0 or less than remove headline from dom -->
     <div
@@ -31,8 +31,8 @@
     <div class="mouse" style="--opacity: {1 - y / (innerHeight / 3)}">
         <a href="#services">
             <svg
-                id="Ebene_1"
-                data-name="Ebene 1"
+                id="mouse"
+                data-name="mouse"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 42"
                 ><defs

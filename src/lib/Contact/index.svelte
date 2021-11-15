@@ -49,7 +49,7 @@
           </form>
         </div>
 
-        <img src="/map-mock.PNG" class="contact-map img-shadow" alt="map" />
+        <img src="/web/map-mock.PNG" class="contact-map img-shadow" alt="map" />
       </Flex>
     </div>
   </Wrapper>
