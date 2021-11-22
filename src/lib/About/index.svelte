@@ -10,8 +10,8 @@
     import { fade, crossfade, fly, scale } from "svelte/transition";
 
     const about = $jsonContent.body.about;
+    const imgBasePath = "/web/";
 
-    const imgBasePath = "/";
     let showModal = false;
     let currentModalContent: Box = {
         imgUrl: "",
@@ -53,7 +53,7 @@
                             text={card.boxText}
                             showImg
                             imgType="img"
-                            imgSrc={card.imgUrl}
+                            imgSrc={imgBasePath + card.imgUrl}
                             cropText
                         />
                     </li>

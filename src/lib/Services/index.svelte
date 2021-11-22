@@ -6,6 +6,7 @@
   import { jsonContent } from "../../stores/stores";
 
   const services = $jsonContent.body.services;
+  const imgBasePath = "/web/";
 </script>
 
 <Wrapper>
@@ -33,7 +34,7 @@
               text={card.boxText}
               showImg
               imgType="img"
-              imgSrc={card.imgUrl}
+              imgSrc={imgBasePath + card.imgUrl}
               cropText
             />
           </li>

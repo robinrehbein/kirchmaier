@@ -7,7 +7,7 @@
   import { jsonContent } from "../../stores/stores";
 
   const customersContent = $jsonContent.body.customers;
-  const imgBasePath = "/";
+  const imgBasePath = '/web/';
   const imageFileNames = customersContent.customerList.split(",");
 </script>
 
@@ -31,7 +31,7 @@
         {#each imageFileNames as imageFileName}
           <li class="customer-list-element">
             <img
-              src={`${imgBasePath}${imageFileName}`}
+              src={imgBasePath + imageFileName}
               class="customer-list-image"
               alt={imageFileName}
               title={imageFileName.split(".")[0]}

@@ -40,22 +40,22 @@
             "subHeadline": "Ein Projekt - Ein Ansprechpartner",
             "boxes": [
                 {
-                    "imgUrl": "../../../facility-management.jpg",
+                    "imgUrl": "facility-management.jpg",
                     "boxHeadline": "GEBÄUDEMANAGEMENT",
                     "boxText": "Kompetent, zuverlässig und servicestark. Wir verwalten Ihr Gebäude und sorgen für eine technisch effiziente Bewirtschaftung. Unsere Dienstleistung umfasst sowohl die kaufmännische als auch die technische Gebäudeverwaltung (keine WEG-Verwaltung). Selbstverständlich informieren wir Sie regelmäßig über aktuelle Reportings, damit Sie über Ihre Immobilien immer auf dem Laufenden sind."
                 },
                 {
-                    "imgUrl": "../../../vermietung-verkauf.jpg",
+                    "imgUrl": "vermietung-verkauf.jpg",
                     "boxHeadline": "VERMIETUNG UND VERKAUF",
                     "boxText": "Wir erweitern unseren Immobilienbestand kontinuierlich. Hierzu sind wir ständig am Erwerb von Immobilien und Grundstücken aller Art interessiert. Eine schnelle sowie kompetente und zuverlässige Kaufvertragsabwicklung ist unsere Stärke."
                 },
                 {
-                    "imgUrl": "../../../mietinteressenten.jpg",
+                    "imgUrl": "mietinteressenten.jpg",
                     "boxHeadline": "MIETINTERESSENTEN",
                     "boxText": "Für unsere Mietwohnungen sowie Gewerbeflächen können sich als Mietinteressent gerne für freiwerdende Wohnungen und Büro- oder Verkaufsflächen vormerken lassen. "
                 },
                 {
-                    "imgUrl": "../../../projektplanung.jpg",
+                    "imgUrl": "projektplanung.jpg",
                     "boxHeadline": "PROJEKTENTWICKLUNG",
                     "boxText": "Bei uns finden Sie die Fachkenntnis, die Sie von einem renommierten Projektentwickler erwarten können. Seit 1993 entwickeln wir Wohnprojekte, Einkaufscenter sowie Reihen- und Doppelhaussiedlungen. Wir sind sowohl am Erwerb von Grundstücken mit und ohne Baurecht interessiert. Ebenso erwerben wir Bestandsimmobilien und Sanierungsobjekte verschiedenster Größenordnungen. Sprechen Sie mit uns."
                 }

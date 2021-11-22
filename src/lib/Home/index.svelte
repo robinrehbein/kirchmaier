@@ -75,7 +75,9 @@
         display: none;
     }
     h1 {
-        font-size: 11vw;
+        text-transform: uppercase;
+        font-size: 10vw;
+        // font-size: 9.4vw;
         margin-bottom: 1rem;
         position: relative;
     }
@@ -127,7 +129,8 @@
             white-space: nowrap;
         }
         h1 {
-            font-size: 6vw;
+            // font-size: 6vw;
+            font-size: 5.2vw;
             margin-bottom: 2rem;
         }
         .statements {

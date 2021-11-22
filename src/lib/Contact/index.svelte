@@ -5,6 +5,7 @@
   import Wrapper from "../util/Wrapper/index.svelte";
 
   const contact = $jsonContent.body.contact;
+  const imgBasePath = '/web/'
 
   const iconMapper = {
     phone: "/phone.svg",
@@ -34,7 +35,7 @@
           {#each contact.contactData as contactDataElement}
             <Flex style="margin-bottom: 1rem;">
               <img
-                src={iconMapper[contactDataElement.icon]}
+                src={imgBasePath + iconMapper[contactDataElement.icon]}
                 class="contact-data-icon"
                 alt={contactDataElement.text}
               />
