@@ -25,7 +25,7 @@
             <Flex
                 flexDirectionColumn
                 flexDirectionResponsiveColumnToRow
-                alignItemsCenter
+                alignItemsFlexStart
                 justifyContentSpaceAround
                 flexWrapWrap
                 gap="3rem"
@@ -72,6 +72,9 @@
     @media screen and (min-width: 960px) {
         :global(.reference-box) {
             width: calc(50% - 1.5rem);
+        }
+        li {
+            height: 100%;
         }
     }
 </style>
