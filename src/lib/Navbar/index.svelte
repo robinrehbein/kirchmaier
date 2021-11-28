@@ -134,7 +134,6 @@
         top: 2rem;
         right: 2rem;
         left: 2rem;
-
         padding: 1.5rem 2rem;
         text-transform: uppercase;
         overflow: hidden;
