@@ -114,9 +114,7 @@
                     class:active
                     sveltekit:prefetch
                     href={"/#" + navbarItem.url}
-                    on:click={() => {
-                        active = false;
-                    }}
+                    on:click={() => (active = false)}
                 >
                     {navbarItem.name}
                 </a>
