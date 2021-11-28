@@ -1,19 +1,19 @@
 <script lang="ts">
-	import { crossfade, scale } from 'svelte/transition';
+	import { crossfade, scale } from "svelte/transition";
 
-    export let imageSrcs: Array<string>;
-    const imageBasePath: string = '/web/';
+	export let imageSrcs: Array<string>;
+	const imageBasePath: string = "/web/";
 
 	const [send, receive] = crossfade({
 		duration: 200,
-		fallback: scale
+		fallback: scale,
 	});
 
 	let selected = null;
 	let loading = null;
 
-	const load = imageSrc => {
-		const timeout = setTimeout(() => loading = imageSrc, 100);
+	const load = (imageSrc) => {
+		const timeout = setTimeout(() => (loading = imageSrc), 100);
 
 		const img = new Image();
 
@@ -36,10 +36,11 @@
 				<div class="square">
 					{#if selected !== imageSrc}
 						<button
-							on:click="{() => load(imageSrc)}"
-							in:receive={{key:imageSrc}}
-							out:send={{key:imageSrc}}
-						>{loading === imageSrc ? '...' : imageSrc}</button>
+							on:click={() => load(imageSrc)}
+							in:receive={{ key: imageSrc }}
+							out:send={{ key: imageSrc }}
+							>{loading === imageSrc ? "..." : imageSrc}</button
+						>
 					{/if}
 				</div>
 			{/each}
@@ -47,12 +48,16 @@
 
 		{#if selected}
 			{#await selected then d}
-				<div class="photo" in:receive={{key:d}} out:send={{key:d}}>
+				<div
+					class="photo"
+					in:receive={{ key: d }}
+					out:send={{ key: d }}
+				>
 					<img
 						alt={d}
 						src="{imageBasePath}/{d}"
-						on:click="{() => selected = null}"
-					>
+						on:click={() => (selected = null)}
+					/>
 				</div>
 			{/await}
 		{/if}
@@ -108,7 +113,8 @@
 		will-change: transform;
 	}
 
-	.photo, img {
+	.photo,
+	img {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -138,10 +144,11 @@
 		color: white;
 		font-weight: bold;
 		opacity: 0.6;
-		background: rgba(0,0,0,0.4);
+		background: rgba(0, 0, 0, 0.4);
 	}
 
-	.credit a, .credit a:visited {
+	.credit a,
+	.credit a:visited {
 		color: white;
 	}
 </style>
