@@ -1,102 +1,101 @@
-
 export interface Content {
-    navbar: Navbar,
-    body: Body,
-    legal: LegalSection[]
+  navbar: Navbar;
+  body: Body;
+  legal: LegalSection[];
 }
 
 export interface Navbar {
-    logo: NavbarLogo,
-    items: NavbarItem[]
+  logo: NavbarLogo;
+  items: NavbarItem[];
 }
 
 export interface NavbarLogo {
-    imgUrl: string
+  imgUrl: string;
 }
 
 export interface NavbarItem {
-    name: string,
-    url: string
+  name: string;
+  url: string;
 }
 
 export interface Body {
-    landingPage: LandingPage,
-    services: Services,
-    about: About,
-    references: References,
-    customers: Customers,
-    contact: Contact
+  landingPage: LandingPage;
+  services: Services;
+  about: About;
+  references: References;
+  customers: Customers;
+  contact: Contact;
 }
 
 export interface LandingPage {
-    heading: string,
-    statements: Array<string>
+  heading: string;
+  statements: Array<string>;
 }
 
 export interface Services {
-    headline: string,
-    subHeadline: string,
-    boxes: Box[]
+  headline: string;
+  subHeadline: string;
+  boxes: Box[];
 }
 
 export interface About {
-    headline: string,
-    subHeadline: string,
-    boxes: Box[],
-    numbers: NumberBox[]
+  headline: string;
+  subHeadline: string;
+  boxes: Box[];
+  numbers: NumberBox[];
 }
 
 export interface NumberBox {
-    boxNumber: string,
-    boxMetric: string
+  boxNumber: string;
+  boxMetric: string;
 }
 
 export interface References {
-    headline: string,
-    subHeadline: string,
-    projects: Project[]
+  headline: string;
+  subHeadline: string;
+  projects: Project[];
 }
 
 export interface Project {
-    projectName: string,
-    text: string,
-    mainPictureName: string,
-    galleryPictureNames: string
+  projectName: string;
+  text: string;
+  mainPictureName: string;
+  galleryPictureNames: string[];
 }
 
 export interface Customers {
-    headline: string,
-    subHeadline: string,
-    customerList: string
+  headline: string;
+  subHeadline: string;
+  customerList: string;
 }
 
 export interface Contact {
-    headline: string,
-    subHeadline: string,
-    buttonText: string,
-    mapText: string,
-    mailAddress: string,
-    contactData: ContactData[]
+  headline: string;
+  subHeadline: string;
+  buttonText: string;
+  mapText: string;
+  mailAddress: string;
+  contactData: ContactData[];
 }
 
 export interface Box {
-    imgUrl: string,
-    boxHeadline: string,
-    boxText: string
+  imgUrl: string;
+  boxHeadline: string;
+  boxText: string;
 }
 
 export interface ContactData {
-    text: string,
-    icon: string,
-    value: string
+  text: string;
+  icon: string;
+  value: string;
 }
 
 export interface LegalSection {
-    title: string,
-    content: LegalContentEntry[]
+  title: string;
+  content: LegalContentEntry[];
 }
 
 export interface LegalContentEntry {
-    heading: string,
-    text: string
+  heading: string;
+  text: string;
 }
