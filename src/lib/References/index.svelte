@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { scale } from "svelte/transition";
   import Headline from "../util/Headline/index.svelte";
   import Flex from "../util/Flex/index.svelte";
   import Modal from "../util/Modal/index.svelte";
@@ -8,7 +9,6 @@
   import IntersectionObserver from "$lib/util/IntersectionObserver/index.svelte";
   import { jsonContent } from "../../stores/stores";
   import type { Project } from "../../interfaces/interfaces";
-  import { fade, crossfade, fly, scale } from "svelte/transition";
 
   const referenceContent = $jsonContent.body.references;
   const imgBasePath = "/web/";
@@ -52,10 +52,7 @@
             once
             className="reference-box"
           >
-            <li
-              class:intersecting
-              on:click={() => setContentAndShowModal(project)}
-            >
+            <li class:intersecting on:click={() => setContentAndShowModal(project)}>
               <Card
                 headline={project.projectName}
                 text={project.text}
@@ -74,7 +71,9 @@
 {#if showModal}
   <Modal on:close={() => (showModal = false)} transition={scale}>
     <p class="box-headline">{currentModalContent.projectName}</p>
-    <Gallery imageSrcs={currentModalContent.galleryPictureNames} />
+    <div slot="img">
+      <Gallery imageSrcs={currentModalContent.galleryPictureNames} />
+    </div>
     <div class="box-text modal-text">
       {@html currentModalContent.text}
     </div>

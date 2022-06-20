@@ -1,87 +1,67 @@
 <script lang="ts">
-  import { crossfade, scale } from "svelte/transition";
-  import { onMount } from "svelte";
+  import {
+    fade,
+    blur,
+    fly,
+    slide,
+    scale,
+    draw,
+    crossfade,
+  } from "svelte/transition";
 
   export let imageSrcs: string[];
-  const imageBasePath: string = "/web";
 
-  const [send, receive] = crossfade({
-    duration: 200,
-    fallback: scale,
-  });
+  let currentSlideItem = 0;
 
-  let selected = imageSrcs[0];
-  let loading = null;
+  const imgBasePath = "/web/";
 
-  console.log(imageSrcs);
+  const nextImage = () => {
+    currentSlideItem = (currentSlideItem + 1) % imageSrcs.length;
+  };
 
-  const load = (imageSrc) => {
-    const timeout = setTimeout(() => (loading = imageSrc), 100);
-
-    const img = new Image();
-
-    img.onload = () => {
-      selected = imageSrc;
-      clearTimeout(timeout);
-      loading = null;
-    };
-
-    img.src = `${imageBasePath}/${imageSrc}`;
-
-    console.log(img.src);
+  const prevImage = () => {
+    if (currentSlideItem != 0) {
+      currentSlideItem = (currentSlideItem - 1) % imageSrcs.length;
+    } else {
+      currentSlideItem = imageSrcs.length - 1;
+    }
   };
 </script>
 
 <div class="gallery">
-  <div class="phone">
-    <!-- <h1>Photo gallery</h1> -->
-
-    {#if selected}
-      {#await selected then d}
-        <div class="photo" in:receive={{ key: d }} out:send={{ key: d }}>
-          <img
-            alt={d}
-            src="{imageBasePath}/{d}"
-            on:click={() => (selected = null)}
-          />
-        </div>
-      {/await}
-    {/if}
-
-    <ul>
-      {#each imageSrcs as imageSrc}
-        <li
-          on:click={() => load(imageSrc)}
-          in:receive={{ key: imageSrc }}
-          out:send={{ key: imageSrc }}
-        >
-          <img src={`${imageBasePath}/${imageSrc}`} alt={imageSrc} />
-        </li>
-      {/each}
-    </ul>
-  </div>
+  {#each [imageSrcs[currentSlideItem]] as item (currentSlideItem)}
+    <img
+      class="gallery-image"
+      in:fade
+      src={`${imgBasePath}${item}`}
+      alt={item}
+    />
+  {/each}
+  {#if imageSrcs.length > 1}
+    <div class="switch-img-button-wrapper">
+      <button class="button" on:click={() => prevImage()}>Previous</button>
+      <button class="button" on:click={() => nextImage()}>Next</button>
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
-  ul {
+  .gallery-image {
+    max-width: 100%;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+  .switch-img-button-wrapper {
+    padding: 1rem 2rem 0 2rem;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 100%;
-    gap: 1rem;
-    list-style: none;
-    overflow-x: scroll;
-    justify-content: center;
+    justify-content: space-between;
   }
-  img {
-    width: 100%;
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
+  .button {
+    margin-right: 4rem;
+    padding: 0.5rem;
   }
-
-  li {
-    img {
-      height: 5rem;
-      width: 7rem;
-    }
+  .button:last-child {
+    margin-right: 0;
   }
 </style>
