@@ -69,7 +69,7 @@
       </div>
 
       <!-- <button class="button" autofocus on:click={close}>Schließen</button> -->
-      <button class="button" on:click={close}>Schließen</button>
+      <button class="button" on:click={close}>&times;</button>
   </div>
 </div>
 
@@ -96,15 +96,18 @@
   }
 
   .content {
-      margin: 2rem 2rem 0 2rem;
+      margin: 2rem;
       overflow-y: scroll;
       max-height: 30vh;
       padding-right: 0.5rem;
   }
 
   .button {
-      margin: 1rem 2rem 2rem 2rem;
-      width: calc(100% - 4rem);
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: 35px;
+    padding: 0.5rem;
   }
 
   @media screen and (min-width: 960px) {

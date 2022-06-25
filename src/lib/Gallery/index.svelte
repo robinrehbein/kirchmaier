@@ -38,30 +38,43 @@
     />
   {/each}
   {#if imageSrcs.length > 1}
-    <div class="switch-img-button-wrapper">
-      <button class="button" on:click={() => prevImage()}>Previous</button>
-      <button class="button" on:click={() => nextImage()}>Next</button>
-    </div>
+      <button class="button button-left" on:click={() => prevImage()}>&leftarrow;</button>
+      <button class="button button-right" on:click={() => nextImage()}>&rightarrow;</button>
   {/if}
 </div>
 
 <style lang="scss">
+  .gallery {
+    position: relative;
+  }
   .gallery-image {
     max-width: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
   }
-  .switch-img-button-wrapper {
-    padding: 1rem 2rem 0 2rem;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
   .button {
-    margin-right: 4rem;
+    position: absolute;
+    top: 50%;
+    width: 35px;
+    transform: translateY(-50%);
     padding: 0.5rem;
+
+    &-left {
+      left: 0.5rem;
+    }
+    &-right {
+      right: 0.5rem;
+    }
   }
-  .button:last-child {
-    margin-right: 0;
-  }
+
+.button:hover {
+    transform: translateY(-50%);
+}
+
+.button-left:hover {
+      left: 0;
+    }
+.button-right:hover {
+      right: 0;
+    }
+
 </style>
