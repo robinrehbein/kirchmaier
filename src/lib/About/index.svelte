@@ -260,7 +260,7 @@
     :global(.modal-img) {
         border-radius: 0.5rem;
         width: 100%;
-        max-height: 300px;
+        // max-height: 300px;
         object-fit: cover;
         object-position: center;
     }
