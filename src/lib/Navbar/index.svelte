@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { page } from "$app/stores";
-	import type { NavbarItem } from "../../interfaces/interfaces"
+  import { page } from "$app/stores";
+  import type { NavbarItem } from "../../interfaces/interfaces";
 
-	// Navbareintraege aus Datei laden mit Namen und Links
-	export let brand: string;
-	export let navbarItems: Array<NavbarItem>;
-	export let scrollMargin = 100;
-	let y;
-	let active = false;
+  // Navbareintraege aus Datei laden mit Namen und Links
+  export let brand: string;
+  export let navbarItems: Array<NavbarItem>;
+  export let scrollMargin = 100;
+  let y;
+  let active = false;
 </script>
 
 <svelte:window bind:scrollY={y} />
@@ -110,6 +110,7 @@
           class:active
           sveltekit:prefetch
           href={"/#" + navbarItem.url}
+          on:click={() => (active = false)}
         >
           {navbarItem.name}
         </a>
@@ -129,7 +130,6 @@
     top: 2rem;
     right: 2rem;
     left: 2rem;
-
     padding: 1.5rem 2rem;
     text-transform: uppercase;
     overflow: hidden;
@@ -163,6 +163,10 @@
   ul.active {
     opacity: 1;
     transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .navbar-item {
+    width: max-content;
   }
   a {
     text-decoration: none;

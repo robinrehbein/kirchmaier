@@ -14,6 +14,7 @@
 
     /* alignItems - extend list if needed */
     export let alignItemsCenter = false;
+    export let alignItemsFlexStart = false;
 
     /* flexWrap; nowrap is default */
     export let flexWrapWrap = false;
@@ -43,6 +44,7 @@
     class:alignItemsCenter
     class:flexWrapWrap
     class:flexWrapWrapReverse
+    class:alignItemsFlexStart
     style={`${gap ? `gap: ${gap};` : ""} ${style}`}
 >
     <slot />
@@ -78,6 +80,10 @@
     .alignItemsCenter {
         align-items: center;
     }
+
+    // .alignItemsCenter {
+    //     align-items: flex-start;
+    // }
 
     /* flexWrap classes */
 
