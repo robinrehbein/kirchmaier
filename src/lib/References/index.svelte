@@ -28,7 +28,7 @@
 
 <section id="projects">
   <Wrapper>
-    <Headline>
+    <Headline className="headline-wrapper">
       <div slot="headline">
         {@html referenceContent.headline}
       </div>

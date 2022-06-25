@@ -1,6 +1,8 @@
-<script lang="ts"></script>
+<script lang="ts">
+    export let className: string = "";
+</script>
 
-<div class="headline-wrapper">
+<div class="{className}">
     <div class="headline">
         <slot name="headline" />
     </div>

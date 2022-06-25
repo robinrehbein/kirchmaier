@@ -26,7 +26,7 @@
 
 <Wrapper>
     <section id="services">
-        <Headline>
+        <Headline className="headline-wrapper">
             <div slot="headline">
                 {@html services.headline}
             </div>
