@@ -22,6 +22,8 @@
         currentModalContent = content;
         showModal = true;
     };
+
+    let active = false;
 </script>
 
 <section id="about">
@@ -61,6 +63,99 @@
             {/each}
         </ul>
     </Wrapper>
+
+    <div class="more-team-container" class:active>
+        <div class="more-team-headline">
+            <span class="dash-line" />
+            <p on:click={() => (active = !active)}>&plus; Mehr über das Team</p>
+            <span class="dash-line" />
+        </div>
+        <div class="more-team-content" class:active in:scale>
+            <ul>
+                <IntersectionObserver let:intersecting bottom={-100} once>
+                    <li class="team-member" class:intersecting>
+                        <img src={imgBasePath + "ralph.jpg"} alt="" />
+                        <div>
+                            <h2 class={`headline`}>Name</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Assumenda sed, accusamus
+                                excepturi labore consequuntur eius dolore. Unde
+                                minus, vero, saepe facere delectus, deleniti
+                                nemo voluptas quis exercitationem facilis nam
+                                ducimus.
+                            </p>
+                        </div>
+                    </li>
+                </IntersectionObserver>
+                <IntersectionObserver let:intersecting bottom={-100} once>
+                    <li class="team-member" class:intersecting>
+                        <img src={imgBasePath + "robin.jpg"} alt="" />
+                        <div>
+                            <h2 class={`headline`}>Name</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Assumenda sed, accusamus
+                                excepturi labore consequuntur eius dolore. Unde
+                                minus, vero, saepe facere delectus, deleniti
+                                nemo voluptas quis exercitationem facilis nam
+                                ducimus.
+                            </p>
+                        </div>
+                    </li>
+                </IntersectionObserver>
+                <IntersectionObserver let:intersecting bottom={-100} once>
+                    <li class="team-member" class:intersecting>
+                        <img src={imgBasePath + "volker.jpg"} alt="" />
+                        <div>
+                            <h2 class={`headline`}>Name</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Assumenda sed, accusamus
+                                excepturi labore consequuntur eius dolore. Unde
+                                minus, vero, saepe facere delectus, deleniti
+                                nemo voluptas quis exercitationem facilis nam
+                                ducimus.
+                            </p>
+                        </div>
+                    </li>
+                </IntersectionObserver>
+                <IntersectionObserver let:intersecting bottom={-100} once>
+                    <li class="team-member" class:intersecting>
+                        <img src={imgBasePath + "jasmin.jpg"} alt="" />
+                        <div>
+                            <h2 class={`headline`}>Name</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Assumenda sed, accusamus
+                                excepturi labore consequuntur eius dolore. Unde
+                                minus, vero, saepe facere delectus, deleniti
+                                nemo voluptas quis exercitationem facilis nam
+                                ducimus.
+                            </p>
+                        </div>
+                    </li>
+                </IntersectionObserver>
+                <IntersectionObserver let:intersecting bottom={-100} once>
+                    <li class="team-member" class:intersecting>
+                        <img src={imgBasePath + "martina.jpg"} alt="" />
+                        <div>
+                            <h2 class={`headline`}>Name</h2>
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur
+                                adipisicing elit. Assumenda sed, accusamus
+                                excepturi labore consequuntur eius dolore. Unde
+                                minus, vero, saepe facere delectus, deleniti
+                                nemo voluptas quis exercitationem facilis nam
+                                ducimus.
+                            </p>
+                        </div>
+                    </li>
+                </IntersectionObserver>
+            </ul>
+        </div>
+    </div>
+
     <ul class="numbers">
         {#each about.numbers as number}
             <IntersectionObserver let:intersecting bottom={-100} once>
@@ -94,6 +189,7 @@
     ul {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         gap: 3rem;
         list-style: none;
     }
@@ -115,11 +211,77 @@
         object-fit: cover;
         object-position: center;
     }
-
+    .more-team-container {
+        margin-top: 2rem;
+        background-image: linear-gradient(
+            rgba(255, 255, 255, 0),
+            var(--primary-color)
+        );
+    }
+    .more-team-container.active {
+        background-image: none;
+    }
+    .more-team-headline {
+        margin: auto;
+        max-width: 1280px;
+        padding: 1rem 0 2rem 0;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        p {
+            cursor: pointer;
+            color: rgba(0, 0, 0, 0.3);
+        }
+    }
+    .dash-line {
+        margin: 2rem;
+        flex-grow: 1;
+        height: 0.2rem;
+        background-color: var(--primary-color);
+        border-radius: 0.1rem;
+    }
+    .more-team-content {
+        margin: 0 2rem;
+        max-width: 1280px;
+        padding: 0 2rem;
+        text-align: justify;
+        height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: height ease-in-out 0.5s, opacity ease-in-out 0.5s;
+    }
+    .more-team-content.active {
+        opacity: 1;
+        height: 2690px;
+        margin: 0 2rem;
+        margin-bottom: 2rem;
+    }
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        max-width: 900px;
+        img {
+            height: 100%;
+            max-height: 500px;
+            object-fit: cover;
+            object-position: top;
+            border-radius: 0.5rem;
+            box-shadow: var(--box-shadow);
+        }
+    }
+    .headline {
+        color: var(--primary-color);
+        font-weight: bold;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
     .numbers {
         font-size: 1.7rem;
         line-height: 3rem;
-        margin-top: 4rem;
+        // margin-top: 4rem;
         padding: 3rem;
         background-color: var(--primary-color);
         align-items: center;
@@ -160,6 +322,25 @@
         }
         li {
             height: 100%;
+        }
+        .more-team-content {
+            margin: auto;
+        }
+        .more-team-content.active {
+            margin: auto;
+            margin-bottom: 3rem;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: row;
+            div {
+                margin: auto auto auto 2rem;
+            }
+            img {
+                border-radius: 0.5rem;
+                box-shadow: var(--box-shadow);
+            }
         }
         span.line-break {
             display: none;
