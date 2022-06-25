@@ -8,9 +8,9 @@
     const imgBasePath = "/web/";
 
     const iconMapper = {
-        phone: "/phone.svg",
-        fax: "/fax.svg",
-        mail: "/mail.svg",
+        phone: "phone.svg",
+        fax: "fax.svg",
+        mail: "mail.svg",
     };
 </script>
 
@@ -58,7 +58,7 @@
                         href="https://www.google.com/maps/place/Kirchmaier+%26+Staudacher+Projektmanagement+GmbH/@47.7798406,9.6073754,16z/data=!4m12!1m6!3m5!1s0x0:0x89cc0a64cdac4eb7!2sKirchmaier+%26+Staudacher+Projektmanagement+GmbH!8m2!3d47.7801002!4d9.6068772!3m4!1s0x0:0x89cc0a64cdac4eb7!8m2!3d47.7801002!4d9.6068772"
                     >
                         <img
-                            src="/web/map-mock.PNG"
+                            src="/web/map-mock.png"
                             alt="map"
                             class="contact-map img-shadow"
                         />
