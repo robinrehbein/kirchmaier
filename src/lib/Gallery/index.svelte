@@ -70,11 +70,11 @@
     transform: translateY(-50%);
 }
 
-.button-left:hover {
-      left: 0;
+.button-left:active {
+    transform: translateY(-50%) scale(0.9);
     }
-.button-right:hover {
-      right: 0;
+.button-right:active {
+    transform: translateY(-50%) scale(0.9);
     }
 
 </style>
