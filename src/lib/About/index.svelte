@@ -204,7 +204,7 @@
         width: 100%;
         max-height: 300px;
         object-fit: cover;
-        object-position: top;
+        object-position: center;
     }
     .more-team-container {
         margin-top: 2rem;
@@ -255,7 +255,7 @@
     .team-member {
         display: flex;
         flex-direction: column;
-        max-width: 900px;
+        width: 900px;
         img {
             height: 100%;
             max-height: 500px;
