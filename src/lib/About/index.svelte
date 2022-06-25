@@ -77,14 +77,9 @@
                         <img src={imgBasePath + "ralph.jpg"} alt="" />
                         <div>
                             <h2 class={`headline`}>Name</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Assumenda sed, accusamus
-                                excepturi labore consequuntur eius dolore. Unde
-                                minus, vero, saepe facere delectus, deleniti
-                                nemo voluptas quis exercitationem facilis nam
-                                ducimus.
-                            </p>
+                            <p>Geschäftsführer</p>
+                            <p>E-Mail: <a>ralph.kirchmaier[at]kirchmaier-staudacher.de</a></p>
+                            <p>Tel: <a>0751 / 36221 - 10</a></p>
                         </div>
                     </li>
                 </IntersectionObserver>
@@ -209,7 +204,7 @@
         width: 100%;
         max-height: 300px;
         object-fit: cover;
-        object-position: center;
+        object-position: top;
     }
     .more-team-container {
         margin-top: 2rem;
