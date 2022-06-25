@@ -81,9 +81,9 @@
         align-items: center;
     }
 
-    .alignItemsCenter {
-        align-items: flex-start;
-    }
+    // .alignItemsCenter {
+    //     align-items: flex-start;
+    // }
 
     /* flexWrap classes */
 
