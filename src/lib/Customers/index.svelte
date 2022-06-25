@@ -13,7 +13,7 @@
 
 <section id="customer">
   <Wrapper>
-    <Headline>
+    <Headline className="headline-wrapper">
       <div slot="headline">
         {@html customersContent.headline}
       </div>

@@ -7,6 +7,7 @@
     import IntersectionObserver from "$lib/util/IntersectionObserver/index.svelte";
     import { jsonContent } from "../../stores/stores";
     import type { Box } from "../../interfaces/interfaces";
+    import Flex from "../util/Flex/index.svelte";
     import { fade, crossfade, fly, scale } from "svelte/transition";
 
     const about = $jsonContent.body.about;
@@ -24,11 +25,17 @@
     };
 
     let active = false;
+
+    const iconMapper = {
+        phone: "phone.svg",
+        fax: "fax.svg",
+        mail: "mail.svg",
+    };
 </script>
 
 <section id="about">
     <Wrapper>
-        <Headline>
+        <Headline className="headline-wrapper">
             <div slot="headline">
                 {@html about.headline}
             </div>
@@ -65,7 +72,7 @@
     </Wrapper>
 
     <div class="more-team-container" class:active>
-        <div class="more-team-headline">
+        <div class="more-team-headline" class:active>
             <span class="dash-line" />
             <p on:click={() => (active = !active)}>&plus; Mehr über das Team</p>
             <span class="dash-line" />
@@ -74,76 +81,91 @@
             <ul>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img src={imgBasePath + "ralph.jpg"} alt="" />
+                        <img class="team-member-img" src={imgBasePath + "ralph.jpg"} alt="" />
                         <div>
-                            <h2 class={`headline`}>Name</h2>
-                            <p>Geschäftsführer</p>
-                            <p>E-Mail: <a>ralph.kirchmaier[at]kirchmaier-staudacher.de</a></p>
-                            <p>Tel: <a>0751 / 36221 - 10</a></p>
+                            <Headline>
+                                <p slot="headline">
+                                    Ralph Kirchmaier
+                                </p>
+                                <p slot="sub-headline">
+                                    <b>Geschäftsführer</b>
+                                </p>
+                            </Headline>
+                            <br>
+                            <p>E-Mail: <a href="mailto:ralph.kirchmaier@kirchmaier-staudacher.de">ralph.kirchmaier@kirchmaier-staudacher.de</a></p>
+                            <p>Tel.: 0751 / 36221 - 10</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img src={imgBasePath + "robin.jpg"} alt="" />
+                        <img class="team-member-img" src={imgBasePath + "robin.jpg"} alt="" />
                         <div>
-                            <h2 class={`headline`}>Name</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Assumenda sed, accusamus
-                                excepturi labore consequuntur eius dolore. Unde
-                                minus, vero, saepe facere delectus, deleniti
-                                nemo voluptas quis exercitationem facilis nam
-                                ducimus.
-                            </p>
+                            <Headline>
+                                <p slot="headline">
+                                    Robin Kirchmaier
+                                </p>
+                                <p slot="sub-headline">
+                                    <b>Geschäftsführer</b>
+                                </p>
+                            </Headline>
+                            <br>
+                            <p>E-Mail: <a href="mailto:robin.kirchmaier@kirchmaier-staudacher.de">robin.kirchmaier@kirchmaier-staudacher.de</a></p>
+                            <p>Tel.: 0751 / 36221 - 12</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img src={imgBasePath + "volker.jpg"} alt="" />
+                        <img class="team-member-img" src={imgBasePath + "volker.jpg"} alt="" />
                         <div>
-                            <h2 class={`headline`}>Name</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Assumenda sed, accusamus
-                                excepturi labore consequuntur eius dolore. Unde
-                                minus, vero, saepe facere delectus, deleniti
-                                nemo voluptas quis exercitationem facilis nam
-                                ducimus.
-                            </p>
+                            <Headline>
+                                <p slot="headline">
+                                    Volker Boos
+                                </p>
+                                <p slot="sub-headline">
+                                    <b>Vermietung und Verkauf</b>
+                                </p>
+                            </Headline>
+                            <br>
+                            <p>E-Mail: <a href="mailto:volker.boos@kirchmaier-staudacher.de">volker.boos@kirchmaier-staudacher.de</a></p>
+                            <p>Tel.: 0751 / 36221 - 50</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img src={imgBasePath + "jasmin.jpg"} alt="" />
+                        <img class="team-member-img" src={imgBasePath + "jasmin.jpg"} alt="" />
                         <div>
-                            <h2 class={`headline`}>Name</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Assumenda sed, accusamus
-                                excepturi labore consequuntur eius dolore. Unde
-                                minus, vero, saepe facere delectus, deleniti
-                                nemo voluptas quis exercitationem facilis nam
-                                ducimus.
-                            </p>
+                            <Headline>
+                                <p slot="headline">
+                                    Jasmin Kirchmaier
+                                </p>
+                                <p slot="sub-headline">
+                                    <b>Projektmanagement</b>
+                                </p>
+                            </Headline>
+                            <br>
+                            <p>E-Mail: <a href="mailto:jasmin.kirchmaier@kirchmaier-staudacher.de">jasmin.kirchmaier@kirchmaier-staudacher.de</a></p>
+                            <p>Tel.: 0751 / 36221 - 19</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img src={imgBasePath + "martina.jpg"} alt="" />
+                        <img class="team-member-img" src={imgBasePath + "martina.jpg"} alt="" />
                         <div>
-                            <h2 class={`headline`}>Name</h2>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur
-                                adipisicing elit. Assumenda sed, accusamus
-                                excepturi labore consequuntur eius dolore. Unde
-                                minus, vero, saepe facere delectus, deleniti
-                                nemo voluptas quis exercitationem facilis nam
-                                ducimus.
-                            </p>
+                            <Headline>
+                                <p slot="headline">
+                                    Martina Gotterbarm
+                                </p>
+                                <p slot="sub-headline">
+                                    <b>Mietverwaltung</b>
+                                </p>
+                            </Headline>
+                            <br>
+                            <p>E-Mail: <a href="mailto:martina.gotterbarm@kirchmaier-staudacher.de">martina.gotterbarm@kirchmaier-staudacher.de</a></p>
+                            <p>Tel.: 0751 / 36221 - 18</p>
                         </div>
                     </li>
                 </IntersectionObserver>
@@ -181,6 +203,9 @@
 {/if}
 
 <style lang="scss">
+    a {
+        color: black;
+    }
     ul {
         display: flex;
         flex-direction: column;
@@ -229,17 +254,21 @@
             color: rgba(0, 0, 0, 0.3);
         }
     }
+    .more-team-headline.active {
+        p {
+            color: rgba(0, 0, 0, 1);
+        }}
     .dash-line {
         margin: 2rem;
         flex-grow: 1;
-        height: 0.2rem;
+        height: 0.25rem;
         background-color: var(--primary-color);
         border-radius: 0.1rem;
     }
     .more-team-content {
         margin: 0 2rem;
         max-width: 1280px;
-        padding: 0 2rem;
+        // padding: 0 2rem;
         text-align: justify;
         height: 0;
         overflow: hidden;
@@ -255,8 +284,8 @@
     .team-member {
         display: flex;
         flex-direction: column;
-        width: 900px;
-        img {
+        width: 100%;
+        .team-member-img {
             height: 100%;
             max-height: 500px;
             object-fit: cover;
@@ -264,14 +293,6 @@
             border-radius: 0.5rem;
             box-shadow: var(--box-shadow);
         }
-    }
-    .headline {
-        color: var(--primary-color);
-        font-weight: bold;
-        margin-top: 1rem;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
-        text-transform: uppercase;
     }
     .numbers {
         font-size: 1.7rem;
@@ -329,10 +350,11 @@
         .team-member {
             display: flex;
             flex-direction: row;
+            width: 900px;
             div {
-                margin: auto auto auto 2rem;
+                margin: auto auto 0 2rem;
             }
-            img {
+            .team-member-img {
                 border-radius: 0.5rem;
                 box-shadow: var(--box-shadow);
             }

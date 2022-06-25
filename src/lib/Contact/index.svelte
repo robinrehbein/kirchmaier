@@ -17,7 +17,7 @@
 <section id="contact">
     <Wrapper>
         <div class="section-wrapper">
-            <Headline>
+            <Headline className="headline-wrapper">
                 <div slot="headline">
                     {@html contact.headline}
                 </div>
