@@ -7,8 +7,7 @@
     import IntersectionObserver from "$lib/util/IntersectionObserver/index.svelte";
     import { jsonContent } from "../../stores/stores";
     import type { Box } from "../../interfaces/interfaces";
-    import Flex from "../util/Flex/index.svelte";
-    import { fade, crossfade, fly, scale } from "svelte/transition";
+    import { scale } from "svelte/transition";
 
     const about = $jsonContent.body.about;
     const imgBasePath = "/web/";
@@ -54,7 +53,6 @@
                 >
                     <li
                         class:intersecting
-                        class="about-box"
                         on:click={() => setContentAndShowModal(card)}
                     >
                         <Card
@@ -81,90 +79,125 @@
             <ul>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img class="team-member-img" src={imgBasePath + "ralph.jpg"} alt="" />
+                        <img
+                            class="team-member-img"
+                            src={imgBasePath + "ralph.jpg"}
+                            alt=""
+                        />
                         <div>
                             <Headline>
-                                <p slot="headline">
-                                    Ralph Kirchmaier
-                                </p>
+                                <p slot="headline">Ralph Kirchmaier</p>
                                 <p slot="sub-headline">
                                     <b>Geschäftsführer</b>
                                 </p>
                             </Headline>
-                            <br>
-                            <p>E-Mail: <a href="mailto:ralph.kirchmaier@kirchmaier-staudacher.de">ralph.kirchmaier@kirchmaier-staudacher.de</a></p>
+                            <br />
+                            <p>
+                                E-Mail: <a
+                                    href="mailto:ralph.kirchmaier@kirchmaier-staudacher.de"
+                                    >ralph.kirchmaier@kirchmaier-staudacher.de</a
+                                >
+                            </p>
                             <p>Tel.: 0751 / 36221 - 10</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img class="team-member-img" src={imgBasePath + "robin.jpg"} alt="" />
+                        <img
+                            class="team-member-img"
+                            src={imgBasePath + "robin.jpg"}
+                            alt=""
+                        />
                         <div>
                             <Headline>
-                                <p slot="headline">
-                                    Robin Kirchmaier
-                                </p>
+                                <p slot="headline">Robin Kirchmaier</p>
                                 <p slot="sub-headline">
                                     <b>Geschäftsführer</b>
                                 </p>
                             </Headline>
-                            <br>
-                            <p>E-Mail: <a href="mailto:robin.kirchmaier@kirchmaier-staudacher.de">robin.kirchmaier@kirchmaier-staudacher.de</a></p>
+                            <br />
+                            <p>
+                                E-Mail: <a
+                                    href="mailto:robin.kirchmaier@kirchmaier-staudacher.de"
+                                    >robin.kirchmaier@kirchmaier-staudacher.de</a
+                                >
+                            </p>
                             <p>Tel.: 0751 / 36221 - 12</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img class="team-member-img" src={imgBasePath + "volker.jpg"} alt="" />
+                        <img
+                            class="team-member-img"
+                            src={imgBasePath + "volker.jpg"}
+                            alt=""
+                        />
                         <div>
                             <Headline>
-                                <p slot="headline">
-                                    Volker Boos
-                                </p>
+                                <p slot="headline">Volker Boos</p>
                                 <p slot="sub-headline">
                                     <b>Vermietung und Verkauf</b>
                                 </p>
                             </Headline>
-                            <br>
-                            <p>E-Mail: <a href="mailto:volker.boos@kirchmaier-staudacher.de">volker.boos@kirchmaier-staudacher.de</a></p>
+                            <br />
+                            <p>
+                                E-Mail: <a
+                                    href="mailto:volker.boos@kirchmaier-staudacher.de"
+                                    >volker.boos@kirchmaier-staudacher.de</a
+                                >
+                            </p>
                             <p>Tel.: 0751 / 36221 - 50</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img class="team-member-img" src={imgBasePath + "jasmin.jpg"} alt="" />
+                        <img
+                            class="team-member-img"
+                            src={imgBasePath + "jasmin.jpg"}
+                            alt=""
+                        />
                         <div>
                             <Headline>
-                                <p slot="headline">
-                                    Jasmin Kirchmaier
-                                </p>
+                                <p slot="headline">Jasmin Kirchmaier</p>
                                 <p slot="sub-headline">
                                     <b>Projektmanagement</b>
                                 </p>
                             </Headline>
-                            <br>
-                            <p>E-Mail: <a href="mailto:jasmin.kirchmaier@kirchmaier-staudacher.de">jasmin.kirchmaier@kirchmaier-staudacher.de</a></p>
+                            <br />
+                            <p>
+                                E-Mail: <a
+                                    href="mailto:jasmin.kirchmaier@kirchmaier-staudacher.de"
+                                    >jasmin.kirchmaier@kirchmaier-staudacher.de</a
+                                >
+                            </p>
                             <p>Tel.: 0751 / 36221 - 19</p>
                         </div>
                     </li>
                 </IntersectionObserver>
                 <IntersectionObserver let:intersecting bottom={-100} once>
                     <li class="team-member" class:intersecting>
-                        <img class="team-member-img" src={imgBasePath + "martina.jpg"} alt="" />
+                        <img
+                            class="team-member-img"
+                            src={imgBasePath + "martina.jpg"}
+                            alt=""
+                        />
                         <div>
                             <Headline>
-                                <p slot="headline">
-                                    Martina Gotterbarm
-                                </p>
+                                <p slot="headline">Martina Gotterbarm</p>
                                 <p slot="sub-headline">
                                     <b>Mietverwaltung</b>
                                 </p>
                             </Headline>
-                            <br>
-                            <p>E-Mail: <a href="mailto:martina.gotterbarm@kirchmaier-staudacher.de">martina.gotterbarm@kirchmaier-staudacher.de</a></p>
+                            <br />
+                            <p>
+                                E-Mail: <a
+                                    href="mailto:martina.gotterbarm@kirchmaier-staudacher.de"
+                                    >martina.gotterbarm@kirchmaier-staudacher.de</a
+                                >
+                            </p>
                             <p>Tel.: 0751 / 36221 - 18</p>
                         </div>
                     </li>
@@ -257,7 +290,8 @@
     .more-team-headline.active {
         p {
             color: rgba(0, 0, 0, 1);
-        }}
+        }
+    }
     .dash-line {
         margin: 2rem;
         flex-grow: 1;
