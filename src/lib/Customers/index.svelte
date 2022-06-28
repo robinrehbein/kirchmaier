@@ -58,6 +58,8 @@
 
   .customer-list-image {
     height: 5rem;
+    max-width: 100%;
+    object-fit: contain;
     display: block;
     margin: auto;
   }

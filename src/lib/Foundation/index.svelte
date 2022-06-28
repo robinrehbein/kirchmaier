@@ -22,8 +22,6 @@
         currentModalContent = content;
         showModal = true;
     };
-
-    let active = false;
 </script>
 
 <section id="foundation">
@@ -37,30 +35,28 @@
             </div>
         </Headline>
 
-        <ul>
-            {#each foundation.boxes as card}
-                <IntersectionObserver
-                    let:intersecting
-                    bottom={-100}
-                    className="card-wrapper"
-                    once
+        {#each foundation.boxes as card}
+            <IntersectionObserver
+                let:intersecting
+                bottom={-100}
+                className="card-wrapper"
+                once
+            >
+                <div
+                    class:intersecting
+                    on:click={() => setContentAndShowModal(card)}
                 >
-                    <li
-                        class:intersecting
-                        on:click={() => setContentAndShowModal(card)}
-                    >
-                        <Card
-                            headline={card.boxHeadline}
-                            text={card.boxText}
-                            showImg
-                            imgType="img"
-                            imgSrc={imgBasePath + card.imgUrl}
-                            cropText
-                        />
-                    </li>
-                </IntersectionObserver>
-            {/each}
-        </ul>
+                    <Card
+                        headline={card.boxHeadline}
+                        text={card.boxText}
+                        showImg
+                        imgType="img"
+                        imgSrc={imgBasePath + card.imgUrl}
+                        cropText
+                    />
+                </div>
+            </IntersectionObserver>
+        {/each}
     </Wrapper>
 </section>
 
@@ -109,101 +105,6 @@
         object-fit: cover;
         object-position: center;
     }
-    .more-team-container {
-        margin-top: 2rem;
-        // background-image: linear-gradient(
-        //     rgba(255, 255, 255, 0),
-        //     var(--primary-color)
-        // );
-    }
-    .more-team-container.active {
-        background-image: none;
-    }
-    .more-team-headline {
-        margin: auto;
-        max-width: 1280px;
-        padding: 1rem 0 2rem 0;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        p {
-            cursor: pointer;
-        }
-    }
-    .dash-line {
-        margin: 2rem;
-        flex-grow: 1;
-        height: 0.25rem;
-        background-color: var(--primary-color);
-        border-radius: 0.1rem;
-    }
-    .more-team-content {
-        margin: 0 2rem;
-        max-width: 1280px;
-        // padding: 0 2rem;
-        // text-align: justify;
-        height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: height ease-in-out 0.5s, opacity ease-in-out 0.5s;
-    }
-    .more-team-content.active {
-        opacity: 1;
-        // height: 2690px;
-        height: 100%;
-        margin: 0 2rem;
-        margin-bottom: 2rem;
-    }
-    .team-member {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        .team-member-img {
-            height: 100%;
-            max-height: 500px;
-            object-fit: cover;
-            object-position: top;
-            border-radius: 0.5rem;
-            box-shadow: var(--box-shadow);
-        }
-    }
-    .numbers {
-        font-size: 1.7rem;
-        line-height: 3rem;
-        // margin-top: 4rem;
-        padding: 3rem;
-        background-color: var(--primary-color);
-        align-items: center;
-        text-align: center;
-        justify-content: space-around;
-    }
-
-    li.number {
-        color: white;
-        border-radius: 0.5rem;
-        padding: 2rem;
-        transition: box-shadow cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s,
-            transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
-    }
-
-    li.number:hover {
-        box-shadow: var(--box-shadow-dark);
-        transform: scale(1.1);
-    }
-
-    span.line-break {
-        opacity: 1;
-        transform: translateY(0) rotate(0);
-        width: 15%;
-        height: 2px;
-        background-color: white;
-        border-radius: 0.5rem;
-    }
-
-    span.line-break:last-child {
-        display: none;
-    }
 
     @media screen and (min-width: 960px) {
         ul {
@@ -213,34 +114,8 @@
         li {
             height: 100%;
         }
-        .more-team-content {
-            margin: auto;
-        }
-        .more-team-content.active {
-            margin: auto;
-            margin-bottom: 3rem;
-        }
-
-        .team-member {
-            display: flex;
-            flex-direction: row;
-            width: 900px;
-            div {
-                margin: auto auto 0 2rem;
-            }
-            .team-member-img {
-                border-radius: 0.5rem;
-                box-shadow: var(--box-shadow);
-            }
-        }
-        span.line-break {
-            display: none;
-        }
-        .numbers {
-            padding: 4rem;
-        }
         :global(.card-wrapper) {
-            margin: 0 auto;
+            margin: 0;
             width: calc(50% - 1.5rem);
         }
     }
