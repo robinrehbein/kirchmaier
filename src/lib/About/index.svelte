@@ -24,12 +24,6 @@
     };
 
     let active = false;
-
-    const iconMapper = {
-        phone: "phone.svg",
-        fax: "fax.svg",
-        mail: "mail.svg",
-    };
 </script>
 
 <section id="about">
@@ -277,7 +271,6 @@
     .more-team-headline {
         margin: auto;
         max-width: 1280px;
-        padding: 1rem 0 2rem 0;
         display: flex;
         flex-direction: row;
         align-items: center;
