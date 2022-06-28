@@ -50,12 +50,12 @@
                 },
                 {
                     "imgUrl": "vermietung-verkauf.jpg",
-                    "boxHeadline": "VERMIETUNG UND VERKAUF",
+                    "boxHeadline": "VERKAUF",
                     "boxText": "Wir erweitern unseren Immobilienbestand kontinuierlich. Hierzu sind wir ständig am Erwerb von Immobilien und Grundstücken aller Art interessiert. Eine schnelle sowie kompetente und zuverlässige Kaufvertragsabwicklung ist unsere Stärke."
                 },
                 {
                     "imgUrl": "mietinteressenten.jpg",
-                    "boxHeadline": "MIETINTERESSENTEN",
+                    "boxHeadline": "VERMIETUNG",
                     "boxText": "Für unsere Mietwohnungen sowie Gewerbeflächen können Sie sich als Mietinteressent gerne für freiwerdende Wohnungen und Büro- oder Verkaufsflächen vormerken lassen. "
                 },
                 {
@@ -77,7 +77,7 @@
                 {
                     "imgUrl": "team.jpg",
                     "boxHeadline": "TEAM",
-                    "boxText": "28 Jahre Erfahrung gepaart mit junger kompetenter Dynamik. Unser Team  v.l.n.r."
+                    "boxText": "28 Jahre Erfahrung gepaart mit junger kompetenter Dynamik."
                 }
             ],
             "numbers": [
@@ -169,7 +169,7 @@
         "customers": {
             "headline": "UNSERE <b>PARTNER</b>",
             "subHeadline": "Eine Auswahl unserer Partner im Bereich Gewerbeimmobilien",
-            "customerList": "obi.png,rewe.jpg,edeka.jpg,aldi.jpg,jysk.jpg,deichmann.jpg,müller.jpg,fressnapf.jpg,penny.png"
+            "customerList": "obi.svg,rewe.svg,edeka.svg,aldi.svg,jysk.svg,deichmann.svg,müller.svg,fressnapf.svg,penny.svg"
         },
         "foundation": {
             "headline": "UNSERE <b>STIFTUNG</b>",

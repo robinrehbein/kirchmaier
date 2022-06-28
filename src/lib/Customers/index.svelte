@@ -72,7 +72,7 @@
     }
 
     .customer-list-image {
-      height: 5rem;
+      height: 7rem;
     }
   }
 </style>

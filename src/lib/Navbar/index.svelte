@@ -224,7 +224,7 @@
       margin-left: 2rem;
     }
     .logo {
-      height: 2rem;
+      height: 3rem;
     }
     .name {
       font-size: 1rem;
