@@ -70,7 +70,7 @@
     </Wrapper>
 
     <div class="more-team-container" class:active>
-        <div class="more-team-headline" class:active>
+        <div class="more-team-headline">
             <span class="dash-line" />
             <p on:click={() => (active = !active)}>&plus; Mehr über das Team</p>
             <span class="dash-line" />
@@ -95,7 +95,7 @@
                             <p>
                                 E-Mail: <a
                                     href="mailto:ralph.kirchmaier@kirchmaier-staudacher.de"
-                                    >ralph.kirchmaier@kirchmaier-staudacher.de</a
+                                    >ralph.kirchmaier[at]kirchmaier-staudacher.de</a
                                 >
                             </p>
                             <p>Tel.: 0751 / 36221 - 10</p>
@@ -120,7 +120,7 @@
                             <p>
                                 E-Mail: <a
                                     href="mailto:robin.kirchmaier@kirchmaier-staudacher.de"
-                                    >robin.kirchmaier@kirchmaier-staudacher.de</a
+                                    >robin.kirchmaier[at]kirchmaier-staudacher.de</a
                                 >
                             </p>
                             <p>Tel.: 0751 / 36221 - 12</p>
@@ -145,7 +145,7 @@
                             <p>
                                 E-Mail: <a
                                     href="mailto:volker.boos@kirchmaier-staudacher.de"
-                                    >volker.boos@kirchmaier-staudacher.de</a
+                                    >volker.boos[at]kirchmaier-staudacher.de</a
                                 >
                             </p>
                             <p>Tel.: 0751 / 36221 - 50</p>
@@ -170,7 +170,7 @@
                             <p>
                                 E-Mail: <a
                                     href="mailto:jasmin.kirchmaier@kirchmaier-staudacher.de"
-                                    >jasmin.kirchmaier@kirchmaier-staudacher.de</a
+                                    >jasmin.kirchmaier[at]kirchmaier-staudacher.de</a
                                 >
                             </p>
                             <p>Tel.: 0751 / 36221 - 19</p>
@@ -195,7 +195,7 @@
                             <p>
                                 E-Mail: <a
                                     href="mailto:martina.gotterbarm@kirchmaier-staudacher.de"
-                                    >martina.gotterbarm@kirchmaier-staudacher.de</a
+                                    >martina.gotterbarm[at]kirchmaier-staudacher.de</a
                                 >
                             </p>
                             <p>Tel.: 0751 / 36221 - 18</p>
@@ -206,7 +206,7 @@
         </div>
     </div>
 
-    <ul class="numbers">
+    <!-- <ul class="numbers">
         {#each about.numbers as number}
             <IntersectionObserver let:intersecting bottom={-100} once>
                 <li class="number" class:intersecting>
@@ -216,7 +216,7 @@
             </IntersectionObserver>
             <span class="line-break" />
         {/each}
-    </ul>
+    </ul> -->
 </section>
 
 {#if showModal}
@@ -266,10 +266,10 @@
     }
     .more-team-container {
         margin-top: 2rem;
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0),
-            var(--primary-color)
-        );
+        // background-image: linear-gradient(
+        //     rgba(255, 255, 255, 0),
+        //     var(--primary-color)
+        // );
     }
     .more-team-container.active {
         background-image: none;
@@ -284,12 +284,6 @@
         justify-content: space-between;
         p {
             cursor: pointer;
-            color: rgba(0, 0, 0, 0.3);
-        }
-    }
-    .more-team-headline.active {
-        p {
-            color: rgba(0, 0, 0, 1);
         }
     }
     .dash-line {
@@ -303,7 +297,7 @@
         margin: 0 2rem;
         max-width: 1280px;
         // padding: 0 2rem;
-        text-align: justify;
+        // text-align: justify;
         height: 0;
         overflow: hidden;
         opacity: 0;
@@ -311,7 +305,8 @@
     }
     .more-team-content.active {
         opacity: 1;
-        height: 2690px;
+        // height: 2690px;
+        height: 100%;
         margin: 0 2rem;
         margin-bottom: 2rem;
     }

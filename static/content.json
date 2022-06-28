@@ -17,7 +17,11 @@
                 "url": "projects"
             },
             {
-                "name": "KUNDEN",
+                "name": "PARTNER",
+                "url": "customer"
+            },
+            {
+                "name": "STIFTUNG",
                 "url": "customer"
             },
             {
@@ -30,9 +34,9 @@
         "landingPage": {
             "heading": "Kirchmaier & Staudacher",
             "statements": [
-                "Gebäudemanagement",
-                "Immobilienverwaltung",
-                "Projektentwicklung"
+              "Projektentwicklung",
+              "Vermietung & Verkauf",
+                "Gebäudemanagement"
             ]
         },
         "services": {
@@ -117,16 +121,19 @@
                     ]
                 },
                 {
-                    "projectName": "Rewe",
-                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
-                    "mainPictureName": "2021_06_18_kirchmaier_0083.jpg",
+                    "projectName": "Fachmarktzentrum \"Seepark-Center\" in Pfullendorf",
+                    "text": "Fachmarktzentrum \"Seepark-Center\" in Pfullendorf",
+                    "mainPictureName": "2021_06_18_kirchmaier_0171.jpg",
                     "galleryPictureNames": [
+                        "2021_06_18_kirchmaier_0171.jpg",
                         "2021_06_18_kirchmaier_0083.jpg",
-                        "2021_06_18_kirchmaier_0097.jpg"
+                        "2021_06_18_kirchmaier_0097.jpg",
+                        "2021_06_18_kirchmaier_0165.jpg",
+                        "2021_06_18_kirchmaier_0199.jpg"
                     ]
                 },
                 {
-                    "projectName": "Neubau des Fachmarktzentrums \"Salgo\" in Bad Saulgau",
+                    "projectName": "Fachmarktzentrum \"Salgo\" in Bad Saulgau",
                     "text": "Zu den namhaften Mietern im Salgo gehören REWE, Drogeriemarkt Müller, AWG, Penny, Deichmann und das Dänisches Bettenlager. Insgesamt stehen den Kunden über 450 Parkplätzen zur Verfügung.",
                     "mainPictureName": "2021_06_18_kirchmaier_0022.jpg",
                     "galleryPictureNames": [
@@ -137,22 +144,22 @@
                 },
                 {
                     "projectName": "Haus der Mitte",
-                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "text": "",
                     "mainPictureName": "2021_06_18_kirchmaier_0428.jpg",
                     "galleryPictureNames": ["2021_06_18_kirchmaier_0428.jpg"]
                 },
                 {
                     "projectName": "Some other building",
-                    "text": "Kurze Beschreibung des Projektes. Detaillierte Beschreibung und mehr Fotos finden Sie im Modal, wenn Sie auf die Karte klicken",
+                    "text": "",
                     "mainPictureName": "2021_06_18_kirchmaier_0436.jpg",
                     "galleryPictureNames": ["2021_06_18_kirchmaier_0436.jpg"]
                 }
             ]
         },
         "customers": {
-            "headline": "UNSERE <b>KUNDEN</b>",
-            "subHeadline": "Irgendeine subheadline",
-            "customerList": "mail.svg"
+            "headline": "UNSERE <b>PARTNER</b>",
+            "subHeadline": "Eine Auswahl unserer Partner im Bereich Gewerbeimmobilien",
+            "customerList": "mail.svg,mail.svg,mail.svg,mail.svg,mail.svg"
         },
         "contact": {
             "headline": "<b>KONTAKT</b>DATEN",
